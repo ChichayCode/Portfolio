@@ -1,0 +1,181 @@
+@import 'variables';
+
+
+
+
+
+// .menu-btn {
+//     position: absolute;
+//     z-index: 3;
+//     right: 1rem;
+//     top: 1rem;
+//     height: 20px;
+//     width: 28px;
+//     cursor: pointer;
+//     @include transition-ease;
+
+//     &__burger {
+//         position: absolute;
+//         right: 0;
+//         top: .5rem;
+//         width: 28px;
+//         height: 3px;
+//         background: #000000;
+//         @include transition-ease;
+
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             top: -12px;
+//             width: 28px;
+//             height: 3px;
+//             background: $text-color;
+//             @include transition-ease;
+//         }
+
+//         &.open {
+//             transform: rotate(720deg);
+//             background: transparent;
+//         }
+//     }
+// }
+
+
+.logoname img {
+    width: 32px;
+    height: 32px;
+}
+
+.logoname {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    // width: 100%;
+
+}
+
+header ul li {
+    text-align: center;
+}
+
+header ul a {
+    display: block;
+    padding: 20px;
+    @include transition-ease;
+
+    &:hover {
+        color: $secondary-color;
+        font-size: 18px;
+    }
+}
+
+
+.header .menu-nav {
+    background-color: $secondary-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    // top: 30vh;
+    left: 0;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 20px;
+    cursor: pointer;
+}
+
+// .header .menu-icon .nav-icon{
+//     background-color: $text-color;
+//     // display: block;
+//     width: 18px;
+//     height: 2px;
+//     position: relative;
+//     @include transition;
+// }
+
+// .header .menu-icon .nav-icon::before{
+//     background-color: $text-color;
+//     content: '';
+//     // display: block;
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;
+//     @include transition;
+//     top: 5px;
+// }
+
+.header .menu-icon .nav-icon {
+    // position: absolute;
+    // right: 0;
+    position: relative;
+    display: block;
+    top: 4px;
+    width: 20px;
+    height: 2px;
+    background-color: $text-color;
+    @include transition-ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        width: 20px;
+        height: 2px;
+        background-color: $text-color;
+        @include transition-ease;
+    }
+}
+
+.header .menu-btn {
+    position: absolute;
+    display: none;
+
+    &:checked ~ .menu-icon .menu-nav {
+        max-height: 240px;
+
+    }
+
+    &:checked ~ .menu-icon .nav-icon {
+        transform: rotate(45deg);
+        top: 0;
+
+        &::before {
+            transform: rotate(-90deg);
+            top: 0;
+
+        }
+    }
+}
+
+@media (min-width: 56rem) {
+    .header .menu-icon .menu-nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: fit-content;
+        max-height: fit-content;
+        text-align: right;
+        top: 0;
+        gap: 40px;
+
+        &__link{
+            padding: 0 8px;
+        }
+    }
+
+    .header .menu-icon .nav-icon{
+        display: none;
+    }
+}

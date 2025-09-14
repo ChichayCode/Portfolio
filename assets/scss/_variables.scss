@@ -1,0 +1,18 @@
+$primary-color: white;
+$secondary-color: #A92900;
+$text-color: #000000;
+$font-weights: (
+    "regular":400,
+    "medium":500,
+    "bold": 700
+);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin transition-ease {
+    transition: all .3 ease-out;
+}

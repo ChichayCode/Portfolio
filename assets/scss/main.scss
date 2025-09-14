@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'home';
+@import 'menu';
+
+body {
+    background: $primary-color;
+    font-family: 'avenir', sans-serif;
+    color: $text-color;
+    font-weight: map-get($font-weights, regular);
+    height: 100vh;
+    line-height: 1;
+
+}
+
+// h1{
+//     font-weight: map-get($font-weights, medium)
+// }
+
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    // padding: 1rem;
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    height: 80px;
+}
+
+
+
+main {
+    height: 100%;
+    width: 100%;
+
+    .social-.icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+
+        a {
+            padding: 0.4rem;
+            @include transition-ease;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+footer{
+    font-size: 1rem;
+    position: fixed;
+    bottom: .4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: $text-color;
+}
+
+@media (min-width: 56rem) {
+    .header{
+    padding: 0px 40px;
+    }
+}
