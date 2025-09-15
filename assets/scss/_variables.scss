@@ -14,5 +14,5 @@ $font-weights: (
 }
 
 @mixin transition-ease {
-    transition: all .3 ease-out;
+    transition: all .3s ease-out;
 }
