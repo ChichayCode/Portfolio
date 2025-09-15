@@ -1,0 +1,38 @@
+@import 'variables';
+
+
+// .about .introduction .paragraph{
+//     font-weight: 50;
+// }
+
+// .about .introduction .bold{
+//     font-weight: 500;
+// }
+
+
+.about .introduction {
+    display: flex;
+    flex-direction: column;
+
+    & img {
+        width: 200px;
+        height: 200px;
+    }
+
+    & .medium-name {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    & .paragraph {
+        font-weight: 100;
+
+    }
+
+}
+
+.about .jobs .date{
+    font-size: 14px;
+
+
+}

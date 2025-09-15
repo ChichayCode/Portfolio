@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'home';
 @import 'menu';
+@import 'about';
 
 body {
     background: $primary-color;
@@ -15,6 +16,10 @@ body {
 // h1{
 //     font-weight: map-get($font-weights, medium)
 // }
+
+p.medium{
+    font-weight: 500;
+}
 
 a {
     text-decoration: none;
