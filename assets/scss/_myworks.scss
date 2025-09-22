@@ -1,0 +1,117 @@
+@import 'variables';
+
+// * {
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+// }
+
+.allmyworks {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.myworks-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+
+    & h1 {
+        text-align: center;
+        padding: 0px 12px;
+    }
+}
+
+
+
+
+.works {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+
+    a {
+        width: fit-content;
+    }
+
+    & .box {
+        display: flex;
+        position: relative;
+        // padding: 16px;
+        margin: 16px;
+        box-shadow: 0px 0px 10px $primary-color;
+        @include transition-ease;
+        max-width: 300px;
+
+        &:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0.25);
+        }
+
+        img {
+            // width: 300px;
+            // height: 300px;
+            height: auto;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        color: $primary-color;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+
+// SMALL MOBILE
+@media (max-width: 20rem) {
+    .allmyworks .myworks-title {
+        flex-direction: column;
+    }
+
+}
+
+
+// IPAD
+@media (min-width: 48rem) {
+    .allmyworks {
+        margin: 16px 40px;
+    }
+}
+
+
+// // DESKTOP
+// @media (min-width: 56rem) {
+//     .allmyworks {
+//         margin: 16px 80px;
+//     }
+
+
+// }
+
+
+// BIG DESKTOP
+@media (min-width: 90rem) {
+
+    .works {
+        flex-direction: row;
+        max-width: none;
+    }
+}

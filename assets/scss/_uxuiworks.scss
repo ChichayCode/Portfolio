@@ -1,0 +1,24 @@
+.alluxuiworks{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.uxui-title{
+    display: flex;
+    justify-content: center;
+
+    & h1{
+        padding: 0px 12px;
+    }
+}
+
+.ivegan-project{
+    display: flex;
+    flex-direction: column;
+
+    & img.title{
+        max-width: 300px;
+        height: auto;
+    }
+}
