@@ -59,26 +59,32 @@ header ul li {
 header ul a {
   display: block;
   padding: 20px;
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
+  color: white;
 }
 header ul a:hover {
-  color: #A92900;
+  color: white;
   font-size: 18px;
 }
 
 .header .menu-nav {
   background-color: #A92900;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   width: 100vw;
-  left: 0;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
+  top: -10px;
+  right: -110%;
+  transition: right 0.3s ease-out;
+  z-index: 5;
 }
 
 .header .menu-icon {
-  padding: 20px;
+  padding: 24px;
+  z-index: 6;
   cursor: pointer;
 }
 
@@ -86,19 +92,29 @@ header ul a:hover {
   position: relative;
   display: block;
   top: 4px;
-  width: 20px;
+  width: 24px;
   height: 2px;
   background-color: #000000;
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 7;
 }
 .header .menu-icon .nav-icon::before {
   content: "";
   position: absolute;
-  top: -8px;
-  width: 20px;
+  top: 8px;
+  width: 24px;
   height: 2px;
   background-color: #000000;
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
+}
+.header .menu-icon .nav-icon::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  transition: all 0.3s ease-out;
 }
 
 .header .menu-btn {
@@ -106,24 +122,47 @@ header ul a:hover {
   display: none;
 }
 .header .menu-btn:checked ~ .menu-icon .menu-nav {
-  max-height: 240px;
+  right: 0;
 }
 .header .menu-btn:checked ~ .menu-icon .nav-icon {
-  transform: rotate(45deg);
-  top: 0;
+  background-color: transparent;
 }
 .header .menu-btn:checked ~ .menu-icon .nav-icon::before {
-  transform: rotate(-90deg);
+  transform: rotate(45deg);
   top: 0;
+  background-color: white;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+  background-color: white;
 }
 
-@media (min-width: 48rem) {
-  .header {
-    padding: 0px 40px;
-    top: 0px;
+@media (min-width: 56rem) {
+  .header .menu-icon .menu-nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    left: auto;
+    top: auto;
+    background-color: transparent;
+    gap: 40px;
   }
-  .logoname span {
-    opacity: 1;
+  .header .menu-icon .menu-nav__link {
+    color: #000000;
+    padding: 0 8px;
+  }
+  .header .menu-icon .menu-nav__link:hover {
+    color: #A92900;
+    font-size: 18px;
+  }
+  .header .menu-icon .nav-icon,
+  .header .menu-icon .nav-icon::before,
+  .header .menu-icon .nav-icon::after {
+    display: none;
   }
 }
 * {
@@ -487,7 +526,7 @@ header ul a:hover {
   position: relative;
   margin: 16px;
   box-shadow: 0px 0px 10px white;
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
   max-width: 300px;
 }
 .works .box:hover {
@@ -612,7 +651,7 @@ main .social-.icons {
 }
 main .social-.icons a {
   padding: 0.4rem;
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
 }
 main .social-.icons a:hover {
   color: #A92900;
