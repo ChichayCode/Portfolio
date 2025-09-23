@@ -178,7 +178,7 @@ header ul a:hover {
 .about {
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 40px;
 }
 .about .about-title {
   display: flex;
@@ -246,7 +246,7 @@ header ul a:hover {
   justify-content: center;
   gap: 12px;
   width: 100vw;
-  max-width: 620px;
+  max-width: 890px;
   height: -moz-fit-content;
   height: fit-content;
   box-sizing: border-box;
@@ -494,7 +494,7 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   margin: 16px;
-  gap: 40px;
+  gap: 24px;
   align-items: center;
   justify-content: center;
 }
@@ -566,7 +566,19 @@ header ul a:hover {
 .alluxuiworks {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  margin: 16px;
+  gap: 40px;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0px 16px;
 }
 
 .uxui-title {
@@ -577,15 +589,109 @@ header ul a:hover {
   padding: 0px 12px;
 }
 
+.back-btn {
+  display: flex;
+  position: absolute;
+  top: -44px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.back-btn .back-icon {
+  position: relative;
+  display: block;
+  top: -4px;
+  width: 13px;
+  height: 2px;
+  background-color: #000000;
+  transform: rotate(-45deg);
+}
+.back-btn .back-icon::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 13px;
+  height: 2px;
+  background-color: #000000;
+  transform: rotate(90deg);
+}
+.back-btn .back-label {
+  font-size: 14px;
+}
+.back-btn:hover {
+  color: #A92900;
+}
+
 .ivegan-project {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  background-image: url(/assets/img/veg-background2.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-.ivegan-project img.title {
+.ivegan-project:hover {
+  box-shadow: 0px 0px 10px rgb(0, 0, 0.25);
+}
+.ivegan-project .ivegan-title {
   max-width: 300px;
+  width: 100%;
   height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 44px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.ivegan-project .start2impact {
+  display: flex;
+  padding: 0px 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.ivegan-project .start2impact p {
+  color: white;
+  text-align: center;
+  padding: 0px 8px;
+}
+.ivegan-project .start2impact img {
+  width: 160px;
+  height: auto;
+  padding: 0px 8px;
+}
+.ivegan-project a {
+  color: white;
+  font-size: 12px;
+  padding-bottom: 24px;
 }
 
+@media (max-width: 26rem) {
+  .ivegan-project {
+    background-image: url(/assets/img/veg-background2.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media (min-width: 48rem) {
+  .ivegan-project {
+    margin: 0px 80px;
+  }
+  .ivegan-project img.title {
+    padding-top: 52px;
+  }
+  .back-btn {
+    top: 0px;
+    left: 40px;
+  }
+}
 body {
   background: white;
   font-family: "avenir", sans-serif;
@@ -642,7 +748,7 @@ header {
 main {
   height: 100%;
   width: 100%;
-  padding-top: 200px;
+  padding-top: 180px;
 }
 main .social-.icons {
   position: fixed;

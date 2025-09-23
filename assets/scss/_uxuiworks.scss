@@ -1,24 +1,157 @@
-.alluxuiworks{
+.alluxuiworks {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    margin: 16px;
+    gap: 40px;
 }
 
-.uxui-title{
+.title {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0px 16px;
+}
+
+.uxui-title {
     display: flex;
     justify-content: center;
 
-    & h1{
+    & h1 {
         padding: 0px 12px;
     }
 }
 
-.ivegan-project{
+.back-btn {
+    display: flex;
+    position: absolute;
+    top: -44px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+
+    .back-icon {
+        position: relative;
+        display: block;
+        top: -4px;
+        width: 13px;
+        height: 2px;
+        background-color: $text-color;
+        transform: rotate(-45deg);
+        // @include transition-ease;
+        // z-index: 7;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 13px;
+            height: 2px;
+            background-color: $text-color;
+            transform: rotate(90deg);
+            // @include transition-ease;
+
+        }
+    }
+
+    .back-label {
+        font-size: 14px;
+    }
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.ivegan-project {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
 
-    & img.title{
+    background-image: url(/assets/img/veg-background2.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0.25);
+    }
+
+
+    & .ivegan-title {
         max-width: 300px;
+        width: 100%;
         height: auto;
+        object-fit: contain;
+        padding-top: 44px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    & .start2impact {
+        display: flex;
+        padding: 0px 24px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        & p {
+            color: $primary-color;
+            text-align: center;
+            padding: 0px 8px;
+        }
+
+        & img {
+            width: 160px;
+            height: auto;
+            padding: 0px 8px;
+        }
+    }
+
+    & a {
+        color: $primary-color;
+        font-size: 12px;
+        padding-bottom: 24px;
+    }
+}
+
+
+
+
+// SMALL MOBILE
+@media (max-width: 26rem) {
+    .ivegan-project {
+
+        background-image: url(/assets/img/veg-background2.png);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+// IPAD
+@media (min-width: 48rem) {
+
+    .ivegan-project {
+        margin: 0px 80px;
+    }
+
+    .ivegan-project img.title {
+        padding-top: 52px;
+
+    }
+
+    .back-btn {
+        top: 0px;
+        left: 40px;
     }
 }
