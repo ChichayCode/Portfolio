@@ -563,6 +563,12 @@ header ul a:hover {
     max-width: none;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .alluxuiworks {
   display: flex;
   justify-content: center;
@@ -589,42 +595,7 @@ header ul a:hover {
   padding: 0px 12px;
 }
 
-.back-btn {
-  display: flex;
-  position: absolute;
-  top: -44px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-}
-.back-btn .back-icon {
-  position: relative;
-  display: block;
-  top: -4px;
-  width: 13px;
-  height: 2px;
-  background-color: #000000;
-  transform: rotate(-45deg);
-}
-.back-btn .back-icon::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 13px;
-  height: 2px;
-  background-color: #000000;
-  transform: rotate(90deg);
-}
-.back-btn .back-label {
-  font-size: 14px;
-}
-.back-btn:hover {
-  color: #A92900;
-}
-
-.ivegan-project {
+.ivegan-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -636,10 +607,10 @@ header ul a:hover {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.ivegan-project:hover {
+.ivegan-box:hover {
   box-shadow: 0px 0px 10px rgb(0, 0, 0.25);
 }
-.ivegan-project .ivegan-title {
+.ivegan-box .ivegan-title {
   max-width: 300px;
   width: 100%;
   height: auto;
@@ -649,31 +620,31 @@ header ul a:hover {
   padding-right: 20px;
   padding-left: 20px;
 }
-.ivegan-project .start2impact {
+.ivegan-box .uxui-start2impact {
   display: flex;
   padding: 0px 24px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.ivegan-project .start2impact p {
+.ivegan-box .uxui-start2impact p {
   color: white;
   text-align: center;
   padding: 0px 8px;
 }
-.ivegan-project .start2impact img {
+.ivegan-box .uxui-start2impact img {
   width: 160px;
   height: auto;
   padding: 0px 8px;
 }
-.ivegan-project a {
+.ivegan-box a {
   color: white;
   font-size: 12px;
   padding-bottom: 24px;
 }
 
 @media (max-width: 26rem) {
-  .ivegan-project {
+  .ivegan-box {
     background-image: url(/assets/img/veg-background2.png);
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -681,15 +652,145 @@ header ul a:hover {
   }
 }
 @media (min-width: 48rem) {
-  .ivegan-project {
+  .ivegan-box {
     margin: 0px 80px;
   }
-  .ivegan-project img.title {
+  .ivegan-box img.title {
     padding-top: 52px;
   }
   .back-btn {
     top: 0px;
     left: 40px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ivegan-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 16px;
+}
+.ivegan-page .h2-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+.ivegan-page p {
+  margin: 0px 16px;
+}
+
+.ivegan-heading {
+  display: flex;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ivegan-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+}
+.ivegan-project .ivegan-h1 {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.ivegan-project img.ivegan-start2impact {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding: 0px 8px;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.ivegan-introduction,
+.ivegan-client {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.client-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.h2-line h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  color: rgb(58, 125, 60);
+}
+
+.h2-line .ivegan-line {
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(58, 125, 60);
+}
+
+.client-part1,
+.client-part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.client-part1 img,
+.client-part2 img {
+  padding: 0px 16px;
+  max-width: 600px;
+}
+.client-part1 a,
+.client-part2 a {
+  padding: 0px 16px;
+}
+
+@media (min-width: 48rem) {
+  .ivegan-page {
+    margin: 0px 40px;
+  }
+  .client-text {
+    flex-direction: row;
+    width: 100%;
+  }
+  .client-text .client-part1 {
+    width: 100%;
+    max-width: 50%;
+    padding-right: 8px;
+  }
+  .client-text .client-part2 {
+    width: 100%;
+    padding-left: 8px;
+  }
+  .client-text .client-part2 a {
+    margin: 0px 16px;
+  }
+}
+@media (min-width: 90rem) {
+  .ivegan-page {
+    margin: 0px 80px;
+    max-width: 1280px;
   }
 }
 body {
@@ -702,6 +803,10 @@ body {
 }
 
 p.medium {
+  font-weight: 500;
+}
+
+span.medium {
   font-weight: 500;
 }
 
@@ -760,6 +865,41 @@ main .social-.icons a {
   transition: all 0.3s ease-out;
 }
 main .social-.icons a:hover {
+  color: #A92900;
+}
+
+.back-btn {
+  display: flex;
+  position: absolute;
+  top: -44px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.back-btn .back-icon {
+  position: relative;
+  display: block;
+  top: -4px;
+  width: 13px;
+  height: 2px;
+  background-color: #000000;
+  transform: rotate(-45deg);
+}
+.back-btn .back-icon::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 13px;
+  height: 2px;
+  background-color: #000000;
+  transform: rotate(90deg);
+}
+.back-btn .back-label {
+  font-size: 14px;
+}
+.back-btn:hover {
   color: #A92900;
 }
 

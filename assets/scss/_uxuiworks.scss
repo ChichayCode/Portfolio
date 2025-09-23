@@ -1,3 +1,5 @@
+@import 'variables';
+
 .alluxuiworks {
     display: flex;
     justify-content: center;
@@ -25,51 +27,9 @@
     }
 }
 
-.back-btn {
-    display: flex;
-    position: absolute;
-    top: -44px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
 
 
-    .back-icon {
-        position: relative;
-        display: block;
-        top: -4px;
-        width: 13px;
-        height: 2px;
-        background-color: $text-color;
-        transform: rotate(-45deg);
-        // @include transition-ease;
-        // z-index: 7;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 6px;
-            right: 6px;
-            width: 13px;
-            height: 2px;
-            background-color: $text-color;
-            transform: rotate(90deg);
-            // @include transition-ease;
-
-        }
-    }
-
-    .back-label {
-        font-size: 14px;
-    }
-
-    &:hover {
-        color: $secondary-color;
-    }
-}
-
-.ivegan-project {
+.ivegan-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +57,7 @@
         padding-left: 20px;
     }
 
-    & .start2impact {
+    & .uxui-start2impact {
         display: flex;
         padding: 0px 24px;
         flex-wrap: wrap;
@@ -129,7 +89,7 @@
 
 // SMALL MOBILE
 @media (max-width: 26rem) {
-    .ivegan-project {
+    .ivegan-box {
 
         background-image: url(/assets/img/veg-background2.png);
         background-size: auto 100%;
@@ -141,11 +101,11 @@
 // IPAD
 @media (min-width: 48rem) {
 
-    .ivegan-project {
+    .ivegan-box {
         margin: 0px 80px;
     }
 
-    .ivegan-project img.title {
+    .ivegan-box img.title {
         padding-top: 52px;
 
     }

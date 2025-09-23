@@ -4,6 +4,7 @@
 @import 'about';
 @import 'myworks';
 @import 'uxuiworks';
+@import 'ivegan';
 
 body {
     background: $primary-color;
@@ -20,6 +21,10 @@ body {
 // }
 
 p.medium {
+    font-weight: 500;
+}
+
+span.medium{
     font-weight: 500;
 }
 
@@ -84,6 +89,48 @@ main {
                 color: $secondary-color;
             }
         }
+    }
+}
+
+
+.back-btn {
+    display: flex;
+    position: absolute;
+    top: -44px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+
+    .back-icon {
+        position: relative;
+        display: block;
+        top: -4px;
+        width: 13px;
+        height: 2px;
+        background-color: $text-color;
+        transform: rotate(-45deg);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 13px;
+            height: 2px;
+            background-color: $text-color;
+            transform: rotate(90deg);
+
+        }
+    }
+
+    .back-label {
+        font-size: 14px;
+    }
+
+    &:hover {
+        color: $secondary-color;
     }
 }
 
