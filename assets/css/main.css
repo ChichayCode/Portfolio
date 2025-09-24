@@ -179,6 +179,7 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding-top: 60px;
 }
 .about .about-title {
   display: flex;
@@ -494,6 +495,7 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   margin: 16px;
+  padding-top: 44px;
   gap: 24px;
   align-items: center;
   justify-content: center;
@@ -575,6 +577,7 @@ header ul a:hover {
   align-items: center;
   flex-direction: column;
   margin: 16px;
+  padding-top: 60px;
   gap: 40px;
 }
 
@@ -673,6 +676,7 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding-top: 60px;
   max-width: 1280px;
   margin: 16px;
 }
@@ -683,6 +687,7 @@ header ul a:hover {
   justify-content: center;
   width: 100%;
   gap: 16px;
+  padding-left: 16px;
 }
 .ivegan-page p {
   margin: 0px 16px;
@@ -767,8 +772,10 @@ header ul a:hover {
 }
 
 @media (min-width: 48rem) {
-  .ivegan-page {
-    margin: 0px 40px;
+  .ivegan-introduction,
+  .ivegan-client,
+  .ivegan-details {
+    margin: 16px 24px;
   }
   .client-text {
     flex-direction: row;
@@ -787,12 +794,122 @@ header ul a:hover {
     margin: 0px 16px;
   }
 }
+.ivegan-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(58, 125, 60);
+}
+.ivegan-details h2 {
+  color: white;
+  padding: 12px;
+}
+.ivegan-details:hover {
+  border: 4px solid rgb(58, 125, 60);
+  box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
+}
+
 @media (min-width: 90rem) {
-  .ivegan-page {
-    margin: 0px 80px;
-    max-width: 1280px;
+  .ivegan-introduction,
+  .ivegan-client,
+  .ivegan-details {
+    margin: 16px 64px;
   }
 }
+.ivegan-analisis-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.analisis-heading {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: rgb(58, 125, 60);
+  width: 100%;
+  height: 100px;
+}
+.analisis-heading h1 {
+  color: white;
+  margin-left: 28px;
+  padding: 12px;
+}
+
+.analisis-introduction {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 36px;
+  gap: 20px;
+}
+.analisis-introduction .introduction-steps {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 20px;
+}
+.analisis-introduction .introduction-steps img {
+  width: 20px;
+  height: 20px;
+}
+.analisis-introduction .introduction-steps .step-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.analisis-introduction .introduction-steps ul {
+  padding-left: 16px;
+}
+
+.analisis-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.analisis-section .h2-section {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+  padding: 12px 0px;
+  margin-left: 36px;
+}
+.analisis-section .h2-section h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+.analisis-section .h2-section .ivegan-line {
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+.analisis-section .h2-section .bg-section {
+  position: absolute;
+  background-color: rgba(77, 175, 80, 0.12);
+  height: 54px;
+  width: 300px;
+  top: 2px;
+  left: -16px;
+}
+
+.analisis-section .details-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 36px;
+  gap: 20px;
+}
+.analisis-section .details-section ul {
+  padding-left: 36px;
+}
+
 body {
   background: white;
   font-family: "avenir", sans-serif;
@@ -853,7 +970,7 @@ header {
 main {
   height: 100%;
   width: 100%;
-  padding-top: 180px;
+  padding-top: 121px;
 }
 main .social-.icons {
   position: fixed;
@@ -871,7 +988,7 @@ main .social-.icons a:hover {
 .back-btn {
   display: flex;
   position: absolute;
-  top: -44px;
+  top: -40px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -900,6 +1017,44 @@ main .social-.icons a:hover {
   font-size: 14px;
 }
 .back-btn:hover {
+  color: #A92900;
+}
+
+.back-btn-project {
+  display: flex;
+  position: absolute;
+  top: 142px;
+  left: 0px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin: 0 16px;
+}
+.back-btn-project .back-icon {
+  position: relative;
+  display: block;
+  top: -4px;
+  width: 13px;
+  height: 2px;
+  background-color: white;
+  transform: rotate(-45deg);
+}
+.back-btn-project .back-icon::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 13px;
+  height: 2px;
+  background-color: white;
+  transform: rotate(90deg);
+}
+.back-btn-project .back-label {
+  font-size: 12px;
+  color: white;
+}
+.back-btn-project:hover {
   color: #A92900;
 }
 
