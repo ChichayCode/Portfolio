@@ -1247,8 +1247,14 @@ footer {
   color: #000000;
 }
 
+@media (min-width: 48rem) {
+  header {
+    padding: 0px 40px;
+  }
+}
 @media (min-width: 56rem) {
-  .text-about, .text-name h1 {
+  .text-about,
+  .text-name h1 {
     font-size: 28px;
   }
 }/*# sourceMappingURL=main.css.map */

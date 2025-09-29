@@ -24,7 +24,7 @@ p.medium {
     font-weight: 500;
 }
 
-span.medium{
+span.medium {
     font-weight: 500;
 }
 
@@ -32,7 +32,7 @@ h1 {
     font-size: 24px;
 }
 
-h2{
+h2 {
     font-size: 20px;
 }
 
@@ -65,7 +65,7 @@ header {
     justify-content: space-between;
     padding: 0px 16px;
     height: 120px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 
 }
 
@@ -196,9 +196,20 @@ footer {
 
 //SCREEN//
 
+// IPAD
+@media (min-width: 48rem) {
+    
+    header {
+        padding: 0px 40px;
+    }
+
+}
+
 // DESKTOP
 @media (min-width: 56rem) {
-    .text-about, .text-name h1{
+
+    .text-about,
+    .text-name h1 {
         font-size: 28px;
     }
 }
