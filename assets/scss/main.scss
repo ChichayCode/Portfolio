@@ -57,7 +57,7 @@ a {
 
 header {
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
     background: $primary-color;
     display: flex;
@@ -97,6 +97,7 @@ main {
 .back-btn {
     display: flex;
     position: absolute;
+    // z-index: 5;
     top: -40px;
     flex-direction: row;
     align-items: center;
