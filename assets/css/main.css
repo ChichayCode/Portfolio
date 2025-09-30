@@ -579,8 +579,7 @@ header ul a:hover {
   padding-top: 60px;
   gap: 40px;
 }
-
-.title {
+.alluxuiworks .title {
   width: 100%;
   display: flex;
   position: relative;
@@ -588,13 +587,15 @@ header ul a:hover {
   gap: 24px;
   margin: 0px 16px;
 }
+.alluxuiworks h1 {
+  padding: 0px 12px;
+  letter-spacing: 8px;
+  text-align: center;
+}
 
 .uxui-title {
   display: flex;
   justify-content: center;
-}
-.uxui-title h1 {
-  padding: 0px 12px;
 }
 
 .ivegan-box {
@@ -602,10 +603,11 @@ header ul a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
   max-width: 1000px;
+  min-width: 300px;
   background-image: url(/assets/img/img-ivegan/veg-background2.png);
-  background-size: 100% auto;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -618,31 +620,20 @@ header ul a:hover {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
-  padding-top: 44px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-top: 32px;
+  padding-right: 28px;
+  padding-left: 28px;
 }
-.ivegan-box .uxui-start2impact {
-  display: flex;
-  padding: 0px 24px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.ivegan-box .uxui-start2impact p {
-  color: white;
-  text-align: center;
-  padding: 0px 8px;
-}
-.ivegan-box .uxui-start2impact img {
-  width: 160px;
+.ivegan-box img.work-start2impact {
+  width: 120px;
   height: auto;
   padding: 0px 8px;
 }
 .ivegan-box a {
   color: white;
   font-size: 12px;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
+  padding-top: 12px;
 }
 
 @media (max-width: 26rem) {
@@ -1097,6 +1088,92 @@ header ul a:hover {
   }
   .linked-img-pdf:hover .img-hover {
     opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.allsuppwork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 16px;
+  padding-top: 60px;
+  gap: 40px;
+}
+.allsuppwork .title {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0px 16px;
+}
+.allsuppwork h1 {
+  letter-spacing: 8px;
+  text-align: center;
+}
+.allsuppwork .supp-box1, .allsuppwork .supp-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  min-width: 300px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0.25);
+  transition: all 0.3s ease-out;
+}
+.allsuppwork .supp-box1:hover, .allsuppwork .supp-box2:hover {
+  transform: scale(1.04);
+}
+.allsuppwork .supp-box1 h4, .allsuppwork .supp-box2 h4 {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 32px;
+  padding-right: 28px;
+  padding-left: 28px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.allsuppwork .supp-box1 img.orizonlogo, .allsuppwork .supp-box2 img.orizonlogo {
+  width: 180px;
+  height: auto;
+  padding: 12px;
+}
+.allsuppwork .supp-box1 img.work-start2impact, .allsuppwork .supp-box2 img.work-start2impact {
+  width: 100px;
+  height: auto;
+  padding: 0px 8px;
+}
+.allsuppwork .supp-box1 p, .allsuppwork .supp-box2 p {
+  font-size: 12px;
+  padding-bottom: 20px;
+  padding-top: 12px;
+}
+.allsuppwork .supp-box1 {
+  background: linear-gradient(to right, rgba(78, 134, 38, 0.4), rgba(244, 225, 115, 0.4));
+}
+.allsuppwork .supp-box1 h4 {
+  color: #000000;
+}
+.allsuppwork .supp-box1 p {
+  color: rgb(78, 134, 38);
+}
+.allsuppwork .supp-box2 {
+  background-color: white;
+}
+
+@media (min-width: 48rem) {
+  .supp-box1,
+  .supp-box2 {
+    width: 400px;
   }
 }
 body {

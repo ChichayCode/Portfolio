@@ -8,24 +8,30 @@
     margin: 16px;
     padding-top: 60px;
     gap: 40px;
+
+    & .title {
+        width: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 24px;
+        margin: 0px 16px;
+    }
+
+    & h1 {
+        padding: 0px 12px;
+        letter-spacing: 8px;
+        text-align: center;
+    }
 }
 
-.title {
-    width: 100%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    gap: 24px;
-    margin: 0px 16px;
-}
+
 
 .uxui-title {
     display: flex;
     justify-content: center;
 
-    & h1 {
-        padding: 0px 12px;
-    }
+
 }
 
 
@@ -35,11 +41,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
     max-width: 1000px;
+    min-width: 300px;
 
     background-image: url(/assets/img/img-ivegan/veg-background2.png);
-    background-size: 100% auto;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -53,35 +60,22 @@
         width: 100%;
         height: auto;
         object-fit: contain;
-        padding-top: 44px;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-top: 32px;
+        padding-right: 28px;
+        padding-left: 28px;
     }
 
-    & .uxui-start2impact {
-        display: flex;
-        padding: 0px 24px;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-
-        & p {
-            color: $primary-color;
-            text-align: center;
-            padding: 0px 8px;
-        }
-
-        & img {
-            width: 160px;
-            height: auto;
-            padding: 0px 8px;
-        }
+    & img.work-start2impact {
+        width: 120px;
+        height: auto;
+        padding: 0px 8px;
     }
 
     & a {
         color: $primary-color;
         font-size: 12px;
-        padding-bottom: 24px;
+        padding-bottom: 20px;
+        padding-top: 12px;
     }
 }
 
