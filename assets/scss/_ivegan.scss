@@ -57,14 +57,30 @@
         padding-left: 20px;
     }
 
-    img.ivegan-start2impact {
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        padding: 0px 8px;
-        padding-right: 28px;
-        padding-left: 28px;
+    .ivegan-start2impact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:4px;
 
+        & p{
+            color: $ivegan-color;
+            padding-top: 0px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            padding: 0px 8px;
+            padding-right: 28px;
+            padding-left: 28px;
+
+        }
+    }
+
+    & p{
+        padding-top: 32px;
     }
 }
 
@@ -245,8 +261,8 @@
     flex-direction: column;
     gap: 32px;
     height: auto;
-        flex: 1;
-        min-width: 0;
+    flex: 1;
+    min-width: 0;
 
     p {
         margin-left: 40px;
@@ -295,7 +311,7 @@
     }
 }
 
-.analis-section-bis{
+.analis-section-bis {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -507,17 +523,17 @@
         margin: 0px 120px;
     }
 
-    .analis-section-bis{
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    margin: 0px 50px;
-        
-        & .analisis-section{
+    .analis-section-bis {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        margin: 0px 50px;
+
+        & .analisis-section {
             margin: 0px 30px;
         }
 
-        & ul{
+        & ul {
             margin-left: 20px;
         }
     }

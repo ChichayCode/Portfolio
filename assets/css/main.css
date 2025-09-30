@@ -709,13 +709,26 @@ header ul a:hover {
   padding-right: 20px;
   padding-left: 20px;
 }
-.ivegan-project img.ivegan-start2impact {
+.ivegan-project .ivegan-start2impact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.ivegan-project .ivegan-start2impact p {
+  color: rgb(58, 125, 60);
+  padding-top: 0px;
+}
+.ivegan-project .ivegan-start2impact img {
   width: 100%;
   max-width: 200px;
   height: auto;
   padding: 0px 8px;
   padding-right: 28px;
   padding-left: 28px;
+}
+.ivegan-project p {
+  padding-top: 32px;
 }
 
 .ivegan-introduction,
