@@ -73,10 +73,16 @@
         }
     }
 
+    .supp-boxex {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
     & .supp-box1 {
         background: linear-gradient(to right, rgba(78, 134, 38, 0.4), rgba(244, 225, 115, 0.4));
 
-        & h4{
+        & h4 {
             color: $text-color;
         }
 
@@ -99,8 +105,253 @@
 
 // IPAD
 @media (min-width: 48rem) {
+
+    .allsuppwork .supp-boxex {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        margin: 0px 40px;
+    }
+}
+
+@media (min-width: 90rem) {
+
     .supp-box1,
     .supp-box2 {
         width: 400px;
+    }
+
+    .allsuppwork .supp-boxex {
+        gap: 44px;
+        margin: 0px 80px;
+    }
+
+}
+
+
+
+
+
+// ORIZON PROJECT (GRAFICA) //
+
+.orizon-page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 60px;
+    max-width: 1280px;
+    margin: 16px;
+    // justify-content: center;
+    align-items: flex-start;
+
+    .h2-line {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 16px;
+        padding-left: 16px;
+
+        h2 {
+            letter-spacing: 6px;
+        }
+    }
+
+    p {
+        margin: 0px 16px;
+    }
+
+}
+
+.orizon-heading {
+    display: flex;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+
+
+.orizon-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+
+    .orizon-h1 {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        // padding-top: 44px;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+        letter-spacing: 6px;
+    }
+
+    .orizon-start2impact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        & p {
+            color: $ivegan-color;
+            padding-top: 0px;
+            margin: 0px 0px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 160px;
+            height: auto;
+            padding: 0px 8px;
+
+        }
+    }
+
+    & p {
+        padding-top: 32px;
+    }
+}
+
+.orizon-introduction p{
+    padding-top: 12px;
+}
+
+.orizon-introduction,
+.orizon-client {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    & .client-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        & h3{
+            padding-top: 20px;
+            margin-left: 16px;
+        }
+
+        & p{
+            margin-left: 28px;
+        }
+
+    }
+
+    & ul{
+        padding-left: 32px;
+
+        li{
+            padding: 0px 4px;
+        }
+    }
+}
+
+
+
+.h2-line h2 {
+    width: fit-content;
+    white-space: nowrap;
+    color: $ivegan-color;
+
+}
+
+.h2-line .ivegan-line {
+    // position: absolute;
+    // display: block;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: $ivegan-color;
+}
+
+
+
+// IPAD
+@media (min-width: 48rem) {
+
+    .orizon-introduction,
+    .orizon-client,
+    .orizon-details {
+        margin: 16px 24px;
+
+        .client-text{
+            margin: 0px 16px;
+        }
+
+        & p{
+            margin: 0px 32px;
+        }
+
+        & ul{
+            padding-left: 48px;
+            padding-right: 32px;
+        }
+    }
+
+    .orizon-page .orizon-project {
+        margin: 0px 40px;
+
+        & .orizon-start2impact {
+            flex-direction: row;
+        }
+    }
+
+    .orizon-page a{
+        margin-left: 48px;
+    }
+}
+
+
+@media (min-width: 56rem) {
+    .orizon-page{
+        margin: 16px 40px;
+    }
+
+    .orizon-client .client-text{
+        margin: 0px 24px;
+    }
+
+    .orizon-introduction{
+        & p{
+            margin: 0px 44px;
+        }
+
+        & ul{
+            padding-left: 80px;
+        }
+    }
+
+    .orizon-page a{
+        margin-left: 80px;
+    }
+}
+
+
+// BIG DESKTOP
+@media (min-width: 90rem) {
+    // .ivegan-page{
+    //     margin: 0px 80px;
+    //     max-width: 1280px;
+    // }
+
+    .orizon-introduction,
+    .orizon-client,
+    .orizon-details {
+        margin: 16px 64px;
+    }
+
+    .orizon-page a{
+        margin-left: 100px;
     }
 }

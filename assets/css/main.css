@@ -718,14 +718,13 @@ header ul a:hover {
 .ivegan-project .ivegan-start2impact p {
   color: rgb(58, 125, 60);
   padding-top: 0px;
+  margin: 0px 0px;
 }
 .ivegan-project .ivegan-start2impact img {
   width: 100%;
-  max-width: 200px;
+  max-width: 160px;
   height: auto;
   padding: 0px 8px;
-  padding-right: 28px;
-  padding-left: 28px;
 }
 .ivegan-project p {
   padding-top: 32px;
@@ -780,20 +779,26 @@ header ul a:hover {
   .ivegan-details {
     margin: 16px 24px;
   }
-  .client-text {
+  .ivegan-page .ivegan-project {
+    margin: 0px 40px;
+  }
+  .ivegan-page .ivegan-project .ivegan-start2impact {
+    flex-direction: row;
+  }
+  .ivegan-client .client-text {
     flex-direction: row;
     width: 100%;
   }
-  .client-text .client-part1 {
+  .ivegan-client .client-text .client-part1 {
     width: 100%;
     max-width: 50%;
     padding-right: 8px;
   }
-  .client-text .client-part2 {
+  .ivegan-client .client-text .client-part2 {
     width: 100%;
     padding-left: 8px;
   }
-  .client-text .client-part2 a {
+  .ivegan-client .client-text .client-part2 a {
     margin: 0px 16px;
   }
 }
@@ -812,6 +817,11 @@ header ul a:hover {
   box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
 }
 
+@media (min-width: 56rem) {
+  .ivegan-page {
+    margin: 16px 40px;
+  }
+}
 @media (min-width: 90rem) {
   .ivegan-introduction,
   .ivegan-client,
@@ -1170,6 +1180,11 @@ header ul a:hover {
   padding-bottom: 20px;
   padding-top: 12px;
 }
+.allsuppwork .supp-boxex {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 .allsuppwork .supp-box1 {
   background: linear-gradient(to right, rgba(78, 134, 38, 0.4), rgba(244, 225, 115, 0.4));
 }
@@ -1184,9 +1199,202 @@ header ul a:hover {
 }
 
 @media (min-width: 48rem) {
+  .allsuppwork .supp-boxex {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin: 0px 40px;
+  }
+}
+@media (min-width: 90rem) {
   .supp-box1,
   .supp-box2 {
     width: 400px;
+  }
+  .allsuppwork .supp-boxex {
+    gap: 44px;
+    margin: 0px 80px;
+  }
+}
+.orizon-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 60px;
+  max-width: 1280px;
+  margin: 16px;
+  align-items: flex-start;
+}
+.orizon-page .h2-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+  padding-left: 16px;
+}
+.orizon-page .h2-line h2 {
+  letter-spacing: 6px;
+}
+.orizon-page p {
+  margin: 0px 16px;
+}
+
+.orizon-heading {
+  display: flex;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.orizon-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+}
+.orizon-project .orizon-h1 {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+.orizon-project .orizon-start2impact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.orizon-project .orizon-start2impact p {
+  color: rgb(58, 125, 60);
+  padding-top: 0px;
+  margin: 0px 0px;
+}
+.orizon-project .orizon-start2impact img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  padding: 0px 8px;
+}
+.orizon-project p {
+  padding-top: 32px;
+}
+
+.orizon-introduction p {
+  padding-top: 12px;
+}
+
+.orizon-introduction,
+.orizon-client {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.orizon-introduction .client-text,
+.orizon-client .client-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.orizon-introduction .client-text h3,
+.orizon-client .client-text h3 {
+  padding-top: 20px;
+  margin-left: 16px;
+}
+.orizon-introduction .client-text p,
+.orizon-client .client-text p {
+  margin-left: 28px;
+}
+.orizon-introduction ul,
+.orizon-client ul {
+  padding-left: 32px;
+}
+.orizon-introduction ul li,
+.orizon-client ul li {
+  padding: 0px 4px;
+}
+
+.h2-line h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  color: rgb(58, 125, 60);
+}
+
+.h2-line .ivegan-line {
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(58, 125, 60);
+}
+
+@media (min-width: 48rem) {
+  .orizon-introduction,
+  .orizon-client,
+  .orizon-details {
+    margin: 16px 24px;
+  }
+  .orizon-introduction .client-text,
+  .orizon-client .client-text,
+  .orizon-details .client-text {
+    margin: 0px 16px;
+  }
+  .orizon-introduction p,
+  .orizon-client p,
+  .orizon-details p {
+    margin: 0px 32px;
+  }
+  .orizon-introduction ul,
+  .orizon-client ul,
+  .orizon-details ul {
+    padding-left: 48px;
+    padding-right: 32px;
+  }
+  .orizon-page .orizon-project {
+    margin: 0px 40px;
+  }
+  .orizon-page .orizon-project .orizon-start2impact {
+    flex-direction: row;
+  }
+  .orizon-page a {
+    margin-left: 48px;
+  }
+}
+@media (min-width: 56rem) {
+  .orizon-page {
+    margin: 16px 40px;
+  }
+  .orizon-client .client-text {
+    margin: 0px 24px;
+  }
+  .orizon-introduction p {
+    margin: 0px 44px;
+  }
+  .orizon-introduction ul {
+    padding-left: 80px;
+  }
+  .orizon-page a {
+    margin-left: 80px;
+  }
+}
+@media (min-width: 90rem) {
+  .orizon-introduction,
+  .orizon-client,
+  .orizon-details {
+    margin: 16px 64px;
+  }
+  .orizon-page a {
+    margin-left: 100px;
   }
 }
 body {
