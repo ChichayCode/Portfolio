@@ -132,7 +132,7 @@
 
 
 
-// ORIZON PROJECT (GRAFICA) //
+// ORIZON PROJECT (GRAFICA) //////////////////////////////////////
 
 .orizon-page {
     display: flex;
@@ -166,7 +166,7 @@
             top: 50%;
             width: 100%;
             height: 2px;
-            background-color: $ivegan-color;
+            background-color: rgb(2, 124, 132);
         }
     }
 
@@ -242,6 +242,11 @@
     padding-top: 12px;
 }
 
+.orizon-page a {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
 .orizon-introduction,
 .orizon-client {
     display: flex;
@@ -271,6 +276,8 @@
             padding: 0px 4px;
         }
     }
+
+    
 }
 
 
@@ -310,7 +317,7 @@
     }
 
     .orizon-page a {
-        margin-left: 48px;
+        margin-left: 60px;
     }
 }
 
@@ -357,3 +364,7 @@
         margin-left: 100px;
     }
 }
+
+
+
+// LOOKBOOK PROJECT (COPYWRITING) //////////////////////////////////////
