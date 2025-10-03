@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Chelsea Culing</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logoname">
+            <img src="/assets/img/logo1.png" alt="">
+            <span>CHELSEA CULING</span>
+
+        </div>
+
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+
+        <label class="menu-icon" for="menu-btn">
+            <ul class="menu-nav">
+                <li class="menu-nav__item">
+                    <a href="index.html" class="menu-nav__link">HOME</a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="/about" class="menu-nav__link">ABOUT</a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="/myworks" class="menu-nav__link">MY WORK</a>
+                </li>
+                <li class="menu-nav__item">
+                    <a href="/contacts" class="menu-nav__link">CONTACTS</a>
+                </li>
+            </ul>
+            <span class="nav-icon"></span>
+
+        </label>
+
+    </header>
+
+    <main>
+        <section class="contact-page">
+            <div class="content">
+                <img src="/assets/img/chelsea-img-3.JPG" alt="">
+                <h1>CONTACT</h1>
+            </div>
+
+            <h3>Scrivimi un messaggio compilando il form</h3>
+
+            <form action="dati.php" method="post">
+                <ul>
+                    <li class="one">
+                        <label for="nome">Nome</label>
+                        <input class="text" type="text" name="nome" id="nome" required>
+                    </li>
+                    <li class="two">
+                        <label for="email">Email</label>
+                        <input class="text" type="text" name="email" id="email" required>
+                    </li>
+                    <li class="three">
+                        <label for="testo">Messaggio</label>
+                        <textarea name="testo" id="testo"></textarea>
+                    </li>
+                    <li class="four">
+                        <input class="btn" type="submit" value="Invia">
+                    </li>
+                </ul>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- &copy; Copyright 2025 -->
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+@import 'variables';
+
+.contact-page{
+    background-color: $secondary-color;
+    color: $primary-color;
+    width: 100vw;
+}
+
+.content{
+    height: 100vh;
+    padding: 72px 20px;
+    width: 100%;
+    margin: 0px 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & img{
+        width: 100vw;
+        max-width: 6000px;
+        height: fit-content;
+        box-sizing: border-box;
+        
+    }
+}
+
+.contact-page{
+    
+    & ul{
+        list-style: none;
+        width: 100%;
+    }
+    
+}
+
+
+// DESKTOP
+@media (min-width: 56rem) {
+    
+
+}

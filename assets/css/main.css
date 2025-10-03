@@ -67,7 +67,7 @@ header ul a:hover {
 }
 
 .header .menu-nav {
-  background-color: #A92900;
+  background-color: rgb(160, 50, 0);
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -155,7 +155,7 @@ header ul a:hover {
     padding: 0 8px;
   }
   .header .menu-icon .menu-nav__link:hover {
-    color: #A92900;
+    color: rgb(160, 50, 0);
     font-size: 18px;
   }
   .header .menu-icon .nav-icon,
@@ -267,9 +267,10 @@ header ul a:hover {
   gap: 72px;
 }
 .about .curriculum h2 {
-  color: #A92900;
+  color: rgb(160, 50, 0);
   font-weight: 500;
   text-align: center;
+  font-family: "cuprum", sans-serif;
 }
 .about .curriculum .cv-section {
   display: flex;
@@ -285,7 +286,7 @@ header ul a:hover {
   gap: 28px;
   padding: 24px 0px;
   margin: 0px 16px;
-  background-color: #A92900;
+  background-color: rgb(160, 50, 0);
 }
 .about .curriculum .cv-section .section-headline .headline-label {
   display: flex;
@@ -318,7 +319,7 @@ header ul a:hover {
   position: relative;
 }
 .cv-section .each-job .job-details .h4-jobs {
-  color: #A92900;
+  color: rgb(160, 50, 0);
   font-weight: 800;
 }
 .cv-section .each-job .job-details .address {
@@ -350,7 +351,7 @@ header ul a:hover {
   margin: 16px;
 }
 .cv-section .skills .hard-skills .skill-label {
-  color: #A92900;
+  color: rgb(160, 50, 0);
   font-weight: 500;
   padding-left: 16px;
 }
@@ -1404,6 +1405,41 @@ header ul a:hover {
     margin-left: 100px;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-page {
+  background-color: rgb(160, 50, 0);
+  color: white;
+  width: 100vw;
+}
+
+.content {
+  height: 100vh;
+  padding: 72px 20px;
+  width: 100%;
+  margin: 0px 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content img {
+  width: 100vw;
+  max-width: 6000px;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.contact-page ul {
+  list-style: none;
+  width: 100%;
+}
+
 body {
   background: white;
   font-family: "avenir", sans-serif;
@@ -1476,7 +1512,7 @@ main .social-.icons a {
   transition: all 0.3s ease-out;
 }
 main .social-.icons a:hover {
-  color: #A92900;
+  color: rgb(160, 50, 0);
 }
 
 .back-btn {
@@ -1511,7 +1547,7 @@ main .social-.icons a:hover {
   font-size: 14px;
 }
 .back-btn:hover {
-  color: #A92900;
+  color: rgb(160, 50, 0);
 }
 
 .back-btn-project {
@@ -1549,7 +1585,7 @@ main .social-.icons a:hover {
   color: white;
 }
 .back-btn-project:hover {
-  color: #A92900;
+  color: rgb(160, 50, 0);
 }
 
 footer {
