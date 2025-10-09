@@ -270,7 +270,7 @@ header ul a:hover {
   color: rgb(160, 50, 0);
   font-weight: 500;
   text-align: center;
-  font-family: "cuprum", sans-serif;
+  font-family: "";
 }
 .about .curriculum .cv-section {
   display: flex;
@@ -1444,6 +1444,10 @@ h1 {
   position: absolute;
   top: 200px;
   left: 40px;
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
 }
 
 .contact-page h3 {
