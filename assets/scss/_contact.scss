@@ -1,42 +1,110 @@
 @import 'variables';
 
-.contact-page{
+.contact-page {
     background-color: $secondary-color;
     color: $primary-color;
-    width: 100vw;
-}
-
-.content{
-    height: 100vh;
-    padding: 72px 20px;
-    width: 100%;
-    margin: 0px 16px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
+}
 
-    & img{
-        width: 100vw;
-        max-width: 6000px;
-        height: fit-content;
-        box-sizing: border-box;
-        
+.contact-img {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 50%;
+
+
+
+    .img-mobile,
+    .img-desktop {
+        width: auto;
+        // position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        height: auto;
+    }
+
+    .img-desktop{
+        display: none;
+    }
+
+    & img {
+        // width: 100%;
+        // max-width: 600px;
+        // height: fit-content;
+        height: auto;
+        width: 100%;
     }
 }
 
-.contact-page{
-    
-    & ul{
+h1 {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+}
+
+.contact-page {
+
+    & h3 {
+        margin: 0px 8px;
+        padding-top: 28px;
+    }
+
+    & form {
+        margin: 0px 36px;
+    }
+
+    & ul {
         list-style: none;
         width: 100%;
     }
-    
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-end;
+    gap: 16px;
+    padding-bottom: 90px;
+    // width: 100%;
+
+
+    .contact-form-input {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: space-between;
+        width: 100%;
+
+        & label {
+            padding-left: 8px;
+        }
+
+        & input,
+        & textarea {
+            width: 100%;
+            background-color: $secondary-color;
+            // outline: none;
+            border: 1px solid $primary-color;
+            border-radius: 4px;
+            height: 24px;
+
+        }
+
+
+    }
+
+    & .contact-submit-btn {
+        padding: 8px 20px;
+        margin-top: 8px;
+        width: fit-content;
+    }
 }
 
 
 // DESKTOP
-@media (min-width: 56rem) {
-    
-
-}
+@media (min-width: 56rem) {}
