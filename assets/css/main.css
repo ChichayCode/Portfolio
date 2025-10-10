@@ -176,150 +176,134 @@ header ul a:hover {
 
 .about {
   display: flex;
+  position: relative;
   flex-direction: column;
-  gap: 40px;
-  padding-top: 60px;
+  align-items: start;
 }
 .about .about-title {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: rgb(240, 230, 205);
+  height: 160px;
 }
-.about .about-title h1 {
-  text-align: center;
-  padding: 0px 12px;
-}
-.about .about-title .text-about {
-  width: 100vw;
-}
-.about .about-title .text-name {
-  display: flex;
-  height: -moz-fit-content;
-  height: fit-content;
-  justify-content: center;
+.about .about-title .h1-about {
+  position: absolute;
+  color: rgb(134, 42, 0);
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+  top: 129px;
+  left: calc(50% - 40px);
+  transform: translateX(-50%);
 }
 
 .about .introduction {
   display: flex;
+  position: relative;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 0;
+  background-color: rgb(134, 42, 0);
+  color: white;
+  width: 100%;
+  gap: 16px;
+  padding: 0px 32px;
+  padding-top: 52px;
+  padding-bottom: 52px;
 }
-.about .introduction .paragraph {
-  display: block;
+.about .introduction .h1-about-me {
+  position: absolute;
+  top: -31px;
+  left: calc(50% + 60px);
+  transform: translateX(-50%);
+  color: rgb(134, 42, 0);
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.about .introduction .main-introduc {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-.about .introduction .main-introduc .main-pic {
+.about .introduction .main-pic {
   width: 250px;
   height: 250px;
+  margin: 12px 0px;
 }
-.about .introduction .main-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-.about .introduction .medium-name {
-  font-size: 20px;
-  font-weight: 500;
-}
-.about .introduction .paragraph {
-  font-weight: 200;
-  text-align: center;
-  margin: 0px 32px;
+.about .introduction p {
   max-width: 520px;
-}
-.about .introduction .paragraph .medium {
-  font-weight: 500;
-}
-.about .introduction .pictures {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 12px;
-  width: 100vw;
-  max-width: 890px;
-  height: -moz-fit-content;
-  height: fit-content;
-  box-sizing: border-box;
-  overflow: auto;
-  padding-top: 28px;
-  padding-bottom: 8px;
-}
-.about .introduction .pictures .pic {
-  height: auto;
-  width: calc((100% - 48px) / 3);
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .about .curriculum {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 24px;
+  width: 100%;
+  background-color: rgba(240, 230, 205, 0.5);
+  margin-top: 120px;
+  padding-top: 16px;
 }
-.about .curriculum h2 {
-  color: rgb(134, 42, 0);
+
+.cv-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0px 16px;
+  padding-top: 40px;
+}
+.cv-section .h1-cv {
+  color: rgb(234.1153846154, 220.1923076923, 185.3846153846);
+  letter-spacing: 16px;
   font-weight: 500;
   text-align: center;
-  font-family: "";
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.about .curriculum .cv-section {
+.cv-section .section-headline {
   display: flex;
-  flex-direction: column;
-  gap: 28px;
-  margin: 0;
-}
-.about .curriculum .cv-section .section-headline {
-  display: flex;
+  position: relative;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 28px;
-  padding: 24px 0px;
-  margin: 0px 16px;
+  gap: 16px;
+}
+.cv-section .section-headline .h3-inline {
+  color: rgb(134, 42, 0);
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.cv-section .section-headline img {
+  width: 24px;
+  height: 24px;
+}
+.cv-section .section-headline span {
+  height: 1.5px;
   background-color: rgb(134, 42, 0);
-}
-.about .curriculum .cv-section .section-headline .headline-label {
-  display: flex;
-  flex-direction: column;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-left: 20px;
-  gap: 4px;
-  color: white;
-}
-.about .curriculum .cv-section .section-headline .headline-label img {
-  width: 28px;
-  height: 28px;
+  position: absolute;
+  width: calc(100% - 36px);
+  top: 19px;
+  right: 0px;
 }
 
 .cv-section .each-job {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-left: 40px;
+  gap: 4px;
+  padding-left: 24px;
 }
 .cv-section .each-job .date {
   font-size: 14px;
   font-weight: 100;
+  list-style: none;
 }
 .cv-section .each-job .job-details {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 4px;
-  position: relative;
+  padding-left: 16px;
 }
-.cv-section .each-job .job-details .h4-jobs {
-  color: rgb(134, 42, 0);
+.cv-section .each-job .job-details .h5-cv {
+  color: rgb(100, 78, 18);
   font-weight: 800;
 }
 .cv-section .each-job .job-details .address {
@@ -329,26 +313,25 @@ header ul a:hover {
   width: 18px;
   height: 18px;
   position: absolute;
-  top: 49px;
-  left: 0;
+  top: 44px;
+  left: 16px;
 }
 
 .cv-section .skills {
-  padding: 0 16px;
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 40px;
 }
-.cv-section .skills h3 {
+.cv-section .skills h5 {
   color: #000000;
-  background-color: rgba(169, 41, 0, 0.2);
+  background-color: rgb(240, 230, 205);
   padding: 12px 16px;
 }
 .cv-section .skills .hard-skills {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin: 16px;
+  gap: 24px;
+  margin: 0px 16px;
 }
 .cv-section .skills .hard-skills .skill-label {
   color: rgb(134, 42, 0);
@@ -359,25 +342,31 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding-bottom: 12px;
 }
 .cv-section .skills .hard-skills .each-skill ul {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  padding-left: 32px;
-  gap: 8px;
+  padding-left: 20px;
+  gap: 4px;
 }
 .cv-section .skills .hard-skills .each-skill ul .language {
   font-size: 14px;
+  list-style-type: none;
 }
 .cv-section .skills .hard-skills .each-skill ul .text {
   list-style-type: none;
+  padding-left: 16px;
+}
+.cv-section .skills .hard-skills .each-skill ul li {
+  list-style: none;
 }
 .cv-section .skills .soft-skills {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  margin: 16px;
+  gap: 24px;
+  margin: 0px 16px;
 }
 .cv-section .skills .soft-skills ul {
   display: flex;
@@ -387,42 +376,56 @@ header ul a:hover {
 }
 
 @media (min-width: 56rem) {
-  .introduction {
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-  }
-  .introduction.paragraph {
-    max-width: 820px;
-  }
-  .introduction .pictures {
-    gap: 20px;
-  }
-  .about .introduction .main-introduc {
-    display: flex;
-    flex-direction: row;
+  .about .about-title {
+    position: absolute;
+    z-index: 3;
+    height: 180px;
+    width: 600px;
+    right: 0;
+    justify-content: center;
     align-items: center;
-    max-width: 860px;
   }
-  .about .introduction .main-introduc .main-pic {
-    width: 320px;
-    height: 320px;
+  .about .about-title .h1-about {
+    position: absolute;
+    top: 64px;
+    left: 40px;
+    transform: none;
   }
-  .about .introduction .main-introduc .main-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
+  .about .introduction {
+    align-items: flex-end;
+    padding-top: 200px;
+    margin-top: 40px;
   }
-  .about .introduction .main-introduc .main-text .paragraph {
+  .about .introduction .main-pic {
+    position: absolute;
+    top: 200px;
+    left: 116px;
+  }
+  .about .introduction .h1-about-me {
+    color: rgb(240, 230, 205);
+    top: 80px;
+    right: -160px;
+  }
+  .about .introduction p {
     text-align: left;
+    width: 520px;
+    padding-right: 88px;
   }
-  .curriculum {
-    flex-direction: row;
-    margin: 40px;
+  .about .curriculum {
+    margin-top: 180px;
   }
-  .cv-section .section-headline .headline-label .h3-inline {
-    width: 244px;
+  .about .curriculum .h1-cv {
+    top: -73px;
+    letter-spacing: 24px;
+  }
+  .cv-section .section-headline img {
+    display: none;
+  }
+  .cv-section .section-headline .h3-inline {
+    padding-left: 324px;
+  }
+  .cv-section .section-headline span {
+    top: 27px;
   }
   .cv-section .each-job {
     padding-left: 80px;
@@ -433,38 +436,17 @@ header ul a:hover {
   }
   .cv-section .skills .hard-skills {
     width: 100%;
-    margin: 16px;
   }
   .cv-section .skills .soft-skills {
     width: 100%;
   }
 }
-@media (max-width: 20rem) {
-  .about-title .text-name {
-    flex-direction: column;
-  }
-}
 @media (min-width: 48rem) {
-  .about {
-    margin: 40px;
-  }
-  .introduction .main-pic {
-    width: 350px;
-    height: 350px;
-  }
   .introduction .paragraph {
     max-width: 520px;
   }
-  .introduction .pictures {
-    width: 948px;
-    height: auto;
-  }
-  .introduction .pictures .pic {
-    height: auto;
-    width: 300px;
-  }
   .cv-section {
-    margin: 40px;
+    margin: 0px 40px;
   }
   .cv-section .section-headline .headline-label h3 {
     width: 208px;
@@ -482,7 +464,6 @@ header ul a:hover {
   }
   .cv-section .each-job ul .date {
     justify-content: right;
-    list-style-type: none;
   }
 }
 * {
@@ -1635,11 +1616,24 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 h3 {
+  font-size: 20px;
+}
+@media (min-width: 56rem) {
+  h3 {
+    font-size: 28px;
+  }
+}
+
+h4 {
   font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
 }
 
 p,

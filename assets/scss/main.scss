@@ -40,11 +40,22 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 h3 {
+    font-size: 20px;
+
+    @media (min-width: 56rem) {
+    font-size: 28px;}
+}
+
+h4{
     font-size: 18px;
+}
+
+h5{
+    font-size: 16px;
 }
 
 p,
