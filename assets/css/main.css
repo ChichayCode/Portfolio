@@ -237,6 +237,8 @@ header ul a:hover {
   background-color: rgba(240, 230, 205, 0.5);
   margin-top: 120px;
   padding-top: 16px;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .cv-section {
@@ -270,16 +272,19 @@ header ul a:hover {
   font-family: "GFS Didot", serif;
   font-weight: 400;
   font-style: normal;
+  padding-left: 8px;
 }
 .cv-section .section-headline img {
-  width: 24px;
-  height: 24px;
+  position: absolute;
+  width: 60px;
+  height: auto;
+  right: -32px;
 }
 .cv-section .section-headline span {
+  position: absolute;
   height: 1.5px;
   background-color: rgb(134, 42, 0);
-  position: absolute;
-  width: calc(100% - 36px);
+  width: 100%;
   top: 19px;
   right: 0px;
 }
@@ -297,6 +302,7 @@ header ul a:hover {
 }
 .cv-section .each-job .job-details {
   display: flex;
+  flex: 1;
   position: relative;
   flex-direction: column;
   gap: 4px;
@@ -418,17 +424,24 @@ header ul a:hover {
     top: -73px;
     letter-spacing: 24px;
   }
+  .curriculum .section-headline .h3-inline {
+    padding-left: 340px;
+  }
   .cv-section .section-headline img {
     display: none;
   }
   .cv-section .section-headline .h3-inline {
-    padding-left: 324px;
+    padding-left: 340px;
   }
   .cv-section .section-headline span {
     top: 27px;
   }
   .cv-section .each-job {
-    padding-left: 80px;
+    padding-left: 0px;
+    max-width: 800px;
+  }
+  .cv-section .each-job ul {
+    margin-left: 98px;
   }
   .cv-section .skills {
     flex-direction: row;
@@ -441,16 +454,16 @@ header ul a:hover {
     width: 100%;
   }
 }
-@media (min-width: 48rem) {
-  .introduction .paragraph {
-    max-width: 520px;
+@media (min-width: 38rem) {
+  .about .introduction {
+    padding-left: 52px;
+    padding-right: 52px;
   }
   .cv-section {
     margin: 0px 40px;
   }
-  .cv-section .section-headline .headline-label h3 {
-    width: 208px;
-    text-align: right;
+  .cv-section .section-headlineimg {
+    display: none;
   }
   .cv-section .each-job {
     display: flex;
@@ -1592,7 +1605,6 @@ body {
   background: white;
   font-family: "avenir", sans-serif;
   color: #000000;
-  font-weight: 400;
   height: 100vh;
   line-height: 1;
   width: 100%;
