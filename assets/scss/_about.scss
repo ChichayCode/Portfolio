@@ -9,7 +9,9 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    overflow-x: clip;
+    overflow-y: visible;
 
     & .about-title {
         display: flex;
@@ -30,23 +32,28 @@
     }
 }
 
+.introduction-bg {
+    width: 100%;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // overflow-y: hidden;
+}
+
 
 .about .introduction {
     display: flex;
     position: relative;
     flex-direction: column;
-    background-color: $secondary-color;
     color: $primary-color;
     width: 100%;
     gap: 16px;
-    padding: 0px 32px;
-    padding-top: 52px;
-    padding-bottom: 52px;
-
 
     & .h1-about-me {
         position: absolute;
-        top: -31px;
+        top: 129px;
         left: calc(50% + 60px);
         transform: translateX(-50%);
         // padding: 0px 12px;
@@ -54,22 +61,25 @@
         @include font-Didot;
     }
 
-    // & .main-introduc {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     gap: 24px;
-
     & .main-pic {
-        width: 250px;
-        height: 250px;
+        max-width: 250px;
+        height: auto;
         margin: 12px 0px;
+
+    }
+
+    .introduction-text {
+        padding: 0px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 32px;
+        padding-bottom: 48px
     }
 
 
     p {
-        max-width: 520px;
+        max-width: 500px;
 
         // & .medium {
         //     font-weight: 500;
@@ -264,22 +274,91 @@
 
 
 
+
+// IPAD (VERTICAL)
+@media (min-width: 48rem) {
+
+    .about .introduction-bg .introduction-text {
+
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+
+    .introduction-bg .introduction .h1-about {
+        top: 114px;
+        left: calc(50% - 70px);
+        ;
+    }
+
+    .introduction-bg .introduction .h1-about-me {
+        top: 114px;
+        left: calc(50% + 80px);
+    }
+
+
+    .cv-section {
+        margin: 0px 40px;
+
+        & .section-headline {
+            // justify-content: center;
+
+            & .h3-inline{
+                padding-left: 270px;
+            }
+
+            & img {
+
+                // transform: scale(1.2);
+                // right: -20px;
+                display: none;
+            }
+
+        }
+    }
+
+    .about .h1-cv{
+        top: -60px;
+    }
+
+
+
+    .cv-section .each-job {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+
+        & ul {
+            display: flex;
+            width: 200px;
+            justify-content: flex-end;
+
+            & .date {
+                justify-content: right;
+
+            }
+        }
+    }
+}
+
+
+
 // DESKTOP
 @media (min-width: 56rem) {
 
     .about .about-title {
         position: absolute;
-        z-index: 3;
+        // z-index: 3;
         height: 180px;
-        width: 600px;
-        right: 0;
+        width: 100vw;
+        left: 320px;
+        top: 0;
         justify-content: center;
         align-items: center;
 
         .h1-about {
             position: absolute;
             top: 64px;
-            left: 40px;
+            left: 52px;
             transform: none;
 
         }
@@ -288,25 +367,31 @@
 
     .about .introduction {
         align-items: flex-end;
-        padding-top: 200px;
-        margin-top: 40px;
+        padding-top: 220px;
+        max-width: 900px;
 
         & .main-pic {
             position: absolute;
-            top: 200px;
-            left: 116px;
+            top: 250px;
+            left: -4px;
         }
 
         & .h1-about-me {
             color: $tertiary-color;
-            top: 80px;
-            right: -160px;
+            top: 116px;
+            left: 200px;
         }
 
         p {
             text-align: left;
             width: 520px;
-            padding-right: 88px;
+            // padding-right: 88px;
+        }
+
+        .introduction-text {
+            padding-bottom: 80px;
+            padding-top: 40px;
+            padding-right: 24px;
         }
     }
 
@@ -318,14 +403,6 @@
             top: -73px;
             letter-spacing: 24px;
         }
-    }
-
-    .curriculum .section-headline {
-
-        & .h3-inline {
-            padding-left: 340px;
-        }
-
     }
 
 
@@ -368,55 +445,5 @@
             }
         }
 
-    }
-}
-
-
-// IPAD (VERTICAL)
-@media (min-width: 38rem) {
-
-
-    // .introduction .main-pic {
-    //     width: 350px;
-    //     height: 350px;
-    // }
-
-    .about .introduction {
-        padding-left: 52px;
-        padding-right: 52px;
-    }
-
-    .cv-section {
-        margin: 0px 40px;
-
-        & .section-headline {
-
-            &img {
-
-                // transform: scale(1.2);
-                // right: -20px;
-                display: none;
-            }
-
-        }
-    }
-
-
-
-    .cv-section .each-job {
-        display: flex;
-        flex-direction: row;
-        gap: 32px;
-
-        & ul {
-            display: flex;
-            width: 200px;
-            justify-content: flex-end;
-
-            & .date {
-                justify-content: right;
-
-            }
-        }
     }
 }
