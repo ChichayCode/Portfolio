@@ -45,13 +45,13 @@
 
 h1.h1-mobile-contactme {
     position: absolute;
-    bottom: -12px;
+    bottom: -13px;
     left: 40px;
     color: $secondary-color;
     @include font-Didot;
 }
 
-.h1-desktop-contact{
+.h1-desktop-contact {
     display: none;
     @include font-Didot;
     color: $secondary-color;
@@ -161,6 +161,10 @@ form {
     h1.contact-h1-me {
         left: 232px;
     }
+
+    h1.h1-mobile-contactme {
+        bottom: -16px;
+    }
 }
 
 
@@ -170,7 +174,7 @@ form {
 
     .contact-img {
         height: 200px;
-        padding: 0px auto ;
+        padding: 0px auto;
     }
 
     .contact-form .img-desktop {
@@ -184,25 +188,25 @@ form {
         top: 78px;
         left: -426px;
 
-        & img{
+        & img {
             width: 130px;
             height: auto;
             object-fit: contain;
         }
 
-        & .contact-main-img{
+        & .contact-main-img {
             width: 120px;
             height: auto;
             object-fit: contain;
         }
     }
 
-    .contact-img .img-mobile{
+    .contact-img .img-mobile {
         display: none;
     }
-    
 
-    
+
+
 
     .contact-form {
         display: flex;
@@ -216,17 +220,17 @@ form {
         }
     }
 
-    .h1-mobile-contactme{
+    .h1-mobile-contactme {
         display: none;
     }
 
     .h1-desktop-contact {
         display: block;
         position: absolute;
-        top: -133px;
+        top: -134px;
         left: -180px;
     }
-    
+
     .h1-desktop-me {
         display: block;
         position: absolute;

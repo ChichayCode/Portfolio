@@ -1477,7 +1477,7 @@ header ul a:hover {
 
 h1.h1-mobile-contactme {
   position: absolute;
-  bottom: -12px;
+  bottom: -13px;
   left: 40px;
   color: rgb(134, 42, 0);
   font-family: "GFS Didot", serif;
@@ -1576,6 +1576,9 @@ form .contact-submit-btn:hover {
   h1.contact-h1-me {
     left: 232px;
   }
+  h1.h1-mobile-contactme {
+    bottom: -16px;
+  }
 }
 @media (min-width: 56rem) {
   .contact-img {
@@ -1624,7 +1627,7 @@ form .contact-submit-btn:hover {
   .h1-desktop-contact {
     display: block;
     position: absolute;
-    top: -133px;
+    top: -134px;
     left: -180px;
   }
   .h1-desktop-me {
