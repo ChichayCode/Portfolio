@@ -52,6 +52,10 @@ h1 {
 // WORKS //
 h2 {
     font-size: 28px;
+
+    @media (min-width: 56rem) {
+        font-size: 32px;
+    }
 }
 
 
@@ -60,7 +64,7 @@ h3 {
     font-size: 20px;
 
     @media (min-width: 56rem) {
-        font-size: 28px;
+        font-size: 24px;
     }
 }
 

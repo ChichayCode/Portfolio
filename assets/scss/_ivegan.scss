@@ -3,40 +3,71 @@
 .ivegan-page {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 36px;
     padding-top: 60px;
     max-width: 1280px;
-    margin: 16px;
     // justify-content: center;
     // align-items: center;
+    background-color: $ivegan-bg;
 
-    .h2-line {
+    .h3-ivegan {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        gap: 16px;
-        padding-left: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: $ivegan-h3;
+        width: 300px;
+        gap: 8px;
+        // padding-left: 16px;
+        padding: 16px 24px;
+
+        & h3 {
+            color: $primary-color;
+
+            width: fit-content;
+            white-space: nowrap;
+            letter-spacing: 4px;
+        }
+
+        & span {
+            color: $primary-color;
+        }
     }
+}
+
+.ivegan-start2impact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 
     & p {
-        margin: 0px 16px;
+        color: $ivegan-color;
     }
 
+    & img {
+        width: 100%;
+        max-width: 160px;
+        height: auto;
+        padding: 0px 8px;
+
+
+    }
 }
 
 .ivegan-heading {
     display: flex;
-
-    width: 100%;
-    display: flex;
     position: relative;
     flex-direction: column;
     gap: 24px;
+    margin: 16px;
+
+    & p {
+        margin: 0px 16px;
+        max-width: 500px;
+        text-align: center;
+    }
 }
-
-
 
 
 .ivegan-project {
@@ -45,7 +76,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 12px;
+    gap: 16px;
 
     .ivegan-h1 {
         max-width: 400px;
@@ -57,31 +88,7 @@
         padding-left: 20px;
     }
 
-    .ivegan-start2impact {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap:4px;
 
-        & p{
-            color: $ivegan-color;
-            padding-top: 0px;
-            margin: 0px 0px;
-        }
-
-        & img {
-            width: 100%;
-            max-width: 160px;
-            height: auto;
-            padding: 0px 8px;
-
-
-        }
-    }
-
-    & p{
-        padding-top: 32px;
-    }
 }
 
 
@@ -90,23 +97,22 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    & p {
+        margin: 0px 32px;
+    }
+
 }
 
 .client-text {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
 }
 
-.h2-line h2 {
-    width: fit-content;
-    white-space: nowrap;
-    color: $ivegan-color;
-    letter-spacing: 6px;
 
-}
 
-.h2-line .ivegan-line {
+.h3-ivegan .ivegan-line {
     // position: absolute;
     // display: block;
     top: 50%;
@@ -122,12 +128,12 @@
     gap: 20px;
 
     & img {
-        padding: 0px 16px;
+        padding: 0px 32px;
         max-width: 600px;
     }
 
     & a {
-        padding: 0px 16px;
+        padding: 0px 32px;
     }
 }
 
@@ -138,12 +144,20 @@
 
     .ivegan-introduction,
     .ivegan-client,
-    .ivegan-details {
-        margin: 16px 24px;
+    a.h3-ivegan {
+        margin: 8px 40px;
+    }
+
+    .ivegan-page a.h3-ivegan {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ivegan-page .h3-ivegan {
+        width: 500px;
     }
 
     .ivegan-page .ivegan-project {
-        margin: 0px 40px;
 
         & .ivegan-start2impact {
             flex-direction: row;
@@ -157,59 +171,48 @@
         & .client-part1 {
             width: 100%;
             max-width: 50%;
-            padding-right: 8px;
-
         }
 
         & .client-part2 {
             width: 100%;
-            padding-left: 8px;
-
-            a {
-                margin: 0px 16px;
-            }
-
         }
     }
 }
 
-.ivegan-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $ivegan-color;
+// .ivegan-details {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: $ivegan-color;
 
-    h2 {
-        color: $primary-color;
-        padding: 12px;
-        letter-spacing: 4px;
-    }
+//     h2 {
+//         color: $primary-color;
+//         padding: 12px;
+//         letter-spacing: 4px;
+//     }
 
-    &:hover {
-        border: 4px solid $ivegan-color;
-        box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
-    }
-}
+//     &:hover {
+//         border: 4px solid $ivegan-color;
+//         box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
+//     }
+// }
 
 @media (min-width: 56rem) {
-    .ivegan-page{
-        margin: 16px 40px;
+    .ivegan-page .h3-ivegan {
+        width: 700px;
     }
-}
-
-// BIG DESKTOP
-@media (min-width: 90rem) {
-    // .ivegan-page{
-    //     margin: 0px 80px;
-    //     max-width: 1280px;
-    // }
 
     .ivegan-introduction,
     .ivegan-client,
-    .ivegan-details {
-        margin: 16px 64px;
+    a.h3-ivegan {
+        margin: 12px 80px;
     }
+
 }
+
+
+
+
 
 
 ////////////////////////////////////
@@ -219,6 +222,7 @@
     display: flex;
     flex-direction: column;
     gap: 52px;
+    width: 100%;
 }
 
 .analisis-heading {
@@ -228,18 +232,18 @@
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    background-color: $ivegan-color;
+    background-color: $ivegan-h3;
     width: 100%;
     // height: 120px;
     height: auto;
 
-    h1 {
+    h2 {
         color: $primary-color;
         margin-left: 28px;
-        padding-top: 60px;
+        padding-top: 72px;
         padding-bottom: 16px;
         padding-left: 16px;
-        letter-spacing: 8px;
+        letter-spacing: 6px;
     }
 }
 
@@ -248,6 +252,10 @@
     flex-direction: column;
     margin: 0px 36px;
     gap: 20px;
+
+    & ul{
+        padding-left: 20px ;
+    }
 
     .introduction-steps {
         display: flex;
@@ -270,6 +278,10 @@
             padding-left: 16px;
         }
 
+        & h4{
+            color: $ivegan-h3;
+        }
+
     }
 }
 
@@ -280,13 +292,16 @@
     height: auto;
     flex: 1;
     min-width: 0;
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
 
     p {
-        margin-left: 40px;
+        padding: 0px 40px;
     }
 
     ul {
-        margin-left: 48px;
+        padding: 0px 40px;
 
         li {
             margin-left: 16px;
@@ -295,7 +310,7 @@
     }
 }
 
-.h2-section {
+.h3-analisis {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -306,7 +321,7 @@
     padding: 12px 0px;
     margin-left: 36px;
 
-    & h2 {
+    & h3 {
         width: fit-content;
         white-space: nowrap;
         letter-spacing: 2px;
@@ -322,29 +337,19 @@
         position: absolute;
         background-color: rgba(77, 175, 80, .12);
         height: 54px;
-        width: 300px;
+        width: 370px;
         top: 2px;
         left: -16px;
     }
 }
-
-.analis-section-bis {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
 
 .analisis-section .details-section,
 .analisis-section .details-section-x {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-left: 40px;
-
-    p {
-        margin-left: 0px;
-    }
+    // margin-left: 40px;
+    // padding: 0px 40px;
 
     .row-details-section,
     .moredetails-section {
@@ -354,9 +359,11 @@
         flex: 1;
         min-width: 0;
         gap: 16px;
+        padding: 0px 40px;
 
-        p {
+        & p {
             max-width: 100%;
+            padding: 0px;
         }
 
         .sitemap-img {
@@ -372,6 +379,10 @@
             gap: 4px;
             margin: 0px 12px;
         }
+
+        & .linked-img-pdf{
+            margin: 0px;
+        }
     }
 
 }
@@ -383,10 +394,11 @@
     display: flex;
     text-decoration: none;
     color: $primary-color;
-    width: 100%;
     max-width: 600px;
     height: auto;
     box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
+    margin:  0px 40px;
+
 
 
     img {
@@ -413,15 +425,21 @@
         font-weight: bold;
         font-size: 12px;
         line-height: 1.2;
+        
     }
 }
 
+.analis-section-bis{
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+}
 
 // IPAD
 @media (min-width: 48rem) {
 
     .analisis-heading {
-        h1 {
+        h2 {
             margin-left: 52px;
         }
 
@@ -437,32 +455,28 @@
     }
 
     .analisis-section {
-        margin: 0px 60px;
+        padding: 0px 60px;
 
-        & .h2-section {
+        & .h3-analisis {
             width: auto;
             margin-right: 0px;
             margin-left: 0px;
 
         }
 
-        p {
-            margin-right: 20px;
-            margin-left: 20px;
-        }
-
         ul {
-            margin-left: 32px;
+            margin-left: 48px;
             margin-right: 20px;
+            padding: 0px;
         }
+        
     }
 
 
     .analisis-section .details-section {
 
         flex-direction: row;
-        margin-right: 40px;
-        gap: 28px;
+        gap: 0px;
 
         p {
             width: 100%;
@@ -471,11 +485,7 @@
 
         .moredetails-section {
             justify-content: flex-start;
-
-
         }
-
-
     }
 
     .analisis-section .details-section-x {
@@ -484,10 +494,18 @@
         align-items: flex-start;
         margin-right: 20px;
         margin-left: 20px;
-        gap: 28px;
+        gap: 32px;
 
-        p {
+        & .linked-img-pdf{
+            flex: 1;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        & p {
             width: 100%;
+            flex: 1;
+            padding: 0px;
         }
     }
 
@@ -502,37 +520,29 @@
 @media (min-width: 56rem) {
 
     // .analisis-heading {
-    // display: flex;
-    // // position: fixed;
-    // // z-index: 3;
-    // justify-content: flex-end;
-    // align-items: flex-start;
-    // flex-direction: column;
-    // background-color: $ivegan-color;
-    // width: 100%;
-    // height: 120px;
+    //     align-items: center;
+    //     justify-content: flex-end;
+    //     height: 80px;
 
-    // h1 {
-    //     color: $primary-color;
-    //     margin-left: 28px;
-    //     padding: 16px;
+    //     h1 {
+    //         margin-left: 0px;
+    //         padding-top: 16px;
+    //         padding-left: 0px;
+    //         padding-bottom: 20px;
+    //     }
+
+    //     .back-btn-project {
+    //         margin: 0px 60px;
+    //     }
     // }
 
-
-    .analisis-heading {
+    .analisis-heading{
         align-items: center;
-        justify-content: flex-end;
-        height: 80px;
 
-        h1 {
-            margin-left: 0px;
-            padding-top: 16px;
+        & h2{
+            padding-bottom: 24px;
             padding-left: 0px;
-            padding-bottom: 20px;
-        }
-
-        .back-btn-project {
-            margin: 0px 60px;
+            margin-left: 0px;
         }
     }
 
@@ -540,30 +550,33 @@
         margin: 0px 120px;
     }
 
+    .analisis-section{
+        padding: 0px 80px;
+    }
+
     .analis-section-bis {
         display: flex;
         flex-direction: row;
         gap: 0px;
-        margin: 0px 50px;
+        padding: 0px 44px;
 
         & .analisis-section {
-            margin: 0px 30px;
-        }
+            padding: 0px 36px;
 
-        & ul {
-            margin-left: 20px;
+            & ul {
+                margin: 0px;
+            }
         }
     }
 
-    .analisis-section {
-        margin: 0px 80px;
+
+
+    .ivegan-analisis-page .analisis-section .details-section{
+        gap: 0px;
     }
 
-    .ivegan-analisis-page .analisis-section .details-section,
     .ivegan-analisis-page .analisis-section .details-section-x {
-        margin-left: 48px;
-        margin-right: 48px;
-        gap: 36px;
+        gap: 52px;
     }
 
     .linked-img-pdf .img-hover {

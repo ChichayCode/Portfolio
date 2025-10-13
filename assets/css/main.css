@@ -697,31 +697,59 @@ header ul a:hover {
 .ivegan-page {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 36px;
   padding-top: 60px;
   max-width: 1280px;
-  margin: 16px;
+  background-color: rgba(232, 242, 232, 0.7);
 }
-.ivegan-page .h2-line {
+.ivegan-page .h3-ivegan {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 16px;
-  padding-left: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: rgb(7, 53, 8);
+  width: 300px;
+  gap: 8px;
+  padding: 16px 24px;
 }
-.ivegan-page p {
-  margin: 0px 16px;
+.ivegan-page .h3-ivegan h3 {
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  letter-spacing: 4px;
+}
+.ivegan-page .h3-ivegan span {
+  color: white;
+}
+
+.ivegan-start2impact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.ivegan-start2impact p {
+  color: rgb(58, 125, 60);
+}
+.ivegan-start2impact img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  padding: 0px 8px;
 }
 
 .ivegan-heading {
   display: flex;
-  width: 100%;
-  display: flex;
   position: relative;
   flex-direction: column;
   gap: 24px;
+  margin: 16px;
+}
+.ivegan-heading p {
+  margin: 0px 16px;
+  max-width: 500px;
+  text-align: center;
 }
 
 .ivegan-project {
@@ -730,7 +758,7 @@ header ul a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 12px;
+  gap: 16px;
 }
 .ivegan-project .ivegan-h1 {
   max-width: 400px;
@@ -741,26 +769,6 @@ header ul a:hover {
   padding-right: 20px;
   padding-left: 20px;
 }
-.ivegan-project .ivegan-start2impact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-.ivegan-project .ivegan-start2impact p {
-  color: rgb(58, 125, 60);
-  padding-top: 0px;
-  margin: 0px 0px;
-}
-.ivegan-project .ivegan-start2impact img {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-  padding: 0px 8px;
-}
-.ivegan-project p {
-  padding-top: 32px;
-}
 
 .ivegan-introduction,
 .ivegan-client {
@@ -768,22 +776,18 @@ header ul a:hover {
   flex-direction: column;
   gap: 20px;
 }
+.ivegan-introduction p,
+.ivegan-client p {
+  margin: 0px 32px;
+}
 
 .client-text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0px;
 }
 
-.h2-line h2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  white-space: nowrap;
-  color: rgb(58, 125, 60);
-  letter-spacing: 6px;
-}
-
-.h2-line .ivegan-line {
+.h3-ivegan .ivegan-line {
   top: 50%;
   width: 100%;
   height: 2px;
@@ -798,22 +802,26 @@ header ul a:hover {
 }
 .client-part1 img,
 .client-part2 img {
-  padding: 0px 16px;
+  padding: 0px 32px;
   max-width: 600px;
 }
 .client-part1 a,
 .client-part2 a {
-  padding: 0px 16px;
+  padding: 0px 32px;
 }
 
 @media (min-width: 48rem) {
   .ivegan-introduction,
   .ivegan-client,
-  .ivegan-details {
-    margin: 16px 24px;
+  a.h3-ivegan {
+    margin: 8px 40px;
   }
-  .ivegan-page .ivegan-project {
-    margin: 0px 40px;
+  .ivegan-page a.h3-ivegan {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .ivegan-page .h3-ivegan {
+    width: 500px;
   }
   .ivegan-page .ivegan-project .ivegan-start2impact {
     flex-direction: row;
@@ -825,48 +833,26 @@ header ul a:hover {
   .ivegan-client .client-text .client-part1 {
     width: 100%;
     max-width: 50%;
-    padding-right: 8px;
   }
   .ivegan-client .client-text .client-part2 {
     width: 100%;
-    padding-left: 8px;
-  }
-  .ivegan-client .client-text .client-part2 a {
-    margin: 0px 16px;
   }
 }
-.ivegan-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(58, 125, 60);
-}
-.ivegan-details h2 {
-  color: white;
-  padding: 12px;
-  letter-spacing: 4px;
-}
-.ivegan-details:hover {
-  border: 4px solid rgb(58, 125, 60);
-  box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
-}
-
 @media (min-width: 56rem) {
-  .ivegan-page {
-    margin: 16px 40px;
+  .ivegan-page .h3-ivegan {
+    width: 700px;
   }
-}
-@media (min-width: 90rem) {
   .ivegan-introduction,
   .ivegan-client,
-  .ivegan-details {
-    margin: 16px 64px;
+  a.h3-ivegan {
+    margin: 12px 80px;
   }
 }
 .ivegan-analisis-page {
   display: flex;
   flex-direction: column;
   gap: 52px;
+  width: 100%;
 }
 
 .analisis-heading {
@@ -874,17 +860,17 @@ header ul a:hover {
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
-  background-color: rgb(58, 125, 60);
+  background-color: rgb(7, 53, 8);
   width: 100%;
   height: auto;
 }
-.analisis-heading h1 {
+.analisis-heading h2 {
   color: white;
   margin-left: 28px;
-  padding-top: 60px;
+  padding-top: 72px;
   padding-bottom: 16px;
   padding-left: 16px;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
 }
 
 .analisis-introduction {
@@ -892,6 +878,9 @@ header ul a:hover {
   flex-direction: column;
   margin: 0px 36px;
   gap: 20px;
+}
+.analisis-introduction ul {
+  padding-left: 20px;
 }
 .analisis-introduction .introduction-steps {
   display: flex;
@@ -911,6 +900,9 @@ header ul a:hover {
 .analisis-introduction .introduction-steps ul {
   padding-left: 16px;
 }
+.analisis-introduction .introduction-steps h4 {
+  color: rgb(7, 53, 8);
+}
 
 .analisis-section {
   display: flex;
@@ -919,18 +911,21 @@ header ul a:hover {
   height: auto;
   flex: 1;
   min-width: 0;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
 }
 .analisis-section p {
-  margin-left: 40px;
+  padding: 0px 40px;
 }
 .analisis-section ul {
-  margin-left: 48px;
+  padding: 0px 40px;
 }
 .analisis-section ul li {
   margin-left: 16px;
 }
 
-.h2-section {
+.h3-analisis {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -941,30 +936,24 @@ header ul a:hover {
   padding: 12px 0px;
   margin-left: 36px;
 }
-.h2-section h2 {
+.h3-analisis h3 {
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
   letter-spacing: 2px;
 }
-.h2-section .ivegan-line {
+.h3-analisis .ivegan-line {
   width: 100%;
   height: 2px;
   background-color: #000000;
 }
-.h2-section .bg-section {
+.h3-analisis .bg-section {
   position: absolute;
   background-color: rgba(77, 175, 80, 0.12);
   height: 54px;
-  width: 300px;
+  width: 370px;
   top: 2px;
   left: -16px;
-}
-
-.analis-section-bis {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .analisis-section .details-section,
@@ -972,11 +961,6 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-left: 40px;
-}
-.analisis-section .details-section p,
-.analisis-section .details-section-x p {
-  margin-left: 0px;
 }
 .analisis-section .details-section .row-details-section,
 .analisis-section .details-section .moredetails-section,
@@ -988,12 +972,14 @@ header ul a:hover {
   flex: 1;
   min-width: 0;
   gap: 16px;
+  padding: 0px 40px;
 }
 .analisis-section .details-section .row-details-section p,
 .analisis-section .details-section .moredetails-section p,
 .analisis-section .details-section-x .row-details-section p,
 .analisis-section .details-section-x .moredetails-section p {
   max-width: 100%;
+  padding: 0px;
 }
 .analisis-section .details-section .row-details-section .sitemap-img,
 .analisis-section .details-section .moredetails-section .sitemap-img,
@@ -1013,16 +999,22 @@ header ul a:hover {
   gap: 4px;
   margin: 0px 12px;
 }
+.analisis-section .details-section .row-details-section .linked-img-pdf,
+.analisis-section .details-section .moredetails-section .linked-img-pdf,
+.analisis-section .details-section-x .row-details-section .linked-img-pdf,
+.analisis-section .details-section-x .moredetails-section .linked-img-pdf {
+  margin: 0px;
+}
 
 .linked-img-pdf {
   position: relative;
   display: flex;
   text-decoration: none;
   color: white;
-  width: 100%;
   max-width: 600px;
   height: auto;
   box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
+  margin: 0px 40px;
 }
 .linked-img-pdf img {
   display: block;
@@ -1049,8 +1041,14 @@ header ul a:hover {
   line-height: 1.2;
 }
 
+.analis-section-bis {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
 @media (min-width: 48rem) {
-  .analisis-heading h1 {
+  .analisis-heading h2 {
     margin-left: 52px;
   }
   .analisis-heading .back-btn-project {
@@ -1060,25 +1058,21 @@ header ul a:hover {
     margin: 0px 80px;
   }
   .analisis-section {
-    margin: 0px 60px;
+    padding: 0px 60px;
   }
-  .analisis-section .h2-section {
+  .analisis-section .h3-analisis {
     width: auto;
     margin-right: 0px;
     margin-left: 0px;
   }
-  .analisis-section p {
-    margin-right: 20px;
-    margin-left: 20px;
-  }
   .analisis-section ul {
-    margin-left: 32px;
+    margin-left: 48px;
     margin-right: 20px;
+    padding: 0px;
   }
   .analisis-section .details-section {
     flex-direction: row;
-    margin-right: 40px;
-    gap: 28px;
+    gap: 0px;
   }
   .analisis-section .details-section p {
     width: 100%;
@@ -1092,10 +1086,17 @@ header ul a:hover {
     align-items: flex-start;
     margin-right: 20px;
     margin-left: 20px;
-    gap: 28px;
+    gap: 32px;
+  }
+  .analisis-section .details-section-x .linked-img-pdf {
+    flex: 1;
+    padding: 0px;
+    margin: 0px;
   }
   .analisis-section .details-section-x p {
     width: 100%;
+    flex: 1;
+    padding: 0px;
   }
   .analisis-section .row-details-section {
     display: flex;
@@ -1105,41 +1106,35 @@ header ul a:hover {
 @media (min-width: 56rem) {
   .analisis-heading {
     align-items: center;
-    justify-content: flex-end;
-    height: 80px;
   }
-  .analisis-heading h1 {
-    margin-left: 0px;
-    padding-top: 16px;
+  .analisis-heading h2 {
+    padding-bottom: 24px;
     padding-left: 0px;
-    padding-bottom: 20px;
-  }
-  .analisis-heading .back-btn-project {
-    margin: 0px 60px;
+    margin-left: 0px;
   }
   .analisis-introduction {
     margin: 0px 120px;
+  }
+  .analisis-section {
+    padding: 0px 80px;
   }
   .analis-section-bis {
     display: flex;
     flex-direction: row;
     gap: 0px;
-    margin: 0px 50px;
+    padding: 0px 44px;
   }
   .analis-section-bis .analisis-section {
-    margin: 0px 30px;
+    padding: 0px 36px;
   }
-  .analis-section-bis ul {
-    margin-left: 20px;
+  .analis-section-bis .analisis-section ul {
+    margin: 0px;
   }
-  .analisis-section {
-    margin: 0px 80px;
+  .ivegan-analisis-page .analisis-section .details-section {
+    gap: 0px;
   }
-  .ivegan-analisis-page .analisis-section .details-section,
   .ivegan-analisis-page .analisis-section .details-section-x {
-    margin-left: 48px;
-    margin-right: 48px;
-    gap: 36px;
+    gap: 52px;
   }
   .linked-img-pdf .img-hover {
     opacity: 0;
@@ -1673,13 +1668,18 @@ h1 {
 h2 {
   font-size: 28px;
 }
+@media (min-width: 56rem) {
+  h2 {
+    font-size: 32px;
+  }
+}
 
 h3 {
   font-size: 20px;
 }
 @media (min-width: 56rem) {
   h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
