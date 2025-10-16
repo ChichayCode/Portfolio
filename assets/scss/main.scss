@@ -2,7 +2,7 @@
 @import 'home';
 @import 'menu';
 @import 'about';
-@import 'myworks';
+@import 'mywork';
 @import 'uxuiwork';
 @import 'ivegan';
 @import 'suppwork';
@@ -41,11 +41,11 @@ h1 {
     font-size: 36px;
 
     @media (min-width: 48rem) {
-        font-size: 48px;
+        font-size: 44px;
     }
 
     @media (min-width: 56rem) {
-        font-size: 60px;
+        font-size: 56px;
     }
 }
 

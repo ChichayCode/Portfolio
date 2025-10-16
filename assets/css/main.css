@@ -194,7 +194,7 @@ header ul a:hover {
   display: flex;
   position: relative;
   width: 100%;
-  background-color: rgb(240, 230, 205);
+  background-color: rgb(247, 243, 230);
   height: 160px;
 }
 .about .about-title .h1-about {
@@ -203,9 +203,10 @@ header ul a:hover {
   font-family: "GFS Didot", serif;
   font-weight: 400;
   font-style: normal;
-  top: 129px;
+  top: 125px;
   left: calc(50% - 40px);
   transform: translateX(-50%);
+  letter-spacing: 4px;
 }
 
 .introduction-bg {
@@ -227,13 +228,14 @@ header ul a:hover {
 }
 .about .introduction .h1-about-me {
   position: absolute;
-  top: 129px;
+  top: 125px;
   left: calc(50% + 60px);
   transform: translateX(-50%);
   color: rgb(134, 42, 0);
   font-family: "GFS Didot", serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 4px;
 }
 .about .introduction .main-pic {
   max-width: 250px;
@@ -257,7 +259,7 @@ header ul a:hover {
   flex-direction: column;
   gap: 24px;
   width: 100%;
-  background-color: rgba(240, 230, 205, 0.5);
+  background-color: rgb(247, 243, 230);
   margin-top: 120px;
   padding-top: 16px;
   overflow-x: clip;
@@ -525,23 +527,52 @@ header ul a:hover {
 
 .allmyworks {
   display: flex;
+  position: relative;
   flex-direction: column;
-  margin: 16px;
-  padding-top: 44px;
-  gap: 24px;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-.myworks-title {
+.mywork-title {
   display: flex;
-  flex-direction: row;
+  position: relative;
   justify-content: center;
-  gap: 4px;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background-color: transparent;
 }
-.myworks-title h1 {
+.mywork-title .h1-mywork {
+  color: rgb(134, 42, 0);
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
   padding: 0px 12px;
+  letter-spacing: 4px;
+  margin-top: 100px;
+}
+.mywork-title::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(247, 243, 230);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  z-index: -1;
+}
+.mywork-title::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(134, 42, 0);
+  top: 140px;
+  right: 0;
+  width: 40vw;
+  height: 100%;
+  z-index: -2;
 }
 
 .works {
@@ -559,12 +590,15 @@ header ul a:hover {
   display: flex;
   position: relative;
   margin: 16px;
-  box-shadow: 0px 0px 10px white;
   transition: all 0.3s ease-out;
   max-width: 300px;
 }
 .works .box:hover {
-  box-shadow: 0px 0px 10px rgb(0, 0, 0.25);
+  box-shadow: 0px 0px 8px rgb(0, 0, 0.25);
+  transform: scale(1.05);
+}
+.works .box:hover > h3 {
+  font-size: 22px;
 }
 .works .box img {
   height: auto;
@@ -572,23 +606,43 @@ header ul a:hover {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.works h2 {
+.works h3 {
   text-align: center;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.3s ease-out;
 }
 
-@media (max-width: 20rem) {
-  .allmyworks .myworks-title {
-    flex-direction: column;
+@media (min-width: 48rem) {
+  .works {
+    margin: 0px 52px;
+  }
+  .mywork-title::after {
+    right: auto;
+    left: 0;
+    width: 70vw;
   }
 }
-@media (min-width: 48rem) {
-  .allmyworks {
-    margin: 16px 40px;
+@media (min-width: 56rem) {
+  .mywork-title {
+    gap: 40px;
+  }
+  .mywork-title .h1-mywork {
+    margin-top: 146px;
+  }
+  .mywork-title::before {
+    height: 200px;
+    width: 90vw;
+    right: 0;
+    left: auto;
+  }
+  .mywork-title::after {
+    right: auto;
+    left: 0;
+    width: 72vw;
   }
 }
 @media (min-width: 90rem) {
@@ -1449,7 +1503,7 @@ header ul a:hover {
   position: relative;
   gap: 12px;
   width: 100%;
-  background-color: rgba(240, 230, 205, 0.5);
+  background-color: rgb(247, 243, 230);
 }
 .contact-img .img-mobile {
   width: 100%;
@@ -1659,12 +1713,12 @@ h1 {
 }
 @media (min-width: 48rem) {
   h1 {
-    font-size: 48px;
+    font-size: 44px;
   }
 }
 @media (min-width: 56rem) {
   h1 {
-    font-size: 60px;
+    font-size: 56px;
   }
 }
 

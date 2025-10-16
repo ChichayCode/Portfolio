@@ -17,7 +17,7 @@
         display: flex;
         position: relative;
         width: 100%;
-        background-color: $tertiary-color;
+        background-color: $tertiary-color50;
         height: 160px;
 
         & .h1-about {
@@ -25,9 +25,10 @@
             // padding: 0px 12px;
             color: $secondary-color;
             @include font-Didot;
-            top: 129px;
+            top: 125px;
             left: calc(50% - 40px);
             transform: translateX(-50%);
+            letter-spacing: 4px;
         }
     }
 }
@@ -53,12 +54,13 @@
 
     & .h1-about-me {
         position: absolute;
-        top: 129px;
+        top: 125px;
         left: calc(50% + 60px);
         transform: translateX(-50%);
         // padding: 0px 12px;
         color: $secondary-color;
         @include font-Didot;
+        letter-spacing: 4px;
     }
 
     & .main-pic {
