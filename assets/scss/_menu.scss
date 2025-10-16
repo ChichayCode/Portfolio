@@ -1,12 +1,12 @@
 @import 'variables';
 
 header {
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     display: flex;
     align-items: center;
     // justify-content: space-between;
-    
+
     // background:linear-gradient(
     //   to top,
     //   transparent 0px,
@@ -15,6 +15,7 @@ header {
 
     background-color: $primary-color;
     border-radius: 36px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 
     margin: 16px;
     width: calc(100% - 32px);
@@ -24,11 +25,28 @@ header {
     // box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 }
 
-.header-container{
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.header-bg {
+    z-index: 2;
+    width: 100%;
+    height: 140px;
+    background-color: linear-gradient(
+    to bottom,
+   rgba(255, 255, 255, 0.2) 0%,    // colore iniziale semi-trasparente
+    rgba(255, 255, 255, 0.15) 60%,
+    rgba(255, 255, 255, 0.08) 85%,
+    rgba(255, 255, 255, 0) 100%  
+  );
+    position: fixed;
+    // background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .logoname img {
@@ -114,10 +132,10 @@ header ul a {
         height: 2px;
         background-color: $text-color;
         @include transition-ease;
-        
+
     }
 
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         top: -8px;
@@ -133,22 +151,22 @@ header ul a {
     position: absolute;
     display: none;
 
-    &:checked ~ .menu-icon .menu-nav {
+    &:checked~.menu-icon .menu-nav {
         right: 0;
 
     }
 
-    &:checked ~ .menu-icon .nav-icon {
+    &:checked~.menu-icon .nav-icon {
         background-color: transparent;
 
         &::before {
             transform: rotate(45deg);
             top: 0;
             background-color: $primary-color;
-            
+
         }
 
-        &::after{
+        &::after {
             transform: rotate(-45deg);
             top: 0;
             background-color: $primary-color;
@@ -163,8 +181,7 @@ header ul a {
 @media (min-width: 48rem) {
 
     header {
-        padding: 0px 40px;
-        height: 112px;
+        padding: 0px 36px;
     }
 
 }
@@ -173,9 +190,6 @@ header ul a {
 // DESKTOP
 @media (min-width: 56rem) {
 
-    .header{
-        height: 120px;
-    }
 
     .header .menu-icon .menu-nav {
         display: flex;
@@ -188,11 +202,11 @@ header ul a {
         background-color: transparent;
         gap: 40px;
 
-        &__link{
+        &__link {
             color: $text-color;
             padding: 0 8px;
 
-            &:hover{
+            &:hover {
                 color: $secondary-color;
                 font-size: 18px;
             }
@@ -201,7 +215,7 @@ header ul a {
 
     .header .menu-icon .nav-icon,
     .header .menu-icon .nav-icon::before,
-    .header .menu-icon .nav-icon::after{
+    .header .menu-icon .nav-icon::after {
         display: none;
     }
 

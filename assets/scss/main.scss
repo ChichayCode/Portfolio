@@ -23,7 +23,7 @@ body {
 
 }
 
-.body-container{
+.body-container {
     background-color: $tertiary-color50;
     display: flex;
     flex-direction: column;
@@ -50,6 +50,10 @@ main {
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 16px;
+
+    // @media (min-width: 48rem) {
+    //     margin-top: calc(110px + 32px + 24px);
+    // }
 
 
     .social-.icons {
@@ -230,10 +234,25 @@ footer {
 // IPAD
 @media (min-width: 48rem) {
 
+    .main {
+        margin-top: 16px;
+
+        margin-left: calc(40px - 16px);
+        margin-right: calc(40px - 16px);
+    }
 }
+
+
 
 // DESKTOP
 @media (min-width: 56rem) {
+
+    .main {
+        margin-top: 24px;
+
+        margin-left: calc(60px - 16px);
+        margin-right: calc(60px - 16px);
+    }
 
     .text-about,
     .text-name h1 {
