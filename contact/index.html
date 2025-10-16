@@ -13,84 +13,86 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-container">
-        <div class="logoname">
-            <img src="/assets/img/logo1.png" alt="">
-            <span>CHELSEA CULING</span>
+    <div class="body-container">
+        <header class="header">
+            <div class="header-container">
+                <div class="logoname">
+                    <img src="/assets/img/logo1.png" alt="">
+                    <span>CHELSEA CULING</span>
 
-        </div>
-
-        <input type="checkbox" class="menu-btn" id="menu-btn">
-
-        <label class="menu-icon" for="menu-btn">
-            <ul class="menu-nav">
-                <li class="menu-nav__item">
-                    <a href="index.html" class="menu-nav__link">HOME</a>
-                </li>
-                <li class="menu-nav__item">
-                    <a href="/about" class="menu-nav__link">ABOUT</a>
-                </li>
-                <li class="menu-nav__item">
-                    <a href="/myworks" class="menu-nav__link">MY WORK</a>
-                </li>
-                <li class="menu-nav__item">
-                    <a href="/contacts" class="menu-nav__link">CONTACT</a>
-                </li>
-            </ul>
-            <span class="nav-icon"></span>
-
-        </label>
-        </div>
-    </header>
-
-    <main>
-        <section class="contact-page">
-            <div class="contact-img">
-                <div class="img-mobile">
-                    <img class="contact-img1" src="/assets/img/contact-img1.png" alt="">
-                    <img src="/assets/img/contact-img2.png" alt="">
                 </div>
 
-                <h1 class="h1-mobile-contactme">CONTACT ME</h1>
+                <input type="checkbox" class="menu-btn" id="menu-btn">
+
+                <label class="menu-icon" for="menu-btn">
+                    <ul class="menu-nav">
+                        <li class="menu-nav__item">
+                            <a href="index.html" class="menu-nav__link">HOME</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="/about" class="menu-nav__link">ABOUT</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="/myworks" class="menu-nav__link">MY WORK</a>
+                        </li>
+                        <li class="menu-nav__item">
+                            <a href="/contacts" class="menu-nav__link">CONTACT</a>
+                        </li>
+                    </ul>
+                    <span class="nav-icon"></span>
+
+                </label>
             </div>
+        </header>
 
-            <div class="contact-form">
-
-                <form action="dati.php" method="post">
-                    <h1 class="h1-desktop-contact">CONTACT</h1>
-                    <h1 class="h1-desktop-me">ME</h1>
-
-                    <div class="img-desktop">
-                        <img class="contact-main-img" src="/assets/img/contact-img1.png" alt="">
+        <main>
+            <section class="contact-page">
+                <div class="contact-img">
+                    <div class="img-mobile">
+                        <img class="contact-img1" src="/assets/img/contact-img1.png" alt="">
                         <img src="/assets/img/contact-img2.png" alt="">
-                        <img src="/assets/img/contact-img3.png" alt="">
-                        <img src="/assets/img/contact-img4.png" alt="">
                     </div>
 
-                    <h4>Scrivimi un messaggio compilando il form</h4>
-                    <div class="contact-form-input">
-                        <label for="nome">Nome</label>
-                        <input class="text" type="text" name="nome" id="nome" required>
-                    </div>
-                    <div class="contact-form-input">
-                        <label for="email">Email</label>
-                        <input class="text" type="text" name="email" id="email" required>
-                    </div>
-                    <div class="contact-form-input">
-                        <label for="testo">Messaggio</label>
-                        <textarea name="testo" id="testo"></textarea>
-                    </div>
-                    <input class="contact-submit-btn" type="submit" value="INVIA">
-                </form>
-            </div>
+                    <h1 class="h1-mobile-contactme">CONTACT ME</h1>
+                </div>
 
-        </section>
-    </main>
+                <div class="contact-form">
 
-    <footer>
-        <!-- &copy; Copyright 2025 -->
-    </footer>
+                    <form action="dati.php" method="post">
+                        <h1 class="h1-desktop-contact">CONTACT</h1>
+                        <h1 class="h1-desktop-me">ME</h1>
+
+                        <div class="img-desktop">
+                            <img class="contact-main-img" src="/assets/img/contact-img1.png" alt="">
+                            <img src="/assets/img/contact-img2.png" alt="">
+                            <img src="/assets/img/contact-img3.png" alt="">
+                            <img src="/assets/img/contact-img4.png" alt="">
+                        </div>
+
+                        <h4>Scrivimi un messaggio compilando il form</h4>
+                        <div class="contact-form-input">
+                            <label for="nome">Nome</label>
+                            <input class="text" type="text" name="nome" id="nome" required>
+                        </div>
+                        <div class="contact-form-input">
+                            <label for="email">Email</label>
+                            <input class="text" type="text" name="email" id="email" required>
+                        </div>
+                        <div class="contact-form-input">
+                            <label for="testo">Messaggio</label>
+                            <textarea name="testo" id="testo"></textarea>
+                        </div>
+                        <input class="contact-submit-btn" type="submit" value="INVIA">
+                    </form>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <!-- &copy; Copyright 2025 -->
+        </footer>
+    </div>
 
 </body>
 
