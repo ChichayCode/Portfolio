@@ -4,26 +4,37 @@
     color: $primary-color;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    gap: 88px;
     // gap: 24px;
 }
 
 .contact-img {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     position: relative;
     gap: 12px;
     width: 100%;
     background-color: $tertiary-color50;
 
     & .img-mobile {
-        width: calc(100% - 8px);
-        padding: 0px 12px;
+        width: calc(100% - 56px);
         display: flex;
         flex-direction: row;
+        justify-content: center;
         gap: 8px;
-        max-height: 260px;
-        // overflow: hidden;
-        padding-bottom: 88px;
+        max-height: 240px;
+        max-width: 600px;
+
+        // position: fixed;
+        // top: 140px;
+        // left: 50%;
+        // transform: translateX(-50%);
 
         & img {
             flex: 1 1 50%;
@@ -33,12 +44,12 @@
             object-position: center;
         }
 
-        & .contact-img1{
+        & .contact-img1 {
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
-        & .contact-img2{
+        & .contact-img2 {
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
         }
@@ -55,21 +66,21 @@
 
 h1.h1-mobile-contactme {
     position: absolute;
-    bottom: -13px;
-    left: 40px;
+    top: -38px;
+    left: 36px;
     color: $secondary-color;
-    @include font-Didot;
+    @include font-Aladin;
 }
 
 .h1-desktop-contact {
     display: none;
-    @include font-Didot;
+    @include font-Aladin;
     color: $secondary-color;
 }
 
 .h1-desktop-me {
     display: none;
-    @include font-Didot;
+    @include font-Aladin;
     color: $tertiary-color;
 }
 
@@ -86,6 +97,12 @@ h1.h1-mobile-contactme {
     background-color: $secondary-color;
     border-radius: 36px;
     padding-top: 48px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+
+    width: 100%;
+    max-width: 1060px;
 
     & h3 {
         margin: 0px 8px;
@@ -103,14 +120,15 @@ form {
     padding-bottom: 72px;
     // width: 100%;
     background-color: $secondary-color;
-    max-width: 560px;
+    max-width: 420px;
     margin: 0px 36px;
+    width: 100%;
 
     .img-desktop {
         display: none;
     }
 
-    & h4{
+    & h4 {
         padding-bottom: 12px;
     }
 
@@ -134,11 +152,11 @@ form {
             border-radius: 20px;
         }
 
-        & input{
+        & input {
             height: 32px;
         }
 
-        & textarea{
+        & textarea {
             height: 76px;
         }
 
@@ -184,7 +202,8 @@ form {
     }
 
     h1.h1-mobile-contactme {
-        bottom: -16px;
+        left: 72px;
+        top: -50px;
     }
 }
 
@@ -222,15 +241,15 @@ form {
             border-top-left-radius: 20px;
         }
 
-        & .contact-img2{
+        & .contact-img2 {
             border-top-right-radius: 20px;
         }
 
-        & .contact-img3{
+        & .contact-img3 {
             border-bottom-left-radius: 20px;
         }
 
-        & .contact-img4{
+        & .contact-img4 {
             border-bottom-right-radius: 20px;
         }
     }
@@ -249,7 +268,7 @@ form {
 
         form {
             width: calc(100% - 500px);
-            margin-left: 300px;
+            margin-left: 352px;
             margin-right: 0px;
             // width: 400px;
         }
@@ -262,8 +281,8 @@ form {
     .h1-desktop-contact {
         display: block;
         position: absolute;
-        top: -134px;
-        left: -180px;
+        top: -145px;
+        left: -184px;
     }
 
     .h1-desktop-me {
@@ -273,3 +292,5 @@ form {
         left: -180px;
     }
 }
+
+

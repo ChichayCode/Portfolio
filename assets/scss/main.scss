@@ -29,6 +29,12 @@ body {
     flex-direction: column;
 }
 
+.body-container-dark{
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+}
+
 
 // h1{
 //     font-weight: map-get($font-weights, medium)
@@ -45,31 +51,39 @@ span.medium {
 
 main {
     height: 100%;
-    width: calc(100% - 32px);
-    margin-top: calc(100px + 32px + 16px);
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 16px;
+    width: 100%;
+    padding-top: calc(80px + 32px + 16px);
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     // @media (min-width: 48rem) {
     //     margin-top: calc(110px + 32px + 24px);
     // }
 
 
-    .social-.icons {
-        position: fixed;
-        bottom: 1rem;
-        left: 1rem;
+    // .social-.icons {
+    //     position: fixed;
+    //     bottom: 1rem;
+    //     left: 1rem;
 
-        a {
-            padding: 0.4rem;
-            @include transition-ease;
+    //     a {
+    //         padding: 0.4rem;
+    //         @include transition-ease;
 
-            &:hover {
-                color: $secondary-color;
-            }
-        }
-    }
+    //         &:hover {
+    //             color: $secondary-color;
+    //         }
+    //     }
+    // }
+}
+
+.main{
+    width: 100%;
 }
 
 
@@ -77,6 +91,7 @@ main {
 h1 {
     font-size: 40px;
     letter-spacing: 3px;
+    
 
     @media (min-width: 48rem) {
         font-size: 52px;
@@ -85,7 +100,7 @@ h1 {
 
     @media (min-width: 56rem) {
         font-size: 72px;
-        letter-spacing: 6x;
+        letter-spacing: 6px;
     }
 }
 
@@ -222,13 +237,23 @@ a {
 
 //FOOTER
 footer {
-    font-size: 1rem;
-    position: fixed;
-    bottom: .4rem;
-    right: 1rem;
-    text-align: right;
-    padding: 1rem;
-    color: $text-color;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 36px;
+  padding: 40px 60px;
+  margin-bottom: 28px;
+
+  a {
+    color: darken($secondary-color, 5%);
+    font-size: 28px;
+    @include transition-ease;
+
+    &:hover {
+      color: lighten($secondary-color, 5%);
+      transform: scale(1.1);
+    }
+  }
 }
 
 
@@ -239,8 +264,12 @@ footer {
 
     .main {
 
-        margin-left: calc(40px - 16px);
-        margin-right: calc(40px - 16px);
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    footer{
+        margin-left: 28px;
     }
 }
 

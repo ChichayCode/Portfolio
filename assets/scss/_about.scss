@@ -9,14 +9,15 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     overflow-x: clip;
     overflow-y: visible;
-    margin-top: 80px;
+    margin-top: 112px;
 }
 
 .introduction-bg {
     width: 100%;
+    max-width: 1180px;
     // background-color: $secondary-color;
     display: flex;
     flex-direction: column;
@@ -36,19 +37,19 @@
     // justify-content: flex-end;
 
     & .h1-about {
-            position: absolute;
-            // padding: 0px 12px;
-            color: $secondary-color;
-            @include font-Aladin;
-            top: -37px;
-            left: calc(50% - 40px);
-            transform: translateX(-50%);
-        }
+        position: absolute;
+        // padding: 0px 12px;
+        color: $secondary-color;
+        @include font-Aladin;
+        top: -68px;
+        left: calc(50% - 32px);
+        transform: translateX(-50%);
+    }
 
     & .h1-about-me {
         position: absolute;
-        top: -37px;
-        left: calc(50% + 60px);
+        top: -68px;
+        left: calc(50% + 68px);
         transform: translateX(-50%);
         // padding: 0px 12px;
         color: $secondary-color;
@@ -112,13 +113,22 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
     width: 100%;
     background-color: $tertiary-color50;
-    margin-top: 120px;
+    margin-top: 98px;
     padding-top: 16px;
     overflow-x: clip;
     overflow-y: visible;
+
+    & .h1-cv {
+        @include font-Aladin;
+        color: darken($tertiary-color, 15%);
+        text-align: center;
+        line-height: 0.7;
+
+    }
 }
 
 
@@ -128,20 +138,11 @@
     flex-direction: column;
     gap: 24px;
     padding: 32px 16px;
+    width: 100%;
+    max-width: 1060px;
 
     background-color: rgba($color: $primary-color, $alpha: 0.75);
     border-radius: 36px;
-
-    & .h1-cv {
-        color: darken($tertiary-color, 5%);
-        letter-spacing: 16px;
-        font-weight: 500;
-        text-align: center;
-        position: absolute;
-        top: -46px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 
     & .section-headline {
         display: flex;
@@ -181,15 +182,25 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding-left: 24px;
+    padding-left: 32px;
+
+    & ul {
 
 
-    & .date {
+        & .date {
 
-        font-size: 14px;
-        font-weight: 100;
-        list-style: none;
+            font-size: 14px;
+            font-weight: 100;
+            // list-style: square;
+
+            &::marker {
+
+                color: darken($tertiary-color, 10%);
+            }
+        }
     }
+
+
 
     & .job-details {
         display: flex;
@@ -197,23 +208,24 @@
         position: relative;
         flex-direction: column;
         gap: 4px;
-        padding-left: 16px;
+        padding-left: 0px;
 
         & .h5-cv {
-            color: $tertiary-text;
-            font-weight: 800;
+            color: $secondary-color;
+            font-weight: 500;
+            line-height: 1.2;
         }
 
         & .address {
-            padding-left: 24px;
+            padding-left: 18px;
         }
 
         & img {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             position: absolute;
-            top: 44px;
-            left: 16px;
+            top: 49px;
+            left: -2px;
         }
     }
 }
@@ -257,7 +269,10 @@
 
                 & .language {
                     font-size: 14px;
-                    list-style-type: none;
+
+                    &::marker {
+                        color: darken($tertiary-color, 15%);
+                    }
                 }
 
                 & .text {
@@ -265,7 +280,7 @@
 
                 }
 
-                & li {
+                & .bullet {
                     list-style: none;
                 }
             }
@@ -283,6 +298,13 @@
             flex-direction: column;
             gap: 16px;
             padding-left: 32px;
+
+            & .bullet {
+                &::marker {
+
+                    color: darken($tertiary-color, 15%);
+                }
+            }
 
 
         }
@@ -326,7 +348,7 @@
 
     .cv-section {
         // margin: 0px 40px;
-        padding: 44px 16px;
+        padding: 48px;
 
 
         & .section-headline {
@@ -347,7 +369,7 @@
     }
 
     .about .h1-cv {
-        top: -60px;
+        top: -80px;
     }
 
 
@@ -363,6 +385,7 @@
 
             & .date {
                 justify-content: right;
+                list-style: none;
 
             }
         }
@@ -386,7 +409,7 @@
         margin: 0 auto;
         width: 100%;
 
-        & .h1-about{
+        & .h1-about {
             top: -68px;
             left: 328px;
         }
@@ -413,7 +436,7 @@
                 width: 100%;
             }
 
-            & .intro-text-1p{
+            & .intro-text-1p {
                 padding-left: 294px;
             }
         }
@@ -431,18 +454,17 @@
 
 
     .about .curriculum {
-        margin-top: 180px;
+        margin-top: 200px;
 
         .h1-cv {
             top: -73px;
-            letter-spacing: 24px;
         }
     }
 
 
     .cv-section {
 
-        padding: 48px 16px;
+        padding: 48px;
 
         & .section-headline {
 
@@ -451,7 +473,7 @@
             }
 
             & .h3-inline {
-                padding-left: 340px;
+                padding-left: 328px;
             }
 
             & span {
