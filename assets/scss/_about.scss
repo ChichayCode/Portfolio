@@ -9,33 +9,15 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     overflow-x: clip;
     overflow-y: visible;
-
-    & .about-title {
-        display: flex;
-        position: relative;
-        width: 100%;
-        background-color: $tertiary-color50;
-        height: 160px;
-
-        & .h1-about {
-            position: absolute;
-            // padding: 0px 12px;
-            color: $secondary-color;
-            @include font-Didot;
-            top: 125px;
-            left: calc(50% - 40px);
-            transform: translateX(-50%);
-            letter-spacing: 4px;
-        }
-    }
+    margin-top: 80px;
 }
 
 .introduction-bg {
     width: 100%;
-    background-color: $secondary-color;
+    // background-color: $secondary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,16 +33,26 @@
     color: $primary-color;
     width: 100%;
     gap: 16px;
+    // justify-content: flex-end;
+
+    & .h1-about {
+            position: absolute;
+            // padding: 0px 12px;
+            color: $secondary-color;
+            @include font-Aladin;
+            top: -37px;
+            left: calc(50% - 40px);
+            transform: translateX(-50%);
+        }
 
     & .h1-about-me {
         position: absolute;
-        top: 125px;
+        top: -37px;
         left: calc(50% + 60px);
         transform: translateX(-50%);
         // padding: 0px 12px;
         color: $secondary-color;
-        @include font-Didot;
-        letter-spacing: 4px;
+        @include font-Aladin;
     }
 
     & .main-pic {
@@ -68,20 +60,44 @@
         height: auto;
         margin: 12px 0px;
 
+        border-radius: 20px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+
     }
 
     .introduction-text {
+        background-color: $secondary-color;
+        border-radius: 36px;
         padding: 0px 32px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .intro-text-2 {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        padding-top: 32px;
-        padding-bottom: 48px
+    }
+
+    .intro-text-1p {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .intro-text-2p {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 
 
     p {
-        max-width: 500px;
+        max-width: 450px;
 
         // & .medium {
         //     font-weight: 500;
@@ -111,8 +127,10 @@
     position: relative;
     flex-direction: column;
     gap: 24px;
-    margin: 0px 16px;
-    padding-top: 40px;
+    padding: 32px 16px;
+
+    background-color: rgba($color: $primary-color, $alpha: 0.75);
+    border-radius: 36px;
 
     & .h1-cv {
         color: darken($tertiary-color, 5%);
@@ -132,29 +150,29 @@
         align-items: center;
         justify-content: flex-start;
         gap: 16px;
+        padding-left: 16px;
 
         & .h3-inline {
             color: $secondary-color;
             @include font-Didot;
-            padding-left: 8px;
         }
 
         & img {
-            position: absolute;
-            width: 60px;
+            // position: absolute;
+            width: 32px;
             height: auto;
             right: -32px;
         }
 
-        & span {
-            position: absolute;
-            height: 1.5px;
-            background-color: $secondary-color;
-            width: 100%;
-            // width: calc(100% - 36px);
-            top: 19px;
-            right: 0px;
-        }
+        // & span {
+        //     position: absolute;
+        //     height: 1.5px;
+        //     background-color: $secondary-color;
+        //     width: 100%;
+        //     // width: calc(100% - 36px);
+        //     top: 19px;
+        //     right: 0px;
+        // }
     }
 }
 
@@ -208,20 +226,21 @@
 
     & h5 {
         color: $text-color;
-        background-color: $tertiary-color;
-        padding: 12px 16px;
+        background-color: $tertiary-color50;
+        border-radius: 20px;
+        padding: 16px 20px;
     }
 
     .hard-skills {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        margin: 0px 16px;
+        // margin: 0px 16px;
 
         & .skill-label {
             color: $secondary-color;
             font-weight: 500;
-            padding-left: 16px;
+            padding-left: 20px;
         }
 
         & .each-skill {
@@ -231,10 +250,9 @@
             padding-bottom: 12px;
 
             & ul {
-                padding-left: 20px;
+                padding-left: 24px;
                 display: flex;
                 flex-direction: column;
-                padding-left: 20px;
                 gap: 4px;
 
                 & .language {
@@ -244,7 +262,6 @@
 
                 & .text {
                     list-style-type: none;
-                    padding-left: 16px;
 
                 }
 
@@ -284,28 +301,39 @@
 
         padding-left: 72px;
         padding-right: 72px;
+        align-items: center;
+
+        & p {
+            text-align: center;
+        }
+    }
+
+    .introduction-text .intro-text-2 {
+        align-items: center;
     }
 
     .introduction-bg .introduction .h1-about {
-        top: 114px;
-        left: calc(50% - 70px);
+        top: -49px;
+        left: calc(50% - 45px);
         ;
     }
 
     .introduction-bg .introduction .h1-about-me {
-        top: 114px;
-        left: calc(50% + 80px);
+        top: -49px;
+        left: calc(50% + 85px);
     }
 
 
     .cv-section {
-        margin: 0px 40px;
+        // margin: 0px 40px;
+        padding: 44px 16px;
+
 
         & .section-headline {
             // justify-content: center;
 
-            & .h3-inline{
-                padding-left: 270px;
+            & .h3-inline {
+                padding-left: 252px;
             }
 
             & img {
@@ -318,10 +346,9 @@
         }
     }
 
-    .about .h1-cv{
+    .about .h1-cv {
         top: -60px;
     }
-
 
 
     .cv-section .each-job {
@@ -347,53 +374,58 @@
 // DESKTOP
 @media (min-width: 56rem) {
 
-    .about .about-title {
-        position: absolute;
-        // z-index: 3;
-        height: 180px;
-        width: 100vw;
-        left: 320px;
-        top: 0;
-        justify-content: center;
-        align-items: center;
-
-        .h1-about {
-            position: absolute;
-            top: 64px;
-            left: 52px;
-            transform: none;
-
-        }
+    .introduction-bg {
+        background-color: $secondary-color;
+        border-radius: 36px;
+        margin-top: 100px;
     }
 
 
     .about .introduction {
-        align-items: flex-end;
-        padding-top: 220px;
-        max-width: 900px;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
 
-        & .main-pic {
-            position: absolute;
-            top: 250px;
-            left: -4px;
+        & .h1-about{
+            top: -68px;
+            left: 328px;
         }
 
         & .h1-about-me {
             color: $tertiary-color;
-            top: 116px;
-            left: 200px;
+            top: 60px;
+            left: 268px;
         }
 
         p {
             text-align: left;
             width: 520px;
-            // padding-right: 88px;
         }
 
-        .introduction-text {
-            padding-bottom: 80px;
-            padding-top: 40px;
-            padding-right: 24px;
+        & .introduction-text {
+            background-color: transparent;
+            align-items: flex-end;
+            gap: 12px;
+            padding: 72px;
+
+            & p {
+                text-align: start;
+                width: 100%;
+            }
+
+            & .intro-text-1p{
+                padding-left: 294px;
+            }
+        }
+    }
+
+    .about .introduction-bg .intro-text-2 {
+        flex-direction: row;
+        align-items: center;
+        gap: 44px;
+
+        & .main-pic {
+            margin: 0px;
         }
     }
 
@@ -409,6 +441,8 @@
 
 
     .cv-section {
+
+        padding: 48px 16px;
 
         & .section-headline {
 

@@ -40,3 +40,10 @@ $font-weights: (
     font-style: normal;
     // letter-spacing: 1px;
 }
+
+@mixin font-Aladin{
+  font-family: "Aladin", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+}

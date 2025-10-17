@@ -75,14 +75,17 @@ main {
 
 // HOME/ABOUT/MYWORK/CONTACT //
 h1 {
-    font-size: 36px;
+    font-size: 40px;
+    letter-spacing: 3px;
 
     @media (min-width: 48rem) {
-        font-size: 44px;
+        font-size: 52px;
+        letter-spacing: 4px;
     }
 
     @media (min-width: 56rem) {
-        font-size: 56px;
+        font-size: 72px;
+        letter-spacing: 6x;
     }
 }
 
@@ -235,7 +238,6 @@ footer {
 @media (min-width: 48rem) {
 
     .main {
-        margin-top: 16px;
 
         margin-left: calc(40px - 16px);
         margin-right: calc(40px - 16px);
@@ -248,10 +250,9 @@ footer {
 @media (min-width: 56rem) {
 
     .main {
-        margin-top: 24px;
 
-        margin-left: calc(60px - 16px);
-        margin-right: calc(60px - 16px);
+        margin-left: 60px;
+        margin-right: 60px;
     }
 
     .text-about,
