@@ -44,14 +44,8 @@
             object-position: center;
         }
 
-        & .contact-img1 {
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
-
-        & .contact-img2 {
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
+        & .contact-img {
+            border-radius: 20px;
         }
     }
 
@@ -116,7 +110,7 @@ form {
     position: relative;
     flex-direction: column;
     // align-items: flex-end;
-    gap: 16px;
+    gap: 20px;
     padding-bottom: 72px;
     // width: 100%;
     background-color: $secondary-color;
@@ -135,29 +129,39 @@ form {
     .contact-form-input {
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: 6px;
         justify-content: space-between;
         width: 100%;
 
         & label {
-            padding-left: 8px;
+            padding-left: 16px;
+            font-size: 14px;
+            color: $tertiary-color50;
         }
 
         & input,
         & textarea {
             width: 100%;
-            background-color: $secondary-color;
+            background-color: transparent;
             // outline: none;
-            border: 1px solid $primary-color;
+            border: 1px solid $tertiary-color50;
             border-radius: 20px;
+            padding: 8px 16px;
+            font-family: 'Avenir', sans-serif;
+            font-size: 16px;
+            color: $primary-color;
         }
 
-        & input {
-            height: 32px;
+        & input.text-email {
+
+            &::placeholder {
+                color: rgba($primary-color, 0.5);
+                font-size: 14px;
+            }
         }
 
         & textarea {
-            height: 76px;
+            height: 120px;
         }
 
 
@@ -238,19 +242,11 @@ form {
             width: 120px;
             height: auto;
             object-fit: contain;
-            border-top-left-radius: 20px;
         }
 
-        & .contact-img2 {
-            border-top-right-radius: 20px;
-        }
-
-        & .contact-img3 {
-            border-bottom-left-radius: 20px;
-        }
-
-        & .contact-img4 {
-            border-bottom-right-radius: 20px;
+        & .contact-main-img,
+        & .contact-img{
+            border-radius: 20px;
         }
     }
 
@@ -292,5 +288,3 @@ form {
         left: -180px;
     }
 }
-
-

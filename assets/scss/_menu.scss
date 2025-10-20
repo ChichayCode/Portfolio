@@ -121,7 +121,7 @@ header ul a {
     top: 4px;
     width: 24px;
     height: 2px;
-    background-color: $text-color;
+    background-color: black;
     @include transition-ease;
     z-index: 4;
 
@@ -131,7 +131,7 @@ header ul a {
         top: 8px;
         width: 24px;
         height: 2px;
-        background-color: $text-color;
+        background-color: black;
         @include transition-ease;
 
     }
@@ -142,7 +142,7 @@ header ul a {
         top: -8px;
         width: 24px;
         height: 2px;
-        background-color: $text-color;
+        background-color: black;
         @include transition-ease;
 
     }
@@ -204,7 +204,7 @@ header ul a {
         gap: 40px;
 
         &__link {
-            color: $text-color;
+            color: black;
             padding: 0 8px;
 
             &:hover {

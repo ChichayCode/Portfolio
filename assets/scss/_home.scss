@@ -1,12 +1,427 @@
 @import 'variables';
 
-.home {
-    height: 100%;
-    padding-top: 40vh;
+.home-bg {
+    background-color: $secondary-color;
+
+    display: flex;
+    width: 100%;
+    padding: 0px 32px;
+    justify-content: flex-end;
+    align-items: flex-end;
     overflow: hidden;
-    align-items: center;
-    text-align: center;
-    background: $primary-color;
-    background-size: cover;
-    // z-index: 1;
+}
+
+.home-container {
+    background-color: $tertiary-color50;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    max-width: 1080px;
+    width: 100%;
+
+}
+
+.main-home {
+    width: 100%;
+    position: relative;
+}
+
+.home-img1 {
+    width: 380px;
+    height: 120px;
+
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    opacity: 0.8;
+    position: absolute;
+}
+
+.home-img1 {
+    left: -392px;
+    top: 120px;
+}
+
+.home-img2 {
+    display: none;
+}
+
+
+.home-head-absolute {
+    height: 380px;
+    width: 100%;
+    // max-width: 320px;
+    position: relative;
+}
+
+.img-wrapper {
+    position: absolute;
+    display: inline-block;
+    top: 80px;
+    left: -160px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -464px;
+        /* perfettamente sopra */
+        left: -304px;
+        width: 380px;
+        height: 120px;
+        transform: rotate(-90deg);
+        transform-origin: top right;
+        background-image: url("/assets/img/moodboard.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        /* più trasparente, per distinguersi */
+        pointer-events: none;
+        /* evita che interferisca con hover o click */
+    }
+}
+
+.home-pic {
+    width: auto;
+    height: 100px;
+    border-radius: 20px;
+    display: block // position: absolute;
+        // transform-origin: right top;
+        // left: -160px;
+        // top: 48px;
+}
+
+h1.PORT-home {
+    @include font-Aladin;
+    color: $secondary-color;
+    font-size: 68px;
+    transform: rotate(270deg);
+    line-height: .8;
+    width: fit-content;
+
+    position: absolute;
+    transform-origin: top right;
+    right: -40px;
+    top: -44px
+}
+
+h1.FOLIO-home {
+    @include font-Aladin;
+    color: $secondary-color;
+    font-size: 52px;
+    transform: scaleX(-1) rotate(90deg);
+    transform-origin: top left;
+    width: fit-content;
+
+    position: absolute;
+    // right: 76px;
+    // top: 260px;
+    top: 160px;
+    right: -80px;
+}
+
+.home-chelseaculing {
+    position: absolute;
+    white-space: nowrap;
+
+    // top: 188px;
+    // // left: 168px;
+    // right: 34px;
+    transform-origin: top right;
+    top: 124px;
+    right: -92px;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    word-spacing: 12px;
+}
+
+
+section.home {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    // padding-top: 420px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+
+    justify-content: flex-end;
+    align-items: flex-end;
+    // max-width: 400px;
+
+    & h3 {
+        line-height: 1.4;
+        letter-spacing: 2px;
+        width: 100%;
+    }
+}
+
+
+
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+.home-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+    & a {
+        padding: 16px 24px;
+        width: 172px;
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 14px;
+
+        color: $tertiary-color50;
+        background-color: $secondary-color;
+        border-radius: 20px;
+
+        @include transition-ease;
+
+        &:hover {
+            transform: scale(1.05);
+            color: $primary-color;
+        }
+    }
+}
+
+
+
+// // IPAD
+@media (min-width: 48rem) {
+
+    .home-head-absolute {
+        height: 500px;
+    }
+
+    .home-bg {
+        padding: 0px 72px;
+    }
+
+    section.home {
+        max-width: none;
+
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .img-wrapper {
+        top: 80px;
+        left: -160px;
+    }
+
+    .home-pic {
+        width: auto;
+        height: 152px;
+    }
+
+    h1.PORT-home {
+        font-size: 80px;
+        top: -28px;
+        right: 0px;
+        transform: rotate(270deg) translateY(280px);
+
+    }
+
+    h1.FOLIO-home {
+        font-size: 68px;
+        top: 220px;
+        transform: scaleX(-1) rotate(90deg) translateY(332px);
+    }
+
+    .home-chelseaculing {
+        top: 180px;
+        right: -100px;
+    }
+
+    .home-img1 {
+        width: 480px;
+        height: 160px;
+        opacity: 0.8;
+        position: absolute;
+    }
+
+    .home-img1 {
+        left: -480px;
+        top: 120px;
+
+        &::after {
+            width: 4ch;
+            height: 160px;
+        }
+    }
+
+    .home-btn {
+        gap: 24px;
+        padding: 12px 0px;
+    }
+}
+
+
+// DESKTOP
+@media (min-width: 56rem) {
+    .home-bg {
+        padding: 0px 92px;
+    }
+
+    .img-wrapper {
+        top: 100px;
+        left: -260px;
+
+        &::after {
+            content: none;
+            background: none;
+        }
+    }
+
+    .home-img1,
+    .home-img2 {
+        width: 580px;
+        height: 220px;
+    }
+
+    .home-img1 {
+        top: 880px;
+        right: 0px;
+        transform: rotate(-90deg) translateY(-112px);
+
+    }
+
+    .home-img2 {
+        position: absolute;
+        display: block;
+        transform: rotate(-90deg) translateY(-52px);
+        transform-origin: top right;
+        right: 200px;
+        top: -200px;
+    }
+
+
+
+    h1.PORT-home {
+        font-size: 96px;
+        top: -64px;
+        transform: rotate(270deg) translateY(260px);
+
+    }
+
+    h1.FOLIO-home {
+        font-size: 80px;
+        top: 256px;
+        transform: scaleX(-1) rotate(90deg) translateY(276px);
+    }
+
+    .home-chelseaculing {
+        top: 196px;
+        right: -90px;
+        word-spacing: 28px;
+    }
+
+    .span-home {
+        width: 2px;
+        height: 200%;
+        background-color: black;
+
+        position: absolute;
+        top: -100px;
+        left: 218px;
+    }
+
+    .home-text {
+        position: relative;
+        padding-right: 52px;
+        padding-left: 280px;
+    }
+
+    section.home {
+        h3 {
+            padding-right: 52px;
+            padding-left: 280px;
+        }
+    }
+
+    .home-head-absolute {
+        height: 324px;
+    }
+
+    .home-btn {
+        padding-left: 280px;
+    }
+
+}
+
+
+// DESKTOP LARGE 1440px
+@media (min-width: 90rem) {
+
+    .img-wrapper {
+        top: 100px;
+        left: -460px;
+
+        & .home-pic {
+            height: 228px;
+        }
+    }
+
+    h1.PORT-home {
+        font-size: 120px;
+        top: -28px;
+        transform: rotate(270deg) translateY(460px);
+
+    }
+
+    h1.FOLIO-home {
+        font-size: 92px;
+        top: 352px;
+        transform: scaleX(-1) rotate(90deg) translateY(500px);
+    }
+
+    .home-chelseaculing {
+        font-size: 16px;
+        top: 284px;
+        right: -108px;
+        word-spacing: 28px;
+    }
+
+    .span-home {
+        width: 2px;
+        height: 200%;
+        background-color: black;
+
+        position: absolute;
+        top: -100px;
+        left: 260px;
+    }
+
+    .home-text {
+        position: relative;
+        padding-right: 72px;
+        padding-left: 340px;
+    }
+
+    section.home {
+        h3 {
+            padding-right: 72px;
+            padding-left: 340px;
+        }
+    }
+
+    .home-head-absolute {
+        height: 420px;
+    }
+
+    .home-btn {
+        padding-left: 340px;
+    }
+
+
+
 }
