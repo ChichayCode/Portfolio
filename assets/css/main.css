@@ -999,7 +999,7 @@ header ul a:hover {
   position: relative;
   margin: 16px;
   transition: all 0.3s ease-out;
-  max-width: 300px;
+  max-width: 260px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1029,7 +1029,13 @@ header ul a:hover {
 @media (min-width: 48rem) {
   .works {
     margin: 0px 52px;
-    max-width: 480px;
+    max-width: 580px;
+    flex-wrap: wrap;
+  }
+  .box-link {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 calc(50% - 32px);
   }
   .mywork-title::after {
     right: auto;
@@ -1056,13 +1062,17 @@ header ul a:hover {
     width: 72vw;
   }
   .works {
-    max-width: 820px;
+    max-width: 780px;
+    flex-direction: row;
+  }
+  .works .box-link {
+    margin: 16px 0px;
   }
 }
 @media (min-width: 90rem) {
   .works {
     flex-direction: row;
-    max-width: none;
+    max-width: 820px;
   }
 }
 * {
@@ -1071,14 +1081,26 @@ header ul a:hover {
   padding: 0;
 }
 
+.uxui-bg {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 243, 230);
+}
+
+.uxui-main {
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+}
+
 .alluxuiworks {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 16px;
-  padding-top: 60px;
-  gap: 40px;
+  padding: 60px 16px;
+  gap: 60px;
+  width: 100%;
 }
 .alluxuiworks .title {
   width: 100%;
@@ -1088,10 +1110,20 @@ header ul a:hover {
   gap: 24px;
   margin: 0px 16px;
 }
-.alluxuiworks h1 {
+.alluxuiworks .h1-uxui {
   padding: 0px 12px;
-  letter-spacing: 8px;
+  font-family: "Aladin", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4px;
   text-align: center;
+  color: rgb(146.1538461538, 116.9230769231, 43.8461538462);
+}
+@media (min-width: 56rem) {
+  .alluxuiworks .h1-uxui {
+    font-size: 64px;
+    letter-spacing: 6px;
+  }
 }
 
 .uxui-title {
@@ -1106,16 +1138,21 @@ header ul a:hover {
   align-items: center;
   gap: 8px;
   min-width: 300px;
+  border-radius: 20px;
+  height: auto;
+  padding: 16px;
   background-image: url(/assets/img/img-ivegan/veg-background2.png);
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center center;
+  transition: all 0.3s ease-out;
 }
 .ivegan-box:hover {
   box-shadow: 0px 0px 10px rgb(0, 0, 0.25);
+  transform: scale(1.04);
 }
 .ivegan-box .ivegan-title {
-  max-width: 300px;
+  max-width: 280px;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -1129,7 +1166,7 @@ header ul a:hover {
   height: auto;
   padding: 0px 8px;
 }
-.ivegan-box a {
+.ivegan-box span {
   color: white;
   font-size: 12px;
   padding-bottom: 20px;
@@ -2252,7 +2289,7 @@ a {
 .back-btn {
   display: flex;
   position: absolute;
-  top: -40px;
+  top: -48px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
