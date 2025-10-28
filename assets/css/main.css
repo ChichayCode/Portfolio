@@ -104,7 +104,7 @@ h1.PORT-home {
   font-style: normal;
   color: rgb(134, 42, 0);
   font-size: 68px;
-  font-weight: 700;
+  font-weight: 500;
   transform: rotate(270deg);
   width: -moz-fit-content;
   width: fit-content;
@@ -133,7 +133,7 @@ h1.FOLIO-home {
   font-style: normal;
   color: rgb(134, 42, 0);
   font-size: 56px;
-  font-weight: 700;
+  font-weight: 500;
   transform: scaleX(-1) rotate(90deg);
   transform-origin: top left;
   width: -moz-fit-content;
@@ -307,14 +307,24 @@ section.home h2 {
     top: -200px;
   }
   h1.PORT-home {
-    font-size: 96px;
-    top: -128px;
-    transform: rotate(270deg) translateY(160px);
+    font-size: 88px;
+    top: -108px;
+    transform: rotate(270deg) translateY(180px);
+  }
+  h1.PORT-home::before {
+    font-size: 120px;
+    top: 40px;
+    right: -128px;
   }
   h1.FOLIO-home {
     font-size: 80px;
     top: 256px;
     transform: scaleX(-1) rotate(90deg) translateY(272px);
+  }
+  h1.FOLIO-home::before {
+    font-size: 96px;
+    top: -52px;
+    right: -120px;
   }
   .home-chelseaculing {
     top: 196px;
@@ -357,14 +367,23 @@ section.home h2 {
     height: 228px;
   }
   h1.PORT-home {
-    font-size: 120px;
-    top: -28px;
-    transform: rotate(270deg) translateY(460px);
+    font-size: 112px;
+    top: -92px;
+    transform: rotate(270deg) translateY(380px);
+  }
+  h1.PORT-home::before {
+    font-size: 140px;
+    top: 60px;
   }
   h1.FOLIO-home {
     font-size: 92px;
     top: 352px;
     transform: scaleX(-1) rotate(90deg) translateY(500px);
+  }
+  h1.FOLIO-home::before {
+    font-size: 120px;
+    top: -68px;
+    right: -172px;
   }
   .home-chelseaculing {
     font-size: 16px;
@@ -1199,15 +1218,23 @@ header ul a:hover {
   padding: 0;
 }
 
+.ivegan-main {
+  background-color: rgba(232, 242, 232, 0.7);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
 .ivegan-page {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 36px;
   padding-top: 60px;
   max-width: 1280px;
-  background-color: rgba(232, 242, 232, 0.7);
 }
-.ivegan-page .h3-ivegan {
+.ivegan-page .h3-ivegan,
+.ivegan-page .h3-ivegan-x {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1215,17 +1242,22 @@ header ul a:hover {
   background-color: rgb(7, 53, 8);
   width: 300px;
   gap: 8px;
-  padding: 16px 24px;
+  padding: 16px 28px;
 }
-.ivegan-page .h3-ivegan h3 {
+.ivegan-page .h3-ivegan h3,
+.ivegan-page .h3-ivegan-x h3 {
   color: white;
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
   letter-spacing: 4px;
 }
-.ivegan-page .h3-ivegan span {
+.ivegan-page .h3-ivegan span,
+.ivegan-page .h3-ivegan-x span {
   color: white;
+}
+.ivegan-page .h3-ivegan-x {
+  margin: 0px 12px;
 }
 
 .ivegan-start2impact {
@@ -1280,10 +1312,11 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0px 12px;
 }
 .ivegan-introduction p,
 .ivegan-client p {
-  margin: 0px 32px;
+  margin: 0px 20px;
 }
 
 .client-text {
@@ -1308,6 +1341,7 @@ header ul a:hover {
 .client-part1 img,
 .client-part2 img {
   padding: 0px 32px;
+  padding-bottom: 20px;
   max-width: 600px;
 }
 .client-part1 a,
@@ -1356,25 +1390,31 @@ header ul a:hover {
 .ivegan-analisis-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 52px;
   width: 100%;
 }
 
+.analisis-heading-bg {
+  background-color: rgb(7, 53, 8);
+  width: 100vw;
+}
+
 .analisis-heading {
   display: flex;
+  position: relative;
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
-  background-color: rgb(7, 53, 8);
-  width: 100%;
   height: auto;
+  margin: 0px 16px;
 }
 .analisis-heading h2 {
+  width: 100%;
+  text-align: center;
   color: white;
-  margin-left: 28px;
   padding-top: 72px;
   padding-bottom: 16px;
-  padding-left: 16px;
   letter-spacing: 6px;
 }
 
@@ -1553,11 +1593,8 @@ header ul a:hover {
 }
 
 @media (min-width: 48rem) {
-  .analisis-heading h2 {
-    margin-left: 52px;
-  }
   .analisis-heading .back-btn-project {
-    margin: 0px 40px;
+    margin: 0px 16px;
   }
   .analisis-introduction {
     margin: 0px 80px;
@@ -2211,7 +2248,6 @@ span.medium {
 }
 
 main {
-  height: 100%;
   width: 100%;
   padding-top: 128px;
   padding-left: 16px;
@@ -2324,13 +2360,14 @@ a {
 .back-btn-project {
   display: flex;
   position: absolute;
-  top: 152px;
+  top: 24px;
   left: 0px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
-  margin: 0 16px;
+  padding: 0 16px;
+  opacity: 0.8;
 }
 .back-btn-project .back-icon {
   position: relative;

@@ -102,7 +102,7 @@ h1.PORT-home {
     @include font-Didot;
     color: $secondary-color;
     font-size: 68px;
-    font-weight: 700;
+    font-weight: 500;
     transform: rotate(270deg);
     width: fit-content;
 
@@ -131,7 +131,7 @@ h1.FOLIO-home {
     @include font-Didot;
     color: $secondary-color;
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 500;
     transform: scaleX(-1) rotate(90deg);
     transform-origin: top left;
     width: fit-content;
@@ -358,16 +358,28 @@ section.home {
 
 
     h1.PORT-home {
-        font-size: 96px;
-        top: -128px;
-        transform: rotate(270deg) translateY(160px);
+        font-size: 88px;
+        top: -108px;
+        transform: rotate(270deg) translateY(180px);
 
+        &::before{
+            font-size: 120px;
+            top: 40px;
+            right: -128px;
+            
+        }
     }
 
     h1.FOLIO-home {
         font-size: 80px;
         top: 256px;
         transform: scaleX(-1) rotate(90deg) translateY(272px);
+    
+        &::before{
+            font-size: 96px;
+            top: -52px;
+            right: -120px;
+        }
     }
 
     .home-chelseaculing {
@@ -427,16 +439,26 @@ section.home {
     }
 
     h1.PORT-home {
-        font-size: 120px;
-        top: -28px;
-        transform: rotate(270deg) translateY(460px);
+        font-size: 112px;
+        top: -92px;
+        transform: rotate(270deg) translateY(380px);
 
+         &::before{
+            font-size: 140px;
+            top: 60px;    
+        }
     }
 
     h1.FOLIO-home {
         font-size: 92px;
         top: 352px;
         transform: scaleX(-1) rotate(90deg) translateY(500px);
+        
+         &::before{
+            font-size: 120px;
+            top: -68px;
+            right: -172px;
+        }
     }
 
     .home-chelseaculing {

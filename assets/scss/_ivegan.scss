@@ -1,6 +1,15 @@
 @import 'variables';
 
+
+.ivegan-main{
+    background-color: $ivegan-bg;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
 .ivegan-page {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 36px;
@@ -8,9 +17,10 @@
     max-width: 1280px;
     // justify-content: center;
     // align-items: center;
-    background-color: $ivegan-bg;
+    
 
-    .h3-ivegan {
+    .h3-ivegan,
+    .h3-ivegan-x {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -19,7 +29,7 @@
         width: 300px;
         gap: 8px;
         // padding-left: 16px;
-        padding: 16px 24px;
+        padding: 16px 28px;
 
         & h3 {
             color: $primary-color;
@@ -32,6 +42,10 @@
         & span {
             color: $primary-color;
         }
+    }
+
+    .h3-ivegan-x{
+        margin: 0px 12px;
     }
 }
 
@@ -97,9 +111,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0px 12px;
 
     & p {
-        margin: 0px 32px;
+        margin: 0px 20px;
     }
 
 }
@@ -129,6 +144,7 @@
 
     & img {
         padding: 0px 32px;
+        padding-bottom: 20px;
         max-width: 600px;
     }
 
@@ -179,24 +195,6 @@
     }
 }
 
-// .ivegan-details {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: $ivegan-color;
-
-//     h2 {
-//         color: $primary-color;
-//         padding: 12px;
-//         letter-spacing: 4px;
-//     }
-
-//     &:hover {
-//         border: 4px solid $ivegan-color;
-//         box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
-//     }
-// }
-
 @media (min-width: 56rem) {
     .ivegan-page .h3-ivegan {
         width: 700px;
@@ -221,28 +219,35 @@
 .ivegan-analisis-page {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 52px;
     width: 100%;
 }
 
+.analisis-heading-bg{
+    background-color: $ivegan-h3;
+    width: 100vw;
+    
+}
+
 .analisis-heading {
     display: flex;
-    // position: fixed;
+    position: relative;
     // z-index: 3;
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    background-color: $ivegan-h3;
-    width: 100%;
     // height: 120px;
     height: auto;
+    margin: 0px 16px;
+
 
     h2 {
+        width: 100%;
+        text-align: center;
         color: $primary-color;
-        margin-left: 28px;
         padding-top: 72px;
         padding-bottom: 16px;
-        padding-left: 16px;
         letter-spacing: 6px;
     }
 }
@@ -439,12 +444,9 @@
 @media (min-width: 48rem) {
 
     .analisis-heading {
-        h2 {
-            margin-left: 52px;
-        }
 
         .back-btn-project {
-            margin: 0px 40px;
+            margin: 0px 16px;
         }
     }
 
