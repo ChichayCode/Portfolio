@@ -21,6 +21,8 @@ body {
     flex-direction: column;
     // min-height: 100vh;
 
+    width: 100%;
+
 
 }
 
@@ -185,10 +187,14 @@ a {
 
     .back-label {
         font-size: 14px;
+        @include transition-ease;
     }
 
     &:hover {
-        color: $secondary-color;
+
+        .back-label{
+            font-size: 15px;
+        }
     }
 }
 
@@ -196,7 +202,7 @@ a {
 .back-btn-project {
     display: flex;
     position: absolute;
-    top: 24px;
+    top: 132px;
     left: 0px;
     flex-direction: row;
     align-items: center;
@@ -233,7 +239,10 @@ a {
     }
 
     &:hover {
-        color: $secondary-color;
+
+        .back-label{
+            font-size: 15px;
+        }
     }
 }
 

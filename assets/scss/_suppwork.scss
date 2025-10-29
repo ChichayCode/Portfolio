@@ -1,13 +1,14 @@
 @import 'variables';
+@import 'uxuiwork';
 
 .allsuppwork {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 16px;
-    padding-top: 60px;
+    padding: 60px 16px;
     gap: 40px;
+    width: 100%;
 
     & .title {
         width: 100%;
@@ -18,11 +19,6 @@
         margin: 0px 16px;
     }
 
-    & h1 {
-        letter-spacing: 8px;
-        text-align: center;
-    }
-
 
     & .supp-box1,
     & .supp-box2 {
@@ -31,12 +27,11 @@
         justify-content: center;
         align-items: center;
         gap: 4px;
-        min-width: 300px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0.25);
+        border-radius: 20px;
         @include transition-ease;
 
         &:hover {
-            // box-shadow: 0px 0px 10px rgba(0, 0, 0.25);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0.25);
             transform: scale(1.04)
         }
 

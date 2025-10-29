@@ -39,6 +39,7 @@
   position: relative;
   padding-left: 32px;
   padding-right: 32px;
+  padding-top: 140px;
 }
 
 .home-img1 {
@@ -207,6 +208,7 @@ section.home h2 {
   text-align: center;
   letter-spacing: 2px;
   font-size: 14px;
+  border-radius: 4px;
   color: rgb(247, 243, 230);
   background-color: rgb(134, 42, 0);
   transition: all 0.3s ease-out;
@@ -430,7 +432,7 @@ header {
   display: flex;
   align-items: center;
   background-color: white;
-  border-radius: 36px;
+  border-radius: 20px;
   margin: 16px;
   width: calc(100% - 32px);
   padding: 0px 16px;
@@ -561,7 +563,7 @@ header ul a:hover {
 
 @media (min-width: 48rem) {
   header {
-    padding: 0px 40px;
+    padding: 0px 24px;
   }
 }
 @media (min-width: 56rem) {
@@ -608,7 +610,7 @@ header ul a:hover {
   align-items: center;
   overflow-x: clip;
   overflow-y: visible;
-  margin-top: 112px;
+  margin-top: 100px;
 }
 
 .introduction-bg {
@@ -634,13 +636,13 @@ header ul a:hover {
   font-family: "Aladin", system-ui;
   font-weight: 400;
   font-style: normal;
-  top: -68px;
+  top: -67px;
   left: calc(50% - 32px);
   transform: translateX(-50%);
 }
 .about .introduction .h1-about-me {
   position: absolute;
-  top: -68px;
+  top: -67px;
   left: calc(50% + 68px);
   transform: translateX(-50%);
   color: rgb(134, 42, 0);
@@ -726,11 +728,12 @@ header ul a:hover {
   gap: 16px;
   padding-left: 16px;
 }
-.cv-section .section-headline .h3-inline {
+.cv-section .section-headline .h3-inline, .cv-section .section-headline .h3-inline-x {
   color: rgb(134, 42, 0);
-  font-family: "GFS Didot", serif;
+  font-family: "Aladin", system-ui;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 2px;
 }
 .cv-section .section-headline img {
   width: 32px;
@@ -781,15 +784,17 @@ header ul a:hover {
   gap: 40px;
 }
 .cv-section .skills h5 {
-  color: rgba(169, 41, 0, 0.2);
+  color: rgb(134, 42, 0);
   background-color: rgb(247, 243, 230);
   border-radius: 20px;
   padding: 16px 20px;
+  font-weight: 800;
 }
 .cv-section .skills .hard-skills {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin: 0px 16px;
 }
 .cv-section .skills .hard-skills .skill-label {
   color: rgb(134, 42, 0);
@@ -830,13 +835,16 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-left: 32px;
+  padding-left: 20px;
 }
 .cv-section .skills .soft-skills ul .bullet::marker {
   color: rgb(222.3461538462, 200.5769230769, 146.1538461538);
 }
 
 @media (min-width: 48rem) {
+  .about {
+    margin-top: 80px;
+  }
   .about .introduction-bg .introduction-text {
     padding-left: 72px;
     padding-right: 72px;
@@ -860,7 +868,14 @@ header ul a:hover {
     padding: 48px;
   }
   .cv-section .section-headline .h3-inline {
-    padding-left: 252px;
+    padding-left: 244px;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  .cv-section .section-headline .h3-inline-x {
+    padding-left: 0px;
+    width: 100%;
+    padding-bottom: 12px;
   }
   .cv-section .section-headline img {
     display: none;
@@ -884,6 +899,9 @@ header ul a:hover {
   }
 }
 @media (min-width: 56rem) {
+  .about {
+    margin-top: 20px;
+  }
   .introduction-bg {
     background-color: rgb(134, 42, 0);
     border-radius: 36px;
@@ -929,7 +947,7 @@ header ul a:hover {
     margin: 0px;
   }
   .about .curriculum {
-    margin-top: 200px;
+    margin-top: 140px;
   }
   .about .curriculum .h1-cv {
     top: -73px;
@@ -940,8 +958,11 @@ header ul a:hover {
   .cv-section .section-headline img {
     display: none;
   }
+  .cv-section .section-headline .h3-inline-x {
+    padding-left: 0px;
+  }
   .cv-section .section-headline .h3-inline {
-    padding-left: 328px;
+    padding-left: 312px;
   }
   .cv-section .section-headline span {
     top: 27px;
@@ -985,7 +1006,7 @@ header ul a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   width: 100%;
   background-color: transparent;
 }
@@ -996,7 +1017,7 @@ header ul a:hover {
   font-style: normal;
   text-align: center;
   padding: 0px 12px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .works {
@@ -1100,10 +1121,11 @@ header ul a:hover {
   padding: 0;
 }
 
-.uxui-bg {
+.works-bg {
   display: flex;
   flex-direction: column;
   background-color: rgb(247, 243, 230);
+  height: 100%;
 }
 
 .uxui-main {
@@ -1118,7 +1140,7 @@ header ul a:hover {
   align-items: center;
   flex-direction: column;
   padding: 60px 16px;
-  gap: 60px;
+  gap: 40px;
   width: 100%;
 }
 .alluxuiworks .title {
@@ -1129,7 +1151,8 @@ header ul a:hover {
   gap: 24px;
   margin: 0px 16px;
 }
-.alluxuiworks .h1-uxui {
+
+.h1-works {
   padding: 0px 12px;
   font-family: "Aladin", system-ui;
   font-weight: 400;
@@ -1137,9 +1160,10 @@ header ul a:hover {
   letter-spacing: 4px;
   text-align: center;
   color: rgb(146.1538461538, 116.9230769231, 43.8461538462);
+  width: 100%;
 }
 @media (min-width: 56rem) {
-  .alluxuiworks .h1-uxui {
+  .h1-works {
     font-size: 64px;
     letter-spacing: 6px;
   }
@@ -1156,29 +1180,26 @@ header ul a:hover {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  min-width: 300px;
   border-radius: 20px;
   height: auto;
   padding: 16px;
-  background-image: url(/assets/img/img-ivegan/veg-background2.png);
-  background-size: auto 100%;
+  background-image: url(/assets/img/img-ivegan/veg-background.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   transition: all 0.3s ease-out;
 }
 .ivegan-box:hover {
-  box-shadow: 0px 0px 10px rgb(0, 0, 0.25);
+  box-shadow: 0px 0px 8px rgb(0, 0, 0.25);
   transform: scale(1.04);
 }
 .ivegan-box .ivegan-title {
-  max-width: 280px;
+  max-width: 272px;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
   padding-top: 32px;
-  padding-right: 28px;
-  padding-left: 28px;
 }
 .ivegan-box img.work-start2impact {
   width: 120px;
@@ -1192,14 +1213,6 @@ header ul a:hover {
   padding-top: 12px;
 }
 
-@media (max-width: 26rem) {
-  .ivegan-box {
-    background-image: url(/assets/img/veg-background2.png);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-}
 @media (min-width: 48rem) {
   .ivegan-box {
     margin: 0px 80px;
@@ -1219,10 +1232,14 @@ header ul a:hover {
 }
 
 .ivegan-main {
-  background-color: rgba(232, 242, 232, 0.7);
   display: flex;
   flex-direction: column;
   height: auto;
+  padding-bottom: 60px;
+}
+
+.body-iveg {
+  background-color: rgba(232, 242, 232, 0.7);
 }
 
 .ivegan-page {
@@ -1230,7 +1247,7 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding-top: 60px;
+  padding-top: 40px;
   max-width: 1280px;
 }
 .ivegan-page .h3-ivegan,
@@ -1239,10 +1256,11 @@ header ul a:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: rgb(7, 53, 8);
+  background-color: rgb(49.9180327869, 107.5819672131, 51.6393442623);
   width: 300px;
   gap: 8px;
   padding: 16px 28px;
+  border-radius: 8px;
 }
 .ivegan-page .h3-ivegan h3,
 .ivegan-page .h3-ivegan-x h3 {
@@ -1255,9 +1273,21 @@ header ul a:hover {
 .ivegan-page .h3-ivegan span,
 .ivegan-page .h3-ivegan-x span {
   color: white;
+  opacity: 0.8;
 }
 .ivegan-page .h3-ivegan-x {
   margin: 0px 12px;
+  transition: all 0.3s ease-out;
+  background-color: rgb(7, 53, 8);
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 300px;
+}
+.ivegan-page .h3-ivegan-x:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  background-color: rgb(58, 125, 60);
 }
 
 .ivegan-start2impact {
@@ -1349,6 +1379,15 @@ header ul a:hover {
   padding: 0px 32px;
 }
 
+.iveg-footer a {
+  color: rgb(7, 53, 8);
+  transition: all 0.3s ease-out;
+}
+.iveg-footer a:hover {
+  color: rgb(58, 125, 60);
+  transform: scale(1.1);
+}
+
 @media (min-width: 48rem) {
   .ivegan-introduction,
   .ivegan-client,
@@ -1361,6 +1400,9 @@ header ul a:hover {
   }
   .ivegan-page .h3-ivegan {
     width: 500px;
+  }
+  .ivegan-page .h3-ivegan-x {
+    margin: 0px 52px;
   }
   .ivegan-page .ivegan-project .ivegan-start2impact {
     flex-direction: row;
@@ -1381,12 +1423,23 @@ header ul a:hover {
   .ivegan-page .h3-ivegan {
     width: 700px;
   }
+  .ivegan-page .h3-ivegan-x {
+    margin: 0px 96px;
+  }
   .ivegan-introduction,
   .ivegan-client,
   a.h3-ivegan {
     margin: 12px 80px;
   }
 }
+.ivegan-main-x {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 60px;
+}
+
 .ivegan-analisis-page {
   display: flex;
   flex-direction: column;
@@ -1413,9 +1466,9 @@ header ul a:hover {
   width: 100%;
   text-align: center;
   color: white;
-  padding-top: 72px;
+  padding-top: 172px;
   padding-bottom: 16px;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 
 .analisis-introduction {
@@ -1458,7 +1511,6 @@ header ul a:hover {
   min-width: 0;
   height: auto;
   width: 100%;
-  overflow-x: hidden;
 }
 .analisis-section p {
   padding: 0px 40px;
@@ -1479,7 +1531,8 @@ header ul a:hover {
   width: 100%;
   gap: 16px;
   padding: 12px 0px;
-  margin-left: 36px;
+  padding-left: 20px;
+  margin-left: 16px;
 }
 .h3-analisis h3 {
   width: -moz-fit-content;
@@ -1496,9 +1549,9 @@ header ul a:hover {
   position: absolute;
   background-color: rgba(77, 175, 80, 0.12);
   height: 54px;
-  width: 370px;
+  width: 332px;
   top: 2px;
-  left: -16px;
+  left: -4px;
 }
 
 .analisis-section .details-section,
@@ -1672,6 +1725,9 @@ header ul a:hover {
   .analis-section-bis .analisis-section ul {
     margin: 0px;
   }
+  .ivegan-page .h3-ivegan-x {
+    width: 360px;
+  }
   .ivegan-analisis-page .analisis-section .details-section {
     gap: 0px;
   }
@@ -1691,14 +1747,124 @@ header ul a:hover {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.works-bg {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 243, 230);
+  height: 100%;
+}
+
+.uxui-main {
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+}
+
+.alluxuiworks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 16px;
+  gap: 40px;
+  width: 100%;
+}
+.alluxuiworks .title {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0px 16px;
+}
+
+.h1-works {
+  padding: 0px 12px;
+  font-family: "Aladin", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4px;
+  text-align: center;
+  color: rgb(146.1538461538, 116.9230769231, 43.8461538462);
+  width: 100%;
+}
+@media (min-width: 56rem) {
+  .h1-works {
+    font-size: 64px;
+    letter-spacing: 6px;
+  }
+}
+
+.uxui-title {
+  display: flex;
+  justify-content: center;
+}
+
+.ivegan-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  height: auto;
+  padding: 16px;
+  background-image: url(/assets/img/img-ivegan/veg-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.3s ease-out;
+}
+.ivegan-box:hover {
+  box-shadow: 0px 0px 8px rgb(0, 0, 0.25);
+  transform: scale(1.04);
+}
+.ivegan-box .ivegan-title {
+  max-width: 272px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 32px;
+}
+.ivegan-box img.work-start2impact {
+  width: 120px;
+  height: auto;
+  padding: 0px 8px;
+}
+.ivegan-box span {
+  color: white;
+  font-size: 12px;
+  padding-bottom: 20px;
+  padding-top: 12px;
+}
+
+@media (min-width: 48rem) {
+  .ivegan-box {
+    margin: 0px 80px;
+  }
+  .ivegan-box img.title {
+    padding-top: 52px;
+  }
+  .back-btn {
+    top: 0px;
+    left: 40px;
+  }
+}
 .allsuppwork {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 16px;
-  padding-top: 60px;
+  padding: 60px 16px;
   gap: 40px;
+  width: 100%;
 }
 .allsuppwork .title {
   width: 100%;
@@ -1708,21 +1874,17 @@ header ul a:hover {
   gap: 24px;
   margin: 0px 16px;
 }
-.allsuppwork h1 {
-  letter-spacing: 8px;
-  text-align: center;
-}
 .allsuppwork .supp-box1, .allsuppwork .supp-box2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4px;
-  min-width: 300px;
-  box-shadow: 0px 0px 10px rgb(0, 0, 0.25);
+  border-radius: 20px;
   transition: all 0.3s ease-out;
 }
 .allsuppwork .supp-box1:hover, .allsuppwork .supp-box2:hover {
+  box-shadow: 0px 0px 8px rgb(0, 0, 0.25);
   transform: scale(1.04);
 }
 .allsuppwork .supp-box1 h4, .allsuppwork .supp-box2 h4 {
@@ -2126,8 +2288,8 @@ form .contact-submit-btn {
   font-size: 16px;
   letter-spacing: 2px;
   border: none;
-  border-radius: 20px;
-  padding: 16px 28px;
+  border-radius: 4px;
+  padding: 12px 28px;
   margin-top: 8px;
   width: -moz-fit-content;
   width: fit-content;
@@ -2225,6 +2387,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .body-container {
@@ -2352,15 +2515,16 @@ a {
 }
 .back-btn .back-label {
   font-size: 14px;
+  transition: all 0.3s ease-out;
 }
-.back-btn:hover {
-  color: rgb(134, 42, 0);
+.back-btn:hover .back-label {
+  font-size: 15px;
 }
 
 .back-btn-project {
   display: flex;
   position: absolute;
-  top: 24px;
+  top: 132px;
   left: 0px;
   flex-direction: row;
   align-items: center;
@@ -2392,8 +2556,8 @@ a {
   font-size: 12px;
   color: white;
 }
-.back-btn-project:hover {
-  color: rgb(134, 42, 0);
+.back-btn-project:hover .back-label {
+  font-size: 15px;
 }
 
 footer {

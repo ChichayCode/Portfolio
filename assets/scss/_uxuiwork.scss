@@ -1,13 +1,14 @@
 @import 'variables';
 
-.uxui-bg{
+.works-bg {
     display: flex;
     flex-direction: column;
-background-color: $tertiary-color50;
+    background-color: $tertiary-color50;
+    height: 100%;
 }
 
 .uxui-main {
-    
+
     justify-content: flex-start;
     align-items: flex-start;
     height: auto;
@@ -19,7 +20,7 @@ background-color: $tertiary-color50;
     align-items: center;
     flex-direction: column;
     padding: 60px 16px;
-    gap: 60px;
+    gap: 40px;
     width: 100%;
 
     & .title {
@@ -30,20 +31,22 @@ background-color: $tertiary-color50;
         gap: 24px;
         margin: 0px 16px;
     }
+}
 
-    & .h1-uxui {
-        padding: 0px 12px;
-        @include font-Aladin;
-        letter-spacing: 4px;
-        text-align: center;
-        color: darken($tertiary-color, 50%);
+.h1-works {
+    padding: 0px 12px;
+    @include font-Aladin;
+    letter-spacing: 4px;
+    text-align: center;
+    color: darken($tertiary-color, 50%);
+    width: 100%;
 
-        @media (min-width: 56rem) {
-            font-size: 64px;
-            letter-spacing: 6px;
-        }
+    @media (min-width: 56rem) {
+        font-size: 64px;
+        letter-spacing: 6px;
     }
 }
+
 
 
 
@@ -63,31 +66,31 @@ background-color: $tertiary-color50;
     align-items: center;
     gap: 8px;
     // max-width: 1000px;
-    min-width: 300px;
+    // min-width: 300px;
     border-radius: 20px;
     height: auto;
     padding: 16px;
 
-    background-image: url(/assets/img/img-ivegan/veg-background2.png);
-    background-size: auto 100%;
+    background-image: url(/assets/img/img-ivegan/veg-background.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     @include transition-ease;
 
     &:hover {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0.25);
+        box-shadow: 0px 0px 8px rgba(0, 0, 0.25);
         transform: scale(1.04);
     }
 
 
     & .ivegan-title {
-        max-width: 280px;
+        max-width: 272px;
         width: 100%;
         height: auto;
         object-fit: contain;
         padding-top: 32px;
-        padding-right: 28px;
-        padding-left: 28px;
+        // padding-right: 20px;
+        // padding-left: 20px;
     }
 
     & img.work-start2impact {
@@ -104,19 +107,6 @@ background-color: $tertiary-color50;
     }
 }
 
-
-
-
-// SMALL MOBILE
-@media (max-width: 26rem) {
-    .ivegan-box {
-
-        background-image: url(/assets/img/veg-background2.png);
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-}
 
 // IPAD
 @media (min-width: 48rem) {

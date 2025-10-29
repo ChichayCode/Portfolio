@@ -12,7 +12,7 @@
     align-items: center;
     overflow-x: clip;
     overflow-y: visible;
-    margin-top: 112px;
+    margin-top: 100px;
 }
 
 .introduction-bg {
@@ -41,14 +41,14 @@
         // padding: 0px 12px;
         color: $secondary-color;
         @include font-Aladin;
-        top: -68px;
+        top: -67px;
         left: calc(50% - 32px);
         transform: translateX(-50%);
     }
 
     & .h1-about-me {
         position: absolute;
-        top: -68px;
+        top: -67px;
         left: calc(50% + 68px);
         transform: translateX(-50%);
         // padding: 0px 12px;
@@ -153,9 +153,12 @@
         gap: 16px;
         padding-left: 16px;
 
-        & .h3-inline {
+        & .h3-inline,
+        & .h3-inline-x {
             color: $secondary-color;
-            @include font-Didot;
+            @include font-Aladin;
+            letter-spacing: 2px;
+            
         }
 
         & img {
@@ -237,17 +240,18 @@
     gap: 40px;
 
     & h5 {
-        color: $secondary-color20;
+        color: $secondary-color;
         background-color: $tertiary-color50;
         border-radius: 20px;
         padding: 16px 20px;
+        font-weight: 800;
     }
 
     .hard-skills {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        // margin: 0px 16px;
+        margin: 0px 16px;
 
         & .skill-label {
             color: $secondary-color;
@@ -297,7 +301,7 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            padding-left: 32px;
+            padding-left: 20px;
 
             & .bullet {
                 &::marker {
@@ -318,6 +322,10 @@
 
 // IPAD (VERTICAL)
 @media (min-width: 48rem) {
+
+    .about {
+        margin-top: 80px;
+    }
 
     .about .introduction-bg .introduction-text {
 
@@ -355,7 +363,17 @@
             // justify-content: center;
 
             & .h3-inline {
-                padding-left: 252px;
+                padding-left: 244px;
+                width: 100%;
+
+                padding-bottom: 12px;
+            }
+
+            & .h3-inline-x {
+                padding-left: 0px;
+                width: 100%;
+
+                padding-bottom: 12px;
             }
 
             & img {
@@ -396,6 +414,10 @@
 
 // DESKTOP
 @media (min-width: 56rem) {
+
+    .about {
+        margin-top: 20px;
+    }
 
     .introduction-bg {
         background-color: $secondary-color;
@@ -454,7 +476,7 @@
 
 
     .about .curriculum {
-        margin-top: 200px;
+        margin-top: 140px;
 
         .h1-cv {
             top: -73px;
@@ -472,8 +494,12 @@
                 display: none;
             }
 
+            & .h3-inline-x {
+                padding-left: 0px;
+            }
+
             & .h3-inline {
-                padding-left: 328px;
+                padding-left: 312px;
             }
 
             & span {
