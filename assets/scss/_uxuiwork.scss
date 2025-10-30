@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     background-color: $tertiary-color50;
-    height: 100%;
+    height: auto;
 }
 
 .uxui-main {
@@ -34,7 +34,7 @@
 }
 
 .h1-works {
-    padding: 0px 12px;
+    padding: 0px 0px;
     @include font-Aladin;
     letter-spacing: 4px;
     text-align: center;

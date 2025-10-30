@@ -1125,7 +1125,7 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   background-color: rgb(247, 243, 230);
-  height: 100%;
+  height: auto;
 }
 
 .uxui-main {
@@ -1153,7 +1153,7 @@ header ul a:hover {
 }
 
 .h1-works {
-  padding: 0px 12px;
+  padding: 0px 0px;
   font-family: "Aladin", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -1757,7 +1757,7 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   background-color: rgb(247, 243, 230);
-  height: 100%;
+  height: auto;
 }
 
 .uxui-main {
@@ -1785,7 +1785,7 @@ header ul a:hover {
 }
 
 .h1-works {
-  padding: 0px 12px;
+  padding: 0px 0px;
   font-family: "Aladin", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -1921,6 +1921,7 @@ header ul a:hover {
 }
 .allsuppwork .supp-box1 {
   background: linear-gradient(to right, rgba(78, 134, 38, 0.4), rgba(244, 225, 115, 0.4));
+  box-shadow: inset 0 0px 8px rgba(0, 0, 0, 0.2);
 }
 .allsuppwork .supp-box1 h4 {
   color: black;
@@ -1930,6 +1931,7 @@ header ul a:hover {
 }
 .allsuppwork .supp-box2 {
   background-color: white;
+  box-shadow: inset 0 0px 8px rgba(134, 42, 0, 0.4);
 }
 
 @media (min-width: 48rem) {
@@ -1950,16 +1952,64 @@ header ul a:hover {
     margin: 0px 80px;
   }
 }
+.orizon-bg {
+  background: linear-gradient(150deg, rgba(79, 134, 38, 0.25) 5%, rgba(244, 225, 115, 0.3) 35%, rgba(244, 225, 115, 0.3) 100%);
+}
+
+.orizon-intro-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.orizon-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.orizon-intro .orizon-h2 {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  text-align: center;
+  letter-spacing: 4px;
+  color: rgb(0, 66.1448863636, 99.5);
+}
+.orizon-intro .orizon-start2impact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.orizon-intro .orizon-start2impact p {
+  padding-top: 0px;
+  margin: 0px 0px;
+}
+.orizon-intro .orizon-start2impact img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  padding: 0px 8px;
+}
+.orizon-intro p {
+  padding-top: 32px;
+  text-align: center;
+  max-width: 600px;
+}
+
 .orizon-page {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding-top: 60px;
   max-width: 1280px;
-  margin: 16px;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
 }
-.orizon-page .h2-line {
+.orizon-page .h3-orizon {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1967,83 +2017,40 @@ header ul a:hover {
   width: 100%;
   gap: 16px;
   padding-left: 16px;
+  padding-bottom: 12px;
 }
-.orizon-page .h2-line h2 {
-  letter-spacing: 6px;
+.orizon-page .h3-orizon h3 {
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
-  color: rgb(58, 125, 60);
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
+  color: rgb(0, 83.0965909091, 125);
 }
-.orizon-page .h2-line .orizon-line {
+.orizon-page .h3-orizon .orizon-line {
   top: 50%;
   width: 100%;
   height: 2px;
-  background-color: rgb(2, 124, 132);
+  background-color: rgb(0, 83.0965909091, 125);
 }
 .orizon-page p {
   margin: 0px 16px;
 }
 
-.h2-line .orizon-heading {
-  display: flex;
-  width: 100%;
-  display: flex;
+.orizon-heading {
   position: relative;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.orizon-project {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
-.orizon-project .orizon-h1 {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-  padding-right: 20px;
-  padding-left: 20px;
-  text-align: center;
-  letter-spacing: 6px;
-}
-.orizon-project .orizon-start2impact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-.orizon-project .orizon-start2impact p {
-  color: rgb(58, 125, 60);
-  padding-top: 0px;
-  margin: 0px 0px;
-}
-.orizon-project .orizon-start2impact img {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-  padding: 0px 8px;
-}
-.orizon-project p {
-  padding-top: 32px;
-}
 
 .orizon-introduction {
   width: 94%;
-}
-
-.orizon-introduction p {
-  padding-top: 12px;
-}
-
-.orizon-page a {
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .orizon-introduction,
@@ -2056,16 +2063,17 @@ header ul a:hover {
 .orizon-client .client-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
-.orizon-introduction .client-text h3,
-.orizon-client .client-text h3 {
-  padding-top: 20px;
+.orizon-introduction .client-text .h4-orizon,
+.orizon-client .client-text .h4-orizon {
   margin-left: 16px;
+  letter-spacing: 2px;
+  color: rgb(7, 53, 8);
 }
 .orizon-introduction .client-text p,
 .orizon-client .client-text p {
-  margin-left: 28px;
+  margin-bottom: 20px;
 }
 .orizon-introduction ul,
 .orizon-client ul {
@@ -2095,22 +2103,21 @@ header ul a:hover {
   .orizon-introduction ul,
   .orizon-client ul,
   .orizon-details ul {
-    padding-left: 48px;
+    padding-left: 60px;
     padding-right: 32px;
   }
-  .orizon-page .orizon-project {
-    margin: 0px 40px;
+  .orizon-page .orizon-intro {
+    padding: 0px 40px;
   }
-  .orizon-page .orizon-project .orizon-start2impact {
+  .orizon-page .orizon-intro .orizon-start2impact {
     flex-direction: row;
-  }
-  .orizon-page a {
-    margin-left: 60px;
   }
 }
 @media (min-width: 56rem) {
   .orizon-page {
-    margin: 16px 40px;
+    margin: 16px 0px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .orizon-client .client-text {
     margin: 0px 24px;
@@ -2120,9 +2127,6 @@ header ul a:hover {
   }
   .orizon-introduction ul {
     padding-left: 80px;
-  }
-  .orizon-page a {
-    margin-left: 80px;
   }
 }
 @media (min-width: 90rem) {
@@ -2489,6 +2493,7 @@ a {
   display: flex;
   position: absolute;
   top: -48px;
+  left: 0px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
