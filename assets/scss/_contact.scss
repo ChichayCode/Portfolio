@@ -7,9 +7,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-
     gap: 88px;
-    // gap: 24px;
 }
 
 .contact-img {
@@ -215,6 +213,10 @@ form {
 
 // DESKTOP
 @media (min-width: 56rem) {
+
+    .contact-page{
+        gap: 16px;
+    }
 
     .contact-img {
         height: 100px;

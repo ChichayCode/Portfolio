@@ -1,0 +1,36 @@
+
+.card-box{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 20px;
+}
+
+
+.freetime-card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & img{
+        object-fit: contain;
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        @include transition-ease;
+
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+}
+
+
+@media (min-width: 56rem) {
+
+    .card-box{
+        flex-direction: row;
+        gap: 60px;
+    }
+
+}

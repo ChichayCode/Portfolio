@@ -356,6 +356,7 @@
 
         li {
             margin-left: 16px;
+            padding-bottom: 8px;
         }
 
     }
@@ -572,23 +573,6 @@
 // DESKTOP
 @media (min-width: 56rem) {
 
-    // .analisis-heading {
-    //     align-items: center;
-    //     justify-content: flex-end;
-    //     height: 80px;
-
-    //     h1 {
-    //         margin-left: 0px;
-    //         padding-top: 16px;
-    //         padding-left: 0px;
-    //         padding-bottom: 20px;
-    //     }
-
-    //     .back-btn-project {
-    //         margin: 0px 60px;
-    //     }
-    // }
-
     .analisis-heading{
         align-items: center;
 
@@ -605,6 +589,11 @@
 
     .analisis-section{
         padding: 0px 80px;
+
+        ul li{
+            margin: 0px 32px;
+            
+        }
     }
 
     .analis-section-bis {

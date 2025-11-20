@@ -102,6 +102,11 @@
 // IPAD
 @media (min-width: 48rem) {
 
+    .orizon-bg .orizon-page {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .allsuppwork .supp-boxex {
         display: flex;
         flex-direction: row;
@@ -132,16 +137,14 @@
 
 
 .orizon-bg {
-    background: linear-gradient(
-  150deg,
-  rgba(79, 134, 38, 0.25) 5%,
-  rgba(244, 225, 115, 0.3) 35%,
-  rgba(244, 225, 115, 0.3) 100%
-);
+    background: linear-gradient(150deg,
+            rgba(79, 134, 38, 0.25) 5%,
+            rgba(244, 225, 115, 0.3) 35%,
+            rgba(244, 225, 115, 0.3) 100%);
 }
 
 
-.orizon-intro-wrapper{
+.supp-intro-wrapper {
     position: relative;
     width: 100%;
 }
@@ -161,6 +164,7 @@
         text-align: center;
         letter-spacing: 4px;
         color: darken(rgb(0, 117, 176), 15%);
+        @include font-Aladin;
     }
 
     .orizon-start2impact {
@@ -211,10 +215,9 @@
         padding-bottom: 12px;
 
         & h3 {
-            
+
             width: fit-content;
             white-space: nowrap;
-            @include font-Didot;
             font-weight: 800;
             color: darken(rgb(0, 117, 176), 10%);
         }
@@ -231,26 +234,9 @@
     }
 
     p {
-        margin: 0px 16px;
+        margin: 0px 24px;
     }
 
-}
-
-.orizon-heading {
-    position: relative;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-}
-
-
-.orizon-introduction {
-    width: 94%;
 }
 
 .orizon-introduction,
@@ -258,6 +244,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
 
     & .client-text {
         display: flex;
@@ -266,7 +253,7 @@
 
         & .h4-orizon {
 
-            margin-left: 16px;
+            margin-left: 24px;
             letter-spacing: 2px;
             color: $ivegan-h3;
         }
@@ -300,7 +287,7 @@
     .orizon-introduction,
     .orizon-client,
     .orizon-details {
-        margin: 16px 24px;
+        padding: 16px 24px;
 
         .client-text {
             margin: 0px 16px;
@@ -371,3 +358,54 @@
 
 
 // LOOKBOOK PROJECT (COPYWRITING) //////////////////////////////////////
+
+.lookbook-bg {
+    background-color: rgba(226, 189, 67, 0.2);
+}
+
+.lookbook-h2 {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    text-align: center;
+    letter-spacing: 4px;
+    @include font-Aladin;
+    color: $secondary-color;
+}
+
+
+.h3-lookbook {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 16px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+
+    & h3 {
+
+        width: fit-content;
+        white-space: nowrap;
+        font-weight: 800;
+        color: $secondary-color;
+    }
+
+    .lookbook-line {
+        // position: absolute;
+        // display: block;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: $secondary-color;
+        ;
+    }
+}
+
+.h4-lookbook {
+    margin-left: 24px;
+    letter-spacing: 2px;
+    color: rgb(198,156,18);
+}

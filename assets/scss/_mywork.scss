@@ -32,7 +32,7 @@
         @include font-Aladin;
         text-align: center;
         padding: 0px 12px;
-        margin-top: 30px;
+        margin-top: 28px;
 
     }
 }
@@ -66,11 +66,11 @@
         overflow: hidden;
 
         &:hover {
-            box-shadow: 0px 0px 8px rgba(0, 0, 0.25);
+            box-shadow: 0px 0px 8px rgba(256,256, 256, 0.5);
             transform: scale(1.05);
 
             &>h3 {
-                font-size: 22px;
+                font-size: 21px;
             }
         }
 
@@ -128,10 +128,9 @@
 @media (min-width: 56rem) {
 
     .mywork-title {
-        gap: 40px;
 
         .h1-mywork {
-            margin-top: 146px;
+            margin-top: 52px;
         }
 
         &::before {

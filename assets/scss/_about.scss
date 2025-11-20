@@ -123,11 +123,10 @@
     overflow-y: visible;
 
     & .h1-cv {
-        @include font-Aladin;
+        @include font-Didot;
         color: darken($tertiary-color, 15%);
         text-align: center;
         line-height: 0.7;
-
     }
 }
 
@@ -158,7 +157,7 @@
             color: $secondary-color;
             @include font-Aladin;
             letter-spacing: 2px;
-            
+
         }
 
         & img {
@@ -353,6 +352,10 @@
         left: calc(50% + 85px);
     }
 
+    .h1-cv{
+        font-size: 44px;
+    }
+
 
     .cv-section {
         // margin: 0px 40px;
@@ -480,6 +483,8 @@
 
         .h1-cv {
             top: -73px;
+            font-size: 60px;
+
         }
     }
 

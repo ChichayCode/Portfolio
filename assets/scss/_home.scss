@@ -223,7 +223,7 @@ section.home {
         font-size: 14px;
         border-radius: 4px;
 
-        color: $tertiary-color50;
+        color: $primary-color;
         background-color: $secondary-color;
         // border-radius: 20px;
 
@@ -232,6 +232,7 @@ section.home {
         &:hover {
             transform: scale(1.05);
             color: $primary-color;
+            background-color: lighten($secondary-color, 5%);
         }
     }
 }
