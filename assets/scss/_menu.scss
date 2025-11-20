@@ -6,7 +6,6 @@ header {
     display: flex;
     align-items: center;
     background-color: $primary-color;
-    // background: linear-gradient(to bottom, $tertiary-color50 50%, transparent 100%);
 
     border-radius: 20px;
     border: .1px solid rgba(0, 0, 0, 0.15);
@@ -29,23 +28,6 @@ header {
     align-items: center;
     width: 100%;
 }
-
-// .header-bg {
-//     z-index: 2;
-//     width: 100%;
-//     height: 140px;
-//     background-color: linear-gradient(
-//     to bottom,
-//    rgba(255, 255, 255, 0.2) 0%,    // colore iniziale semi-trasparente
-//     rgba(255, 255, 255, 0.15) 60%,
-//     rgba(255, 255, 255, 0.08) 85%,
-//     rgba(255, 255, 255, 0) 100%  
-//   );
-//     position: fixed;
-//     // background-color: rgba(255, 255, 255, 0.2); 
-//     backdrop-filter: blur(4px);
-//     -webkit-backdrop-filter: blur(4px);
-// }
 
 .logoname img {
     width: 40px;
@@ -70,7 +52,6 @@ header ul {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    // width: 100%;
 
 }
 
@@ -90,7 +71,6 @@ header ul a {
     }
 }
 
-
 .header .menu-nav {
     background-color: $secondary-color;
     position: fixed;
@@ -105,11 +85,6 @@ header ul a {
 
     transition: right .3s ease-out;
     z-index: 2;
-
-    // height: calc(100vh - 16px);
-    // width: calc(100vw - 32px);
-    // border-radius: 36px;
-    // margin: 16px;
 }
 
 .header .menu-icon {
@@ -136,7 +111,6 @@ header ul a {
         height: 2px;
         background-color: black;
         @include transition-ease;
-
     }
 
     &::after {
@@ -147,7 +121,6 @@ header ul a {
         height: 2px;
         background-color: black;
         @include transition-ease;
-
     }
 }
 
@@ -157,7 +130,6 @@ header ul a {
 
     &:checked~.menu-icon .menu-nav {
         right: 0;
-
     }
 
     &:checked~.menu-icon .nav-icon {
@@ -167,7 +139,6 @@ header ul a {
             transform: rotate(45deg);
             top: 0;
             background-color: $primary-color;
-
         }
 
         &::after {
@@ -175,26 +146,20 @@ header ul a {
             top: 0;
             background-color: $primary-color;
         }
-
-
     }
 }
 
 
 // IPAD
 @media (min-width: 48rem) {
-
     header {
         padding: 0px 24px;
     }
-
 }
 
 
 // DESKTOP
 @media (min-width: 56rem) {
-
-
     .header .menu-icon .menu-nav {
         display: flex;
         flex-direction: row;
@@ -222,5 +187,4 @@ header ul a {
     .header .menu-icon .nav-icon::after {
         display: none;
     }
-
 }

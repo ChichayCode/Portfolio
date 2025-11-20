@@ -19,7 +19,6 @@
         margin: 0px 16px;
     }
 
-
     & .supp-box1,
     & .supp-box2 {
         display: flex;
@@ -34,7 +33,6 @@
             box-shadow: 0px 0px 8px rgba(0, 0, 0.25);
             transform: scale(1.04)
         }
-
 
         & h4 {
             max-width: 300px;
@@ -61,7 +59,6 @@
         }
 
         & p {
-            // color: $primary-color;
             font-size: 12px;
             padding-bottom: 20px;
             padding-top: 12px;
@@ -88,11 +85,6 @@
     }
 
     & .supp-box2 {
-        // background-image: url(/assets/img/img-ivegan/veg-background2.png);
-        // background-size: auto 100%;
-        // background-repeat: no-repeat;
-        // background-position: center center;
-
         background-color: $primary-color;
         box-shadow: inset 0 0px 8px rgba($secondary-color, 0.4)
     }
@@ -101,7 +93,6 @@
 
 // IPAD
 @media (min-width: 48rem) {
-
     .orizon-bg .orizon-page {
         padding-left: 20px;
         padding-right: 20px;
@@ -115,8 +106,8 @@
     }
 }
 
+// DESTOP LARGE
 @media (min-width: 90rem) {
-
     .supp-box1,
     .supp-box2 {
         width: 400px;
@@ -126,15 +117,10 @@
         gap: 44px;
         margin: 0px 80px;
     }
-
 }
 
 
-
-
-
-// ORIZON PROJECT (GRAFICA) //////////////////////////////////////
-
+// ORIZON PROJECT (GRAFICA) //
 
 .orizon-bg {
     background: linear-gradient(150deg,
@@ -142,7 +128,6 @@
             rgba(244, 225, 115, 0.3) 35%,
             rgba(244, 225, 115, 0.3) 100%);
 }
-
 
 .supp-intro-wrapper {
     position: relative;
@@ -183,7 +168,6 @@
             max-width: 160px;
             height: auto;
             padding: 0px 8px;
-
         }
     }
 
@@ -200,7 +184,6 @@
     gap: 40px;
     padding-top: 60px;
     max-width: 1280px;
-    // justify-content: center;
     align-items: center;
     margin-bottom: 40px;
 
@@ -223,13 +206,10 @@
         }
 
         .orizon-line {
-            // position: absolute;
-            // display: block;
             top: 50%;
             width: 100%;
             height: 2px;
             background-color: darken(rgb(0, 117, 176), 10%);
-            ;
         }
     }
 
@@ -261,7 +241,6 @@
         & p {
             margin-bottom: 20px;
         }
-
     }
 
     & ul {
@@ -271,14 +250,7 @@
             padding: 0px 4px;
         }
     }
-
-
 }
-
-
-
-
-
 
 
 // IPAD
@@ -310,10 +282,9 @@
             flex-direction: row;
         }
     }
-
 }
 
-
+// DESKTOP
 @media (min-width: 56rem) {
     .orizon-page {
         margin: 16px 0px;
@@ -337,13 +308,8 @@
 }
 
 
-// BIG DESKTOP
+// DESKTOP LARGE
 @media (min-width: 90rem) {
-    // .ivegan-page{
-    //     margin: 0px 80px;
-    //     max-width: 1280px;
-    // }
-
     .orizon-introduction,
     .orizon-client,
     .orizon-details {
@@ -357,8 +323,7 @@
 
 
 
-// LOOKBOOK PROJECT (COPYWRITING) //////////////////////////////////////
-
+// LOOKBOOK PROJECT (COPYWRITING) //
 .lookbook-bg {
     background-color: rgba(226, 189, 67, 0.2);
 }
@@ -374,7 +339,6 @@
     color: $secondary-color;
 }
 
-
 .h3-lookbook {
     display: flex;
     flex-direction: row;
@@ -386,7 +350,6 @@
     padding-bottom: 12px;
 
     & h3 {
-
         width: fit-content;
         white-space: nowrap;
         font-weight: 800;
@@ -394,13 +357,10 @@
     }
 
     .lookbook-line {
-        // position: absolute;
-        // display: block;
         top: 50%;
         width: 100%;
         height: 2px;
         background-color: $secondary-color;
-        ;
     }
 }
 

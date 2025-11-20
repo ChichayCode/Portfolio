@@ -5,7 +5,6 @@
 }
 
 .about {
-
     display: flex;
     position: relative;
     flex-direction: column;
@@ -18,12 +17,10 @@
 .introduction-bg {
     width: 100%;
     max-width: 1180px;
-    // background-color: $secondary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // overflow-y: hidden;
 }
 
 
@@ -34,11 +31,9 @@
     color: $primary-color;
     width: 100%;
     gap: 16px;
-    // justify-content: flex-end;
 
     & .h1-about {
         position: absolute;
-        // padding: 0px 12px;
         color: $secondary-color;
         @include font-Aladin;
         top: -67px;
@@ -51,7 +46,6 @@
         top: -67px;
         left: calc(50% + 68px);
         transform: translateX(-50%);
-        // padding: 0px 12px;
         color: $secondary-color;
         @include font-Aladin;
     }
@@ -60,10 +54,8 @@
         max-width: 250px;
         height: auto;
         margin: 12px 0px;
-
         border-radius: 20px;
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-
     }
 
     .introduction-text {
@@ -96,21 +88,13 @@
         gap: 16px;
     }
 
-
     p {
         max-width: 450px;
-
-        // & .medium {
-        //     font-weight: 500;
-        // }
     }
 }
 
 
-
-
 .about .curriculum {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,7 +114,6 @@
     }
 }
 
-
 .cv-section {
     display: flex;
     position: relative;
@@ -139,7 +122,6 @@
     padding: 32px 16px;
     width: 100%;
     max-width: 1060px;
-
     background-color: rgba($color: $primary-color, $alpha: 0.75);
     border-radius: 36px;
 
@@ -157,25 +139,13 @@
             color: $secondary-color;
             @include font-Aladin;
             letter-spacing: 2px;
-
         }
 
         & img {
-            // position: absolute;
             width: 32px;
             height: auto;
             right: -32px;
         }
-
-        // & span {
-        //     position: absolute;
-        //     height: 1.5px;
-        //     background-color: $secondary-color;
-        //     width: 100%;
-        //     // width: calc(100% - 36px);
-        //     top: 19px;
-        //     right: 0px;
-        // }
     }
 }
 
@@ -187,22 +157,15 @@
     padding-left: 32px;
 
     & ul {
-
-
         & .date {
-
             font-size: 14px;
             font-weight: 100;
-            // list-style: square;
 
             &::marker {
-
                 color: darken($tertiary-color, 10%);
             }
         }
     }
-
-
 
     & .job-details {
         display: flex;
@@ -280,7 +243,6 @@
 
                 & .text {
                     list-style-type: none;
-
                 }
 
                 & .bullet {
@@ -303,31 +265,23 @@
             padding-left: 20px;
 
             & .bullet {
-                &::marker {
 
+                &::marker {
                     color: darken($tertiary-color, 15%);
                 }
             }
-
-
         }
     }
-
-
 }
-
-
 
 
 // IPAD (VERTICAL)
 @media (min-width: 48rem) {
-
     .about {
         margin-top: 80px;
     }
 
     .about .introduction-bg .introduction-text {
-
         padding-left: 72px;
         padding-right: 72px;
         align-items: center;
@@ -344,7 +298,6 @@
     .introduction-bg .introduction .h1-about {
         top: -49px;
         left: calc(50% - 45px);
-        ;
     }
 
     .introduction-bg .introduction .h1-about-me {
@@ -356,11 +309,8 @@
         font-size: 44px;
     }
 
-
     .cv-section {
-        // margin: 0px 40px;
         padding: 48px;
-
 
         & .section-headline {
             // justify-content: center;
@@ -368,31 +318,24 @@
             & .h3-inline {
                 padding-left: 244px;
                 width: 100%;
-
                 padding-bottom: 12px;
             }
 
             & .h3-inline-x {
                 padding-left: 0px;
                 width: 100%;
-
                 padding-bottom: 12px;
             }
 
             & img {
-
-                // transform: scale(1.2);
-                // right: -20px;
                 display: none;
             }
-
         }
     }
 
     .about .h1-cv {
         top: -80px;
     }
-
 
     .cv-section .each-job {
         display: flex;
@@ -407,17 +350,14 @@
             & .date {
                 justify-content: right;
                 list-style: none;
-
             }
         }
     }
 }
 
 
-
 // DESKTOP
 @media (min-width: 56rem) {
-
     .about {
         margin-top: 20px;
     }
@@ -427,7 +367,6 @@
         border-radius: 36px;
         margin-top: 100px;
     }
-
 
     .about .introduction {
         align-items: center;
@@ -484,17 +423,14 @@
         .h1-cv {
             top: -73px;
             font-size: 60px;
-
         }
     }
 
 
     .cv-section {
-
         padding: 48px;
 
         & .section-headline {
-
             & img {
                 display: none;
             }
@@ -533,6 +469,5 @@
                 width: 100%;
             }
         }
-
     }
 }

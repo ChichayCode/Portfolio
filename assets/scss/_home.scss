@@ -2,7 +2,6 @@
 
 .home-bg {
     background-color: $secondary-color;
-
     display: flex;
     width: 100%;
     padding: 0px 0px;
@@ -12,27 +11,22 @@
 }
 
 .clip-wrapper {
-
     width: 100%;
     height: 100%;
 }
 
 .home-container {
     background-color: $tertiary-color50;
-
     display: flex;
     flex-direction: column;
     height: 100%;
-
     max-width: 1080px;
     width: 100%;
-
 }
 
 .main-home {
     width: 100%;
     position: relative;
-
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 140px;
@@ -41,7 +35,6 @@
 .home-img1 {
     width: 380px;
     height: 120px;
-
     transform: rotate(-90deg);
     transform-origin: top right;
     opacity: 0.8;
@@ -58,11 +51,9 @@
     display: none;
 }
 
-
 .home-head-absolute {
     height: 456px;
     width: 100%;
-    // max-width: 320px;
     position: relative;
 }
 
@@ -121,10 +112,9 @@ h1.PORT-home {
         position: absolute;
         top: 20px;
         right: -120px;
-        // transform: rotate(270deg);
         transform-origin: top right;
-        z-index: -1; // dietro il testo principale
-        pointer-events: none; // evita problemi di click
+        z-index: -1;
+        pointer-events: none;
     }
 }
 
@@ -138,8 +128,6 @@ h1.FOLIO-home {
     width: fit-content;
 
     position: absolute;
-    // right: 76px;
-    // top: 260px;
     top: 160px;
     right: -104px;
 
@@ -152,24 +140,18 @@ h1.FOLIO-home {
         position: absolute;
         top: -40px;
         right: -90px;
-        // transform: rotate(270deg);
         transform-origin: top right;
-        z-index: -1; // dietro il testo principale
-        pointer-events: none; // evita problemi di click
+        z-index: -1;
+        pointer-events: none;
     }
 }
 
 .home-chelseaculing {
     position: absolute;
     white-space: nowrap;
-
-    // top: 188px;
-    // // left: 168px;
-    // right: 34px;
     transform-origin: top right;
     top: 124px;
     right: -92px;
-
     font-size: 12px;
     letter-spacing: 4px;
     word-spacing: 12px;
@@ -184,22 +166,17 @@ section.home {
     padding-left: 12px;
     padding-right: 12px;
     width: 100%;
-
     justify-content: flex-end;
     align-items: flex-end;
-    // max-width: 400px;
 
     & h2 {
         @include font-Aladin;
-
         line-height: 1.4;
         letter-spacing: 2px;
         width: 100%;
         padding-top: 20px;
     }
 }
-
-
 
 
 .home-text {
@@ -222,11 +199,8 @@ section.home {
         letter-spacing: 2px;
         font-size: 14px;
         border-radius: 4px;
-
         color: $primary-color;
         background-color: $secondary-color;
-        // border-radius: 20px;
-
         @include transition-ease;
 
         &:hover {
@@ -236,7 +210,6 @@ section.home {
         }
     }
 }
-
 
 
 
@@ -253,7 +226,6 @@ section.home {
 
     section.home {
         max-width: none;
-
         padding-left: 40px;
         padding-right: 40px;
 
@@ -282,7 +254,6 @@ section.home {
         top: -80px;
         right: 0px;
         transform: rotate(270deg) translateY(200px);
-
     }
 
     h1.FOLIO-home {
@@ -368,8 +339,7 @@ section.home {
         &::before{
             font-size: 120px;
             top: 40px;
-            right: -128px;
-            
+            right: -128px;          
         }
     }
 
@@ -395,7 +365,6 @@ section.home {
         width: 2px;
         height: 200%;
         background-color: black;
-
         position: absolute;
         top: -100px;
         left: 218px;
@@ -425,7 +394,6 @@ section.home {
     .home-footer {
         margin-left: 300px;
     }
-
 }
 
 

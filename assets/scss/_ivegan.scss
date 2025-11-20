@@ -1,8 +1,7 @@
 @import 'variables';
 
 
-.ivegan-main{
-    
+.ivegan-main{  
     display: flex;
     flex-direction: column;
     height: auto;
@@ -19,10 +18,6 @@
     flex-direction: column;
     gap: 36px;
     padding-top: 40px;
-    max-width: 1280px;
-    // justify-content: center;
-    // align-items: center;
-    
 
     .h3-ivegan,
     .h3-ivegan-x {
@@ -38,7 +33,6 @@
 
         & h3 {
             color: $primary-color;
-
             width: fit-content;
             white-space: nowrap;
             letter-spacing: 4px;
@@ -81,8 +75,6 @@
         max-width: 160px;
         height: auto;
         padding: 0px 8px;
-
-
     }
 }
 
@@ -118,10 +110,7 @@
         padding-right: 20px;
         padding-left: 20px;
     }
-
-
 }
-
 
 .ivegan-introduction,
 .ivegan-client {
@@ -133,7 +122,6 @@
     & p {
         margin: 0px 20px;
     }
-
 }
 
 .client-text {
@@ -143,10 +131,7 @@
 }
 
 
-
 .h3-ivegan .ivegan-line {
-    // position: absolute;
-    // display: block;
     top: 50%;
     width: 100%;
     height: 2px;
@@ -243,7 +228,6 @@
     a.h3-ivegan {
         margin: 12px 80px;
     }
-
 }
 
 
@@ -279,14 +263,11 @@
 .analisis-heading {
     display: flex;
     position: relative;
-    // z-index: 3;
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    // height: 120px;
     height: auto;
     margin: 0px 16px;
-
 
     h2 {
         width: 100%;
@@ -332,7 +313,6 @@
         & h4{
             color: $ivegan-h3;
         }
-
     }
 }
 
@@ -345,7 +325,6 @@
     min-width: 0;
     height: auto;
     width: 100%;
-    // overflow-x: hidden;
 
     p {
         padding: 0px 40px;
@@ -358,12 +337,7 @@
             margin-left: 16px;
             padding-bottom: 8px;
         }
-
     }
-}
-
-.test{
-    // border: 2px solid blue;
 }
 
 .h3-analisis {
@@ -405,8 +379,6 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    // margin-left: 40px;
-    // padding: 0px 40px;
 
     .row-details-section,
     .moredetails-section {
@@ -441,10 +413,7 @@
             margin: 0px;
         }
     }
-
 }
-
-
 
 .linked-img-pdf {
     position: relative;
@@ -455,8 +424,6 @@
     height: auto;
     box-shadow: 0px 0px 4px rgb(0, 0, 0.25);
     margin:  0px 40px;
-
-
 
     img {
         display: block;
@@ -482,7 +449,6 @@
         font-weight: bold;
         font-size: 12px;
         line-height: 1.2;
-        
     }
 }
 
@@ -495,17 +461,8 @@
 // IPAD
 @media (min-width: 48rem) {
 
-    .analisis-heading {
-
-        .back-btn-project {
-            margin: 0px 16px;
-        }
-    }
-
     .analisis-introduction {
         margin: 0px 80px;
-
-
     }
 
     .analisis-section {
@@ -515,15 +472,13 @@
             width: auto;
             margin-right: 0px;
             margin-left: 0px;
-
         }
 
         ul {
             margin-left: 48px;
             margin-right: 20px;
             padding: 0px;
-        }
-        
+        }        
     }
 
 
@@ -592,7 +547,6 @@
 
         ul li{
             margin: 0px 32px;
-            
         }
     }
 
@@ -630,5 +584,4 @@
     .linked-img-pdf:hover .img-hover {
         opacity: 1;
     }
-
 }

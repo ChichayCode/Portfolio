@@ -1251,7 +1251,6 @@ header ul a:hover {
   flex-direction: column;
   gap: 36px;
   padding-top: 40px;
-  max-width: 1280px;
 }
 .ivegan-page .h3-ivegan,
 .ivegan-page .h3-ivegan-x {
@@ -1650,9 +1649,6 @@ header ul a:hover {
 }
 
 @media (min-width: 48rem) {
-  .analisis-heading .back-btn-project {
-    margin: 0px 16px;
-  }
   .analisis-introduction {
     margin: 0px 80px;
   }
@@ -2470,7 +2466,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .body-container {
@@ -2670,6 +2665,10 @@ footer a:hover {
   footer {
     margin-left: 28px;
   }
+  .back-btn-project,
+  .back-btn {
+    margin: 0px 16px;
+  }
 }
 @media (min-width: 56rem) {
   .main {
@@ -2679,5 +2678,9 @@ footer a:hover {
   .text-about,
   .text-name h1 {
     font-size: 28px;
+  }
+  .back-btn-project,
+  .back-btn {
+    margin: 0px 24px;
   }
 }/*# sourceMappingURL=main.css.map */

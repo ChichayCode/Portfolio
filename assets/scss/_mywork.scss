@@ -1,11 +1,5 @@
 @import 'variables';
 
-// * {
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-// }
-
 .allmyworks {
     display: flex;
     position: relative;
@@ -13,8 +7,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    // overflow-x: hidden;
-
 }
 
 .mywork-title {
@@ -33,7 +25,6 @@
         text-align: center;
         padding: 0px 12px;
         margin-top: 28px;
-
     }
 }
 
@@ -53,13 +44,10 @@
         width: fit-content;
     }
 
-
     & .box {
         display: flex;
         position: relative;
-        // padding: 16px;
         margin: 16px;
-        // box-shadow: 0px 0px 10px rgba(255, 255, 255, .25);
         @include transition-ease;
         max-width: 260px;
         border-radius: 20px;
@@ -75,8 +63,7 @@
         }
 
         img {
-            // width: 300px;
-            // height: 300px;
+
             height: auto;
             width: 100%;
             object-fit: contain;
@@ -96,7 +83,6 @@
 }
 
 
-
 // IPAD
 @media (min-width: 48rem) {
     .works {
@@ -111,10 +97,6 @@
         flex: 0 1 calc(50% - 32px);
     }
 
-    // .allmyworks .h1-mywork{
-    //     margin-top: 60px;
-    // }
-
     .mywork-title::after {
         right: auto;
         left: 0;
@@ -124,7 +106,7 @@
 }
 
 
-// // DESKTOP
+// DESKTOP
 @media (min-width: 56rem) {
 
     .mywork-title {
@@ -155,8 +137,6 @@
             margin: 16px 0px;
         }
     }
-
-
 }
 
 

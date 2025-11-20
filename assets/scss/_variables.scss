@@ -27,7 +27,6 @@ $font-weights: (
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    // overflow-y: hidden;
 }
 
 @mixin transition-ease {
@@ -39,7 +38,6 @@ $font-weights: (
     font-family: "GFS Didot", serif;
     font-weight: 400;
     font-style: normal;
-    // letter-spacing: 1px;
 }
 
 @mixin font-Aladin{
