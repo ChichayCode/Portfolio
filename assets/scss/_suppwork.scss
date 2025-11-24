@@ -140,6 +140,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    width: 100%;
 
     .orizon-h2 {
         max-width: 500px;
@@ -183,7 +184,6 @@
     flex-direction: column;
     gap: 40px;
     padding-top: 60px;
-    max-width: 1280px;
     align-items: center;
     margin-bottom: 40px;
 
@@ -287,7 +287,6 @@
 // DESKTOP
 @media (min-width: 56rem) {
     .orizon-page {
-        margin: 16px 0px;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -313,11 +312,7 @@
     .orizon-introduction,
     .orizon-client,
     .orizon-details {
-        margin: 16px 64px;
-    }
-
-    .orizon-page a {
-        margin-left: 100px;
+        margin: 16px 84px;
     }
 }
 

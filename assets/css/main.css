@@ -373,6 +373,7 @@ section.home h2 {
     font-size: 112px;
     top: -92px;
     transform: rotate(270deg) translateY(380px);
+    line-height: 1;
   }
   h1.PORT-home::before {
     font-size: 140px;
@@ -405,17 +406,17 @@ section.home h2 {
   .home-text {
     position: relative;
     padding-right: 72px;
-    padding-left: 340px;
+    padding-left: 328px;
   }
   section.home h2 {
     padding-right: 72px;
-    padding-left: 340px;
+    padding-left: 328px;
   }
   .home-head-absolute {
     height: 420px;
   }
   .home-btn {
-    padding-left: 340px;
+    padding-left: 328px;
   }
   .home-footer {
     margin-left: 360px;
@@ -1075,6 +1076,7 @@ header ul a:hover {
 @media (min-width: 48rem) {
   .works {
     margin: 0px 52px;
+    margin-bottom: 52px;
     max-width: 580px;
     flex-wrap: wrap;
   }
@@ -1974,6 +1976,7 @@ header ul a:hover {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  width: 100%;
 }
 .orizon-intro .orizon-h2 {
   max-width: 500px;
@@ -2015,7 +2018,6 @@ header ul a:hover {
   flex-direction: column;
   gap: 40px;
   padding-top: 60px;
-  max-width: 1280px;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -2109,7 +2111,6 @@ header ul a:hover {
 }
 @media (min-width: 56rem) {
   .orizon-page {
-    margin: 16px 0px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -2127,10 +2128,7 @@ header ul a:hover {
   .orizon-introduction,
   .orizon-client,
   .orizon-details {
-    margin: 16px 64px;
-  }
-  .orizon-page a {
-    margin-left: 100px;
+    margin: 16px 84px;
   }
 }
 .lookbook-bg {
@@ -2454,7 +2452,7 @@ form .contact-submit-btn:hover {
 @media (min-width: 56rem) {
   .card-box {
     flex-direction: row;
-    gap: 60px;
+    gap: 100px;
   }
 }
 body {
