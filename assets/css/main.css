@@ -2455,6 +2455,83 @@ form .contact-submit-btn:hover {
     gap: 100px;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-h2 {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  text-align: center;
+  letter-spacing: 4px;
+  color: rgb(134, 42, 0);
+  font-family: "Aladin", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.h3-portfolio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+}
+.h3-portfolio h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  font-weight: 800;
+  color: rgb(83, 26.0149253731, 0);
+}
+.h3-portfolio .portfolio-line {
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(83, 26.0149253731, 0);
+}
+
+.portfolio-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  height: auto;
+  padding: 20px 36px;
+  background-color: rgb(251.7692307692, 249.6153846154, 244.2307692308);
+  transition: all 0.3s ease-out;
+}
+.portfolio-box:hover {
+  box-shadow: 0px 0px 8px rgb(0, 0, 0.25);
+  transform: scale(1.04);
+}
+.portfolio-box .img-logonome {
+  max-width: 160px;
+  height: auto;
+}
+.portfolio-box h4 {
+  padding: 8px;
+  font-weight: 800;
+  color: rgb(83, 26.0149253731, 0);
+}
+.portfolio-box img.work-start2impact {
+  width: 120px;
+  height: auto;
+  padding: 16px 8px;
+}
+.portfolio-box span {
+  font-size: 12px;
+}
+
 body {
   background: white;
   font-family: "avenir", sans-serif;
@@ -2558,7 +2635,7 @@ h4 {
 
 a {
   text-decoration: none;
-  color: rgb(84, 62, 2);
+  color: black;
 }
 
 .back-btn {
@@ -2587,7 +2664,7 @@ a {
   right: 6px;
   width: 13px;
   height: 2px;
-  background-color: rgb(84, 62, 2);
+  background-color: black;
   transform: rotate(90deg);
 }
 .back-btn .back-label {
