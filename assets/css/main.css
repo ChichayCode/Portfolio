@@ -2506,7 +2506,8 @@ form .contact-submit-btn:hover {
   gap: 8px;
   border-radius: 20px;
   height: auto;
-  padding: 20px 36px;
+  padding: 28px 36px;
+  border: 0.1px solid rgb(134, 42, 0);
   background-color: rgb(251.7692307692, 249.6153846154, 244.2307692308);
   transition: all 0.3s ease-out;
 }
@@ -2519,14 +2520,19 @@ form .contact-submit-btn:hover {
   height: auto;
 }
 .portfolio-box h4 {
-  padding: 8px;
-  font-weight: 800;
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
   color: rgb(83, 26.0149253731, 0);
 }
 .portfolio-box img.work-start2impact {
   width: 120px;
   height: auto;
   padding: 16px 8px;
+}
+.portfolio-box p {
+  color: rgb(83, 26.0149253731, 0);
+  padding-bottom: 12px;
 }
 .portfolio-box span {
   font-size: 12px;
@@ -2709,6 +2715,7 @@ a {
 .back-btn-project .back-label {
   font-size: 12px;
   color: white;
+  transition: all 0.3s ease-out;
 }
 .back-btn-project:hover .back-label {
   font-size: 15px;
