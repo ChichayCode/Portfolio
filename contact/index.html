@@ -72,7 +72,7 @@
 
                     <div class="contact-form">
                         <h1 class="h1-mobile-contactme">CONTACT ME</h1>
-                        <form action="dati.php" method="post">
+                        <form id="contact-form">
 
                             <h1 class="h1-desktop-contact">CONTACT</h1>
                             <h1 class="h1-desktop-me">ME</h1>
@@ -87,7 +87,7 @@
                             <h4>Scrivimi un messaggio compilando il form</h4>
                             <div class="contact-form-input">
                                 <label for="nome">Nome</label>
-                                <input class="text" type="text" name="nome" id="nome" required>
+                                <input class="text" type="text" name="name" id="nome" required>
                             </div>
                             <div class="contact-form-input">
                                 <label for="email">Indirizzo e-mail</label>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="contact-form-input">
                                 <label for="testo">Messaggio</label>
-                                <textarea name="testo" id="testo"></textarea>
+                                <textarea name="message" id="testo"></textarea>
                             </div>
                             <input class="contact-submit-btn" type="submit" value="INVIA">
                         </form>
@@ -105,6 +105,33 @@
                 </section>
             </div>
         </main>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+
+        <script>
+            (function () {
+                emailjs.init("igxmBEfn8iCl2w05j");
+            })();
+        </script>
+
+        <script>
+            const form = document.getElementById("contact-form");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                emailjs.sendForm(
+                    "service_o133m1q",
+                    "template_0h34ci7",
+                    this
+                ).then(() => {
+                    alert("Email inviata con successo!");
+                }, (error) => {
+                    alert("Errore: " + JSON.stringify(error));
+                });
+            });
+        </script>
 
         <footer>
             <a href="https://github.com/ChichayCode" target="_blank" aria-label="GitHub">
